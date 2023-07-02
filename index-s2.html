@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icon.png">
+    <title  data-sw-translate>EXGPT-最先进的通用人工智能多模态大模型</title>
+    <meta name="description"content="EXGPT的使命是探索和引领通用人工智能(AGI)的边界，以推动人类 智慧和文明的进步。我们致力于构建具有超越人类智能的AGI系统，以解决人类面 临的复杂问题，并为全球社会创造持续的积极影响。">
+    <link rel="stylesheet" href="assets/css/style-s2.css?v1.3.0">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="nk-body " data-menu-collapse="lg">
+    <div class="nk-app-root  bg-darker">
+        <header class="nk-header bg-darker is-dark has-mask">
+            <div class="nk-mask bg-pattern-dot-white-sm bg-blend-bottom"></div>
+            <div class="nk-header-main nk-menu-main is-transparent will-shrink on-dark ignore-mask">
+                <div class="container">
+                    <div class="nk-header-wrap">
+                        <div class="nk-header-logo">
+                            <a href="index.html" class="logo-link">
+                                <div class="logo-wrap">
+                                    <img class="logo-img logo-light" src="images/logo-White.png" srcset="images/logo-White.png 2x" alt="">
+                                    <img class="logo-img logo-dark" src="images/logo-black.png" srcset="images/logo-black.png 2x" alt="">
+                                </div>
+                            </a>
+                        </div><!-- .nk-header-logo -->
+                        <div class="nk-header-toggle">
+                            <button class="dark-mode-toggle">
+                                <em class="off icon ni ni-sun-fill"></em>
+                                <em class="on icon ni ni-moon-fill"></em>
+                            </button>
+                            <button class="btn btn-light btn-icon header-menu-toggle">
+                                <em class="icon ni ni-menu"></em>
+                            </button>
+                        </div>
+                        <nav class="nk-header-menu nk-menu">
+                            <ul class="nk-menu-list me-auto">
+                                <li class="nk-menu-item has-dropdown">
+                                    <a href="index.html" class="nk-menu-link">
+                                        <span class="nk-menu-text" data-sw-translate>首页</span>
+                                    </a>
+                                    <!--<div class="nk-menu-dropdown">-->
+                                    <!--    <ul class="nk-menu-sub">-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index.html">Home S1</a>-->
+                                    <!--        </li>-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index-s2.html">Home S2</a>-->
+                                    <!--        </li>-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index-s3.html">Home S3</a>-->
+                                    <!--        </li>-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index-s4.html">Home S4 <div class="badge bg-primary ms-2 me-n4 px-2 rounded-pill">New</div></a>-->
+                                    <!--        </li>-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index-s5.html">Home S5 <div class="badge bg-primary ms-2 me-n4 px-2 rounded-pill">New</div></a>-->
+                                    <!--        </li>-->
+                                    <!--    </ul>-->
+                                    <!--</div>-->
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="index-s2.html#howto" class="nk-menu-link">
+                                        <span class="nk-menu-text"  data-sw-translate>应用</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="index-s2.html#usecase" class="nk-menu-link">
+                                        <span class="nk-menu-text" data-sw-translate>安全</span>
+                                    </a>
+                                </li>
+                                <!--<li class="nk-menu-item">-->
+                                <!--    <a href="index-s2.html#pricing" class="nk-menu-link">-->
+                                <!--        <span class="nk-menu-text">产品</span>-->
+                                <!--    </a>-->
+                                <!--</li>-->
+                                <li class="nk-menu-item has-dropdown">
+                                    <a href="about.html" class="nk-menu-link">
+                                        <!-- nk-menu-toggle-->
+                                        <span class="nk-menu-text" data-sw-translate>关于我们</span>
+                                    </a>
+                                    <!--<div class="nk-menu-dropdown nk-menu-mega">-->
+                                    <!--    <div class="nk-menu-mega-wrap">-->
+                                    <!--        <ul class="nk-menu-sub">-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="about.html">About</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="usecase.html">Use Case</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="usecase-details.html">Use Case Details <div class="badge bg-primary ms-2 me-n4 px-2 rounded-pill">New</div></a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="usecase-s2.html">Use Case S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="usecase-details-s2.html">Use Case Details S2 <div class="badge bg-primary ms-2 me-n4 px-2 rounded-pill">New</div></a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="pricing.html">Pricing</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="pricing-s2.html">Pricing S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="blog.html">Blog</a>-->
+                                    <!--            </li>-->
+                                    <!--        </ul>-->
+                                    <!--        <ul class="nk-menu-sub">-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="blog-single.html">Blog Single</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="features.html">Features</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="contact.html">Contact</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="contact-s2.html">Contact S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="login.html">Login</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="login-s2.html">Login S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="register.html">Register</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="register-s2.html">Register S2</a>-->
+                                    <!--            </li>-->
+                                    <!--        </ul>-->
+                                    <!--        <ul class="nk-menu-sub">-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="reset.html">Reset</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="reset-s2.html">Reset S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="404.html">404 Error</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="404-s2.html">404 Error S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="504.html">504 Error</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="504-s2.html">504 Error s2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="terms-condition.html">Terms &amp; Condition</a>-->
+                                    <!--            </li>-->
+                                    <!--        </ul>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
+                                </li>
+                            </ul><!-- .nk-menu-list -->
+                            <div class="mx-2 d-none d-lg-block">
+                                <button class="dark-mode-toggle">
+                                    <em class="off icon ni ni-sun-fill"></em>
+                                    <em class="on icon ni ni-moon-fill"></em>
+                                </button>
+                            </div>
+                            <ul class="nk-menu-buttons flex-lg-row-reverse">
+                                <li><a href="#" class="btn btn-outline-primary rounded-pill"  data-sw-translate>立即下载</a></li>
+                                <li><a class="link link-light" href="#" onclick="langSelect()" data-sw-translate>中国大陆 </a></li>
+                                <!--href="login-s2.html"-->
+                            </ul><!-- .nk-menu-buttons -->
+                        </nav><!-- .nk-header-menu -->
+                    </div>
+                </div>
+            </div>
+            <!-- .header -->
+            <div class="nk-hero py-xl-5 overflow-hidden has-shape">
+                <div class="nk-shape bg-shape-blur-b mt-n5 start-50 top-50 translate-middle"></div>
+                <div class="container">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-lg-11 col-xl-10 col-xxl-9">
+                            <div class="nk-hero-content py-5 py-lg-6">
+                                <h1 class="title mb-3 mb-lg-4 display-6"  ><span data-sw-translate>EXGPT通用人工智能大模型</span>
+                                <div class="text-gradient-primary" id="dzjOut"  style="display: none;">
+                                    <span class="type-init daziji"  data-sw-translate data-strings='"超自然语言大模型", "AI生成图像大模型", "AI交易大模型"'></span>
+                                </div>
+                                <div class="text-gradient-primary" id="dzjOutEnglish">
+                                        <span class="type-init"  data-sw-translate data-strings='"Supernatural Language Model", "AI Generated Large Image Model", "AI Trading Model"'></span>
+                                </div>
+                                </h1>
+                                <p class="lead px-md-8 px-lg-6 px-xxl-12 mb-4 mb-lg-5"  data-sw-translate>EXGPT的全面人工智能能力覆盖了多个关键技术领域，包 括深度学习、自然语言处理、图像识别和化交易等。相较于其他AI产品，EXGPT 综合性能出众，能够提供更全面、多维度的解决方案。</p>
+                                <ul class="btn-list btn-list-inline">
+                                    <li><a href="#" class="btn btn-primary btn-lg rounded-pill"><span  data-sw-translate>立即下载</span></a></li>
+                                </ul>
+                                <p class="sub-text mt-2"  data-sw-translate>IOS/安卓</p>
+                            </div>
+                            <div class="nk-hero-gfx position-relative">
+                                
+                                <img class="w-100 rounded-4" src="images/gfx/banner/landingpagebanner.png" alt="">
+                                <!-- large banner image -->
+                                <div class="d-none d-md-block position-absolute top-0 end-100 me-5 me-lg-8 me-xl-12 mt-n3">
+                                    <div class="media media-2xl rounded-pill mx-auto">
+                                        <img src="images/avatar/illustration/11.png" alt="">
+                                    </div>
+                                    <div class="badge bg-dark p-2 mt-2 fw-normal text-white text-opacity-75">Freelancer</div>
+                                </div><!-- floating user -->
+                                <div class="d-none d-md-block position-absolute top-50 end-100 me-3 me-lg-4 mt-n5">
+                                    <div class="media media-2xl rounded-pill mx-auto">
+                                        <img src="images/avatar/illustration/22.png" alt="">
+                                    </div>
+                                    <div class="badge bg-dark p-2 mt-2 fw-normal text-white text-opacity-75">Marketer</div>
+                                </div><!-- floating user -->
+                                <div class="d-none d-md-block position-absolute top-0 start-100 ms-5 ms-lg-7 ms-xl-10 mt-n7">
+                                    <div class="media media-2xl rounded-pill mx-auto">
+                                        <img src="images/avatar/illustration/33.png" alt="">
+                                    </div>
+                                    <div class="badge bg-dark p-2 mt-2 fw-normal text-white text-opacity-75">Copywriter</div>
+                                </div><!-- floating user -->
+                                <div class="d-none d-md-block position-absolute top-50 start-100 ms-4 ms-lg-5 mt-n2">
+                                    <div class="media media-2xl rounded-pill mx-auto">
+                                        <img src="images/avatar/illustration/44.png" alt="">
+                                    </div>
+                                    <div class="badge bg-dark p-2 mt-2 fw-normal text-white text-opacity-75">Blogger</div>
+                                </div><!-- floating user -->
+                            </div>
+                            <div class="nk-hero-content py-6">
+                                <h6 class="lead-text"  data-sw-translate>EXGPT获得超过六千家专业机构的机构的信赖</h6>
+                                <ul class="d-flex flex-wrap justify-content-center pt-4 has-gap gy-3">
+                                    <li class="px-3 px-sm-5">
+                                        <img class="h-2rem" src="images/brands/w3.png" alt="">
+                                    </li>
+                                    <li class="px-3 px-sm-5">
+                                        <img class="h-2rem" src="images/brands/w4.png" alt="">
+                                    </li>
+                                    <li class="px-3 px-sm-5">
+                                        <img class="h-2rem" src="images/brands/w11.png" alt="">
+                                    </li>
+                                    <li class="px-3 px-sm-5">
+                                        <img class="h-2rem" src="images/brands/w2.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="nk-pages">
+            <section class="section bg-darker is-dark section-top-0 has-shape">
+                <div class="nk-shape bg-shape-blur-a start-50 top-50 translate-middle"></div>
+                <div class="container">
+                    <div class="section-head">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-9 col-xl-6 col-xxl-5">
+                                <h2 class="title"  data-sw-translate>EXGPT—行业解决方案</h2>
+                                <p class="lead"  data-sw-translate>EXGPT的全面人工智能能力覆盖了多个关键技术领域，包 括深度学习、自然语言处理、图像识别和量化交易等</p>
+                            </div>
+                        </div>
+                    </div><!-- .section-head -->
+                    <div class="section-content">
+                        <div class="row g-gs">
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card rounded-4 border-0 h-100">
+                                    <div class="card-body">
+                                        <div class="feature">
+                                            <div class="feature-media">
+                                                <div class="media media-middle media-xl text-info bg-info bg-opacity-20 rounded-3">
+                                                    <em class="icon ni ni-bulb"></em>
+                                                </div>
+                                            </div>
+                                            <div class="feature-text">
+                                                <h4 class="title"  data-sw-translate>AI金融解决方案</h4>
+                                                <p  data-sw-translate>EXGPT可以提供智能的化交易决策支持和投资 策略优化。通过分析市场数据、历史交易和经济指标等信息，EXGPT可以利用训 练过的神经网络模型预测市场趋势和股票价格波动，并生成化交易策略。 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card rounded-4 border-0 h-100">
+                                    <div class="card-body">
+                                        <div class="feature">
+                                            <div class="feature-media">
+                                                <div class="media media-middle media-xl text-primary bg-primary bg-opacity-20 rounded-3">
+                                                    <em class="icon ni ni-cpu"></em>
+                                                </div>
+                                            </div>
+                                            <div class="feature-text">
+                                                <h4 class="title"  data-sw-translate>AI直播解决方案</h4>
+                                                <p  data-sw-translate>基于EXGPT的面部深度学习替换模型，获得难以辨别的高保真度直播，并且提供基于EXGPT底层的神经网络视频分发技术，在直播中进行面部实时替换，超低成本分发服务。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card rounded-4 border-0 h-100">
+                                    <div class="card-body">
+                                        <div class="feature">
+                                            <div class="feature-media">
+                                                <div class="media media-middle media-xl text-indigo bg-indigo bg-opacity-20 rounded-3">
+                                                    <em class="icon ni ni-spark"></em>
+                                                </div>
+                                            </div>
+                                            <div class="feature-text">
+                                                <h4 class="title"  data-sw-translate>AI 角色会话行业解决方案</h4>
+                                                <p  data-sw-translate>获得超越大型语言模型 (LLM) 的完全集成的 AI 角色平台，并添加可配置的安全性、知识、记忆、叙事控制、多模态，拥有卓越的真人情感演绎，处理多轮对话的超大上下文记忆空间等。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card rounded-4 border-0 h-100">
+                                    <div class="card-body">
+                                        <div class="feature">
+                                            <div class="feature-media">
+                                                <div class="media media-middle media-xl text-success bg-success bg-opacity-20 rounded-3">
+                                                    <em class="icon ni ni-swap-alt"></em>
+                                                </div>
+                                            </div>
+                                            <div class="feature-text">
+                                                <h4 class="title"  data-sw-translate>AI翻译行业解决方案</h4>
+                                                <p  data-sw-translate>EXGPT翻译模型使用深度学习和神经网络等先进技术，通过大规模的训练数据和模型优化，提高了翻译的准确性和质量。AI翻译系统能够学习语言的语法、上下文和常用短语，从而生成更自然、流畅的翻译结果。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card rounded-4 border-0 h-100">
+                                    <div class="card-body">
+                                        <div class="feature">
+                                            <div class="feature-media">
+                                                <div class="media media-middle media-xl text-danger bg-danger bg-opacity-20 rounded-3">
+                                                    <div class=" d-flex align-items-end">
+                                                        <em class="icon ni ni-text"></em>
+                                                        <em class="icon half ms-n2 ni ni-text"></em>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="feature-text">
+                                                <h4 class="title"  data-sw-translate>AI超自然语音合成行业解决方案</h4>
+                                                <p  data-sw-translate>EXGPT Voice AI模型超自然语音合成采用了深度学习等技术，可以更好地模拟人类语音，生成更加自然、真实的语音，可以根据用户的需求和口音进行定制化，生成符合用户个性化需求的语音。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card rounded-4 border-0 h-100">
+                                    <div class="card-body">
+                                        <div class="feature">
+                                            <div class="feature-media">
+                                                <div class="media media-middle media-xl text-warning bg-warning bg-opacity-20 rounded-3">
+                                                    <em class="icon ni ni-file-docs"></em>
+                                                </div>
+                                            </div>
+                                            <div class="feature-text">
+                                                <h4 class="title"  data-sw-translate>AI营销行业解决方案</h4>
+                                                <p  data-sw-translate>在全球任何地方随时通过客户喜爱的平台与其建立联系。无论您的客户是想询问常见问题还是获取特定信息，文字虚拟客服都能即时提供令人满意的体验，让客户快速获得准确的答复。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div>
+            </section><!-- .section -->
+            <section class="section section-bottom-0 bg-white rounded-top-6" id="howto">
+                <div class="container">
+                    <div class="section-head">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-9 col-xl-8 col-xxl-5">
+                                <div class="badge text-bg-primary-soft-outline text-uppercase text-tracking-1 rounded-pill px-3 py-2 mb-3"  data-sw-translate>如何应用EXGPT?</div>
+                                <h2 class="title"  data-sw-translate>EXGPT开放式平台</h2>
+                                <p class="lead"  data-sw-translate>EXGPT全面的AI能力使得我们能够为各行各业 的用户提供定制化、多维度的解决方案。</p>
+                            </div>
+                        </div>
+                    </div><!-- .section-head -->
+                    <div class="section-content">
+                        <div class="row gy-3 justify-content-center">
+                            <div class="col-xxl-12">
+                                <div class="bg-primary bg-opacity-10 p-5 p-lg-6 rounded-4">
+                                    <div class="row g-gs flex-lg-row-reverse justify-content-between align-items-center">
+                                        <div class="col-lg-6 col-xl-5">
+                                            <div class="rounded-4 bg-gradient-primary bg-opacity-50 p-5 pb-0">
+                                                <div class="block-gfx">
+                                                    <img class="w-100 rounded-top-3 shadow-sm" src="images/gfx/process/a.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div><!-- .col -->
+                                        <div class="col-lg-6 col-xxl-5">
+                                            <div class="block-text pe-xl-5">
+                                                <img class="h-3rem mb-3" src="images/icon/text.svg" alt="">
+                                                <h3 class="title"  data-sw-translate>EXGPTAI金融大模型</h3>
+                                                <p  data-sw-translate>EXGPT可以根据市场行情，创建基于EXGPT的综合交易模型进行即时交易，帮助投资者实现更稳定和可盈利的投资回报。</p>
+                                                <ul class="list gy-3">
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>接入 TradingView全球市场实时精准数据</span></li>
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>全天候24小时自动交易，帮助您在交易市场中稳定获利</span></li>
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>支持多个指标/策略同时对接</span></li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .col -->
+                                    </div><!-- .row -->
+                                </div><!-- box -->
+                            </div><!-- .col -->
+                            <div class="col-xxl-12">
+                                <div class="bg-warning bg-opacity-10 p-5 p-lg-6 rounded-4">
+                                    <div class="row g-gs flex-lg-row-reverse justify-content-between align-items-center">
+                                        <div class="col-lg-6 col-xl-5">
+                                            <div class="rounded-4  bg-gradient-warning bg-opacity-50 p-5 pb-0">
+                                                <div class="block-gfx">
+                                                    <img class="w-100 rounded-top-3 shadow-sm" src="images/gfx/process/b.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div><!-- .col -->
+                                        <div class="col-lg-6 col-xxl-5">
+                                            <div class="block-text pe-xl-5">
+                                                <img class="h-3rem mb-3" src="images/icon/edit.svg" alt="">
+                                                <h3 class="title"  data-sw-translate>零门槛AI模型自训练开放平台</h3>
+                                                <p  data-sw-translate>任何人可以在短短5分钟实现训练属于自己的AI模型，使用EXGPT Flow在短短几秒内创建自有的AI应用，训练属于你独一无二的AI私人模型。</p>
+                                                <ul class="list gy-3">
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>卓越的真人情感演绎</span></li>
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>卓越的语义理解</span></li>
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>LangChain大内存向量数据库，具有处理多轮对话的超大上下文记忆空间</span></li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .col -->
+                                    </div><!-- .row -->
+                                </div><!-- box -->
+                            </div><!-- .col -->
+                            <div class="col-xxl-12">
+                                <div class="bg-info bg-opacity-10 p-5 p-lg-6 rounded-4">
+                                    <div class="row g-gs flex-lg-row-reverse justify-content-between align-items-center">
+                                        <div class="col-lg-6 col-xl-5">
+                                            <div class="rounded-4  bg-gradient-info bg-opacity-50 p-5 pb-0">
+                                                <div class="block-gfx">
+                                                    <img class="w-100 rounded-top-3 shadow-sm" src="images/gfx/process/d.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div><!-- .col -->
+                                        <div class="col-lg-6 col-xxl-5">
+                                            <div class="block-text pe-xl-5">
+                                                <img class="h-3rem mb-3" src="images/icon/paper.svg" alt="">
+                                                <h3 class="title"  data-sw-translate>EXGPT FACE CG</h3>
+                                                <p  data-sw-translate>稳定的AI直播解决方案，在直播中进行面部实时替换，超低成本分发服务。</p>
+                                                <ul class="list gy-3">
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>视频面部替换</span></li>
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>直播面部替换</span></li>
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>局部替换</span></li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .col -->
+                                    </div><!-- .row -->
+                                </div><!-- box -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div>
+            </section>
+            <section class="section bg-white has-mask" id="usecase">
+                <div class="nk-mask bg-pattern-dot-sm bg-blend-around"></div>
+                <div class="container">
+                    <div class="section-head">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-9 col-xl-8 col-xxl-7">
+                                <div class="badge text-bg-primary-soft-outline text-uppercase text-tracking-1 rounded-pill px-3 py-2 mb-3"  data-sw-translate>安全保障</div>
+                                <h2 class="title h1"  data-sw-translate>EXGPT的安全与稳定</h2>
+                                <p class="lead px-xl-6"  data-sw-translate>EXGPT根据特定的行业、领域和任务要求，采用独立高质量的数据集和算法，从而实现更精确和高效的AI应用。</p>
+                            </div>
+                        </div>
+                    </div><!-- .section-head -->
+                    <div class="section-content">
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-11">
+                                <div class="row gy-6 gx-5 text-center">
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="h-100 px-xl-4 px-xxl-5">
+                                            <div class="feature">
+                                                <div class="feature-media">
+                                                    <div class="media media-middle media-xl media-border text-bg-danger-soft-outline rounded-3">
+                                                        <img class="h-2rem" src="images/icon/articles.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="feature-text">
+                                                    <h3 class="title"  data-sw-translate>毫秒级交易响应</h3>
+                                                    <p  data-sw-translate>通过我们的全栈金融级云原生工具和服务，帮助应用开发团队最大限度地提高核心业务应用开发的效率</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="h-100 px-xl-4 px-xxl-5">
+                                            <div class="feature">
+                                                <div class="feature-media">
+                                                    <div class="media media-middle media-xl media-border text-bg-success-soft-outline rounded-3">
+                                                        <img class="h-2rem" src="images/icon/product-discription.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="feature-text">
+                                                    <h3 class="title"  data-sw-translate>可信AI洞察力驱动决策机制</h3>
+                                                    <p  data-sw-translate>来自数百位数据科学团队研发调试，让AI具有洞察力并通过综合数据进行实时交易决策</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="h-100 px-xl-4 px-xxl-5">
+                                            <div class="feature">
+                                                <div class="feature-media">
+                                                    <div class="media media-middle media-xl media-border text-bg-purple-soft-outline rounded-3">
+                                                        <img class="h-2rem" src="images/icon/hand-mic.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="feature-text">
+                                                    <h3 class="title"  data-sw-translate>强大网络基础设施</h3>
+                                                    <p  data-sw-translate>让EXGPT云计算中心和 IT 团队为您的金融解决方案实现银行级的可用性和弹性</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="h-100 px-xl-4 px-xxl-5">
+                                            <div class="feature">
+                                                <div class="feature-media">
+                                                    <div class="media media-middle media-xl media-border text-bg-info-soft-outline rounded-3">
+                                                        <img class="h-2rem" src="images/icon/praying-hand.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="feature-text">
+                                                    <h3 class="title"  data-sw-translate>法律安全合规</h3>
+                                                    <p  data-sw-translate>EXGPT归属于加拿大EXPLORED GPT AI RESEARCHEXPLORED GPT AI RESEARCH 公司，同时拥有在线数据处理与在线交易双资质</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="h-100 px-xl-4 px-xxl-5">
+                                            <div class="feature">
+                                                <div class="feature-media">
+                                                    <div class="media media-middle media-xl media-border text-bg-primary-soft-outline rounded-3">
+                                                        <img class="h-2rem" src="images/icon/stock-up.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="feature-text">
+                                                    <h3 class="title"  data-sw-translate>ZOLOZ 智能反洗钱</h3>
+                                                    <p  data-sw-translate>EXGPT采用先进的ZOLOZ反洗钱风控机制，充分利用拥有 8亿万全球客户的钱包产品带来的技术和最佳实践</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="h-100 px-xl-4 px-xxl-5">
+                                            <div class="feature">
+                                                <div class="feature-media">
+                                                    <div class="media media-middle media-xl media-border text-bg-indigo-soft-outline rounded-3">
+                                                        <img class="h-2rem" src="images/icon/website.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="feature-text">
+                                                    <h3 class="title"  data-sw-translate>ODPS原生大数据计算中心</h3>
+                                                    <p  data-sw-translate>完全托管的 TB/PB 级数据仓库，向用户提供了完善的数据导入方案以及多种经典的分布式计算模型，能够更快速的解决用户海量数据计算问题</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                </div><!-- .row -->
+                            </div>
+                        </div>
+                    </div><!-- .section-content -->
+                </div>
+            </section>
+            <section class="section section-bottom-0 bg-light" id="pricing">
+                <div class="container">
+                    <div class="section-head">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-9 col-xl-8 col-xxl-6">
+                                <div class="badge text-bg-primary-soft-outline text-uppercase text-tracking-1 rounded-pill px-3 py-2 mb-3"  data-sw-translate>AI应用</div>
+                                <h2 class="title h1"  data-sw-translate>EXGPT AI行业通用开放式解决方案</h2>
+                                <p class="lead"  data-sw-translate>用户可以根据特定的行业、领域和任务要求，选择合 适的模型组件、数据集和算法，从而实现更精确和高效的AI应用。</p>
+                            </div>
+                        </div>
+                    </div><!-- .section-head -->
+                    <div class="section-content">
+                        <!--<div class="pricing-toggle-wrap mb-4">-->
+                        <!--    <div class="h5 mb-0 pricing-toggle-text monthly">Monthly</div>-->
+                        <!--    <div class="mx-3">-->
+                        <!--        <button class="pricing-toggle" data-parent="pricing-toggle-wrap" data-target="pricing-price-wrap">-->
+                        <!--            <span class="pricing-toggle-ball"></span>-->
+                        <!--        </button>-->
+                        <!--    </div>-->
+                        <!--    <div class="h5 mb-0 pricing-toggle-text yearly position-relative"> Yearly <span class="badge text-bg-success-soft fw-normal text-uppercase smaller rounded-pill position-absolute ms-n5 mb-2 mb-sm-0 ms-sm-3 translate-middle-sm-y start-100 bottom-100 bottom-sm-auto top-sm-50">Save 12%</span>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <!-- .pricing-toggle -->
+                        <div class="row g-gs">
+                            <div class="col-xxl-4 col-xl-4">
+                                <div class="pricing h-100 pricing-featured bg-gradient-primary">
+                                    <div class="pricing-body h-100 p-5 pt-3 p-md-0 pt-md-0 p-xl-5 pt-xl-3 d-md-flex d-xl-block">
+                                        <div class="text-center p-md-5 p-xl-0 w-md-50 w-xl-100">
+                                            <div class="badge bg-gradient-primary bg-opacity-20 gradient-angle-90 mb-4 px-3 py-2 rounded-pill small text-primary text-tracking-1">
+                                                <div class="p-1"  data-sw-translate>Business</div>
+                                            </div>
+                                            <!--<h3 class="mb-3">Business</h3>-->
+                                            <div class="pricing-price-wrap">
+                                                <div class="pricing-price monthly">
+                                                    
+                                                    <h3 class="display-5 mb-3" style="font-size: 18px;"  data-sw-translate>AI 金融大模型</h3>
+                                                    <!--<h3 class="display-5 mb-3">$19 <span class="caption-text text-muted"> / month</span></h3>-->
+                                                </div>
+                                                <div class="pricing-price yearly">
+                                                    <h3 class="display-5 mb-3" >$190 <span class="caption-text text-muted" > / yearly</span></h3>
+                                                </div>
+                                            </div>
+                                            <p class="fw-bold text-primary" data-sw-translate>EXGPT所追求的不仅仅是交易的智能化，更是一种对全球金融生态的积极 改造与重构</p>
+                                            <div class="bg-light px-4 py-2 mb-4 smaller rounded-1" data-sw-translate>面向所有用户开放</div>
+                                            <div class="px-4">
+                                                <button class="btn btn-primary btn-block rounded-pill" data-sw-translate>立即下载</button>
+                                            </div>
+                                        </div>
+                                        <div class="d-none d-md-block d-xl-none border-start h-100"></div>
+                                        <div class="pt-4 p-md-5 p-xl-0 pt-xl-4 w-md-50 w-xl-100">
+                                            <h5 class="fw-medium pb-1"></h5>
+                                            <!--Everything in Free, plus-->
+                                            <ul class="list gy-3">
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>AVIVA保险承保</span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>交易撮合引擎</span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>AI智能算力</span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>股票AI引擎</span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>数字货币AI引擎</span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>即时风控引擎</span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>TradingView即时报价</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-xxl-4 col-xl-4 col-md-6 order-xl-first">
+                                <div class="h-100 pt-xl-6">
+                                    <div class="pricing h-100">
+                                        <div class="pricing-body h-100 p-5">
+                                            <div class="text-center">
+                                                <h3 class="mb-3">Beta</h3>
+                                                
+                                                 <h3 class="display-5 mb-3" style="font-size: 18px;" data-sw-translate>AI 开放式训练场</h3>
+                                                <!--<h3 class="display-5 mb-3">$0 <span class="caption-text text-muted"> / month</span></h3>-->
+                                                <p class="fw-bold" data-sw-translate>与 EXGPT 团队携手合作，利用数十年的 AI 专业知识和 EXGPT 的尖端平台，为您的项目构建和部署私有AI模型解决方案。</p>
+                                                <div class="bg-light px-4 py-2 mb-4 smaller rounded-1" data-sw-translate>正在逐步推出过程中，我们优先考虑为EXGPT贡献卓越的用户使用</div>
+                                                <div class="px-4">
+                                                    <button class="btn btn-outline-primary btn-block rounded-pill" data-sw-translate>开始试用</button>
+                                                </div>
+                                            </div>
+                                            <h5 class="fw-medium pt-4 pb-1"></h5>
+                                            <!--Give a try for free-->
+                                            <ul class="list gy-3">
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span><strong>$0.004 / 1K</strong> Token</span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span>EXGPT AI X<strong>$0.02 / 1K </strong> Token</span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>$0.1/GB 文件储存空间</span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>实现AI超长记忆</span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>私有化知识库</span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>智能数据处理引擎</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-xxl-4 col-xl-4 col-md-6">
+                                <div class="h-100 pt-xl-6">
+                                    <div class="pricing h-100">
+                                        <div class="pricing-body h-100 p-5">
+                                            <div class="text-center">
+                                                <h3 class="mb-3">Beta</h3>
+                                                <h3 class="display-5 mb-3" style="font-size: 18px;" data-sw-translate>AI 流媒体</h3>
+                                                <!--<div class="media media-middle media-2xl bg-light rounded-pill mb-4 mt-3">-->
+                                                <!--    <em class="icon ni ni-building"></em>-->
+                                                    
+                                                <!--</div>-->
+                                                <p class="fw-bold" data-sw-translate>它提供了一个命令式且易于使用的管道，即使是那些没有全面了解深度学习框架或模型实现的人也可以使用</p>
+                                                <div class="bg-light px-4 py-2 mb-4 smaller rounded-1" data-sw-translate>正在逐步推出过程中，我们优先考虑为EXGPT贡献卓越的用户使用</div>
+                                                <div class="px-4">
+                                                    <button class="btn btn-outline-primary btn-block rounded-pill" data-sw-translate>下载试用版</button>
+                                                </div>
+                                            </div>
+                                            <h5 class="fw-medium pt-4 pb-1"></h5>
+                                            <ul class="list gy-3">
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span><strong data-sw-translate>全脸替换</strong></span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>局部替换</span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>直播实时替换</span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>视频流媒体服务</span></li>
+                                                <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>直播流媒体服务</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div>
+            </section>
+            <section class="section bg-light">
+                <div class="container">
+                    <div class="section-head">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-xl-8">
+                                <h2 class="title" data-sw-translate>品牌的使命、愿景和价值观</h2>
+                                <p class="lead" data-sw-translate>我们以智慧与情怀，致力于为全球投资者带来无尽可能与意义的AI世界</p>
+                            </div>
+                        </div>
+                    </div><!-- .section-head -->
+                    <div class="section-content">
+                        <div class="row g-gs justify-content-center">
+                            <div class="col-xl-9 col-xxl-8">
+                                <div class="accordion accordion-separated accordion-plus-minus" id="faq-1">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq-1-1" data-sw-translate>使命</button>
+                                        </h2>
+                                        <div id="faq-1-1" class="accordion-collapse collapse show" data-bs-parent="#faq-1">
+                                            <div class="accordion-body" data-sw-translate>EXGPT的使命是探索和引领通用人工智能(AGI)的边界，以推动人类 智慧和文明的进步。我们致力于构建具有超越人类智能的AGI系统，以解决人类面 临的复杂问题，并为全球社会创造持续的积极影响。</div>
+                                        </div>
+                                    </div><!-- .accordion-item -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq-1-2" data-sw-translate>愿景</button>
+                                        </h2>
+                                        <div id="faq-1-2" class="accordion-collapse collapse" data-bs-parent="#faq-1">
+                                            <div class="accordion-body" data-sw-translate>我们追求的愿景是实现AGI技术的全面普及和平等共享。我们梦想着一 个未来，人们能够充分利用AGI的力量，扩展自己的认知能力和创造潜力，进一步 推动人类文明的繁荣和智慧的进化。</div>
+                                        </div>
+                                    </div><!-- .accordion-item -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq-1-3" data-sw-translate>价值观</button>
+                                        </h2>
+                                        <div id="faq-1-3" class="accordion-collapse collapse" data-bs-parent="#faq-1">
+                                            <div data-sw-translate class="accordion-body">我们深信智慧是推动人类文明发展的根本力量。我们追求卓越的科学研究和技术创新，通过不断突破技术边界，探索新的认知范式和智能 模型，为人类开辟更加广阔的思维空间。</div>
+                                        </div>
+                                    </div><!-- .accordion-item -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq-1-4" data-sw-translate>道德与责任</button>
+                                        </h2>
+                                        <div id="faq-1-4" class="accordion-collapse collapse" data-bs-parent="#faq-1">
+                                            <div class="accordion-body" data-sw-translate>我们坚守道德和社会责任，将安全性和可持续性置于首位。我们 承诺遵循伦理准则，确保AGI的发展和应用符合人类的利益，并对潜在⻛险和挑战 保持高度警惕。我们积极参与全球社会对话，推动AGI的治理和伦理框架的建立， 确保人工智能服务于人类的整体利益。</div>
+                                        </div>
+                                    </div><!-- .accordion-item -->
+                                </div><!-- .accordion -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+        </main>
+        <!-- start page footer -->
+        <footer class="nk-footer">
+            <section class="section bg-light section-0 has-mask">
+                <div class="nk-mask bg-darker top-50"></div>
+                <div class="container container-xl">
+                    <div class="section-wrap bg-dark is-dark rounded-4 has-shape overflow-hidden">
+                        <div class="nk-shape bg-shape-blur-b start-50 top-50 translate-middle"></div>
+                        <div class="section-content p-4 p-sm-5 p-xl-7">
+                            <div class="row justify-content-between align-items-center g-5">
+                                <div class="col-xl-5 col-lg-6">
+                                    <div class="block-text">
+                                        <h6 class="overline-title text-primary" data-sw-translate>致力于为全球投资者带来无尽可能</h6>
+                                        <h2 class="title" data-sw-translate>开启未来·拥抱AI</h2>
+                                        <p data-sw-translate>EXGPT将给你带来有史以来最专业的交易团队，交易模型参数达到1700亿参数</p>
+                                        <ul class="list list-row gx-3 gy-0">
+                                            <li><em class="icon fs-5 ni ni-check-circle-fill text-info"></em><span data-sw-translate>AVIVA保险承保</span></li>
+                                            <li><em class="icon fs-5 ni ni-check-circle-fill text-info"></em><span data-sw-translate>毫秒级交易响应</span></li>
+                                        </ul>
+                                        <ul class="btn-list btn-list-inline gy-0">
+                                            <li><a href="#" class="btn btn-lg btn-primary rounded-pill"><span data-sw-translate>立即下载体验</span><em class="icon ni ni-arrow-long-right"></em></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 align-self-end">
+                                    <div class="bg-white rounded-top-4">
+                                        <div class="rounded-top-4 bg-gradient-primary bg-opacity-70 p-5 pb-0 mb-n4 mb-sm-n5 mb-xl-n7">
+                                            <div class="block-gfx">
+                                                <img class="w-100 rounded-top-3 shadow-sm" src="images/gfx/process/uu.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .container -->
+            </section><!-- .section -->
+            <section class="section bg-darker is-dark">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-xl-4 col-lg-3 me-auto">
+                            <div class="block-text">
+                                <a href="index.html" class="logo-link mb-4">
+                                    <div class="logo-wrap">
+                                        <img class="logo-img logo-light" src="images/logo-White.png" srcset="images/logo-White.png 2x" alt="">
+                                    <img class="logo-img logo-dark" src="images/logo-black.png" srcset="images/logo-black.png 2x" alt="">
+                                        <!--<img class="logo-img logo-light" src="images/logo.png" srcset="images/logo2x.png 2x" alt="">-->
+                                        <!--<img class="logo-img logo-dark" src="images/logo-dark.png" srcset="images/logo-dark2x.png 2x" alt="">-->
+                                    </div>
+                                </a>
+                                <ul class="btn-list btn-list-inline g-1">
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-facebook-fill"></em></a></li>
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-github-round"></em></a></li>
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-linkedin-round"></em></a></li>
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-youtube-round"></em></a></li>
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-twitter-round"></em></a></li>
+                                </ul>
+                            </div>
+                        </div><!-- .col -->
+                        <!--<div class="col-xl-2 col-lg col-md-3 col-6">-->
+                        <!--    <div class="wgs">-->
+                        <!--        <h6 class="wgs-title">Tools</h6>-->
+                        <!--        <ul class="list gy-2 list-link-base">-->
+                        <!--            <li><a class="link-base" href="#">Article Generator</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Blog Ideas</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Blog Intros</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Blog Outlines</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Product Description</a></li>-->
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <!-- .col -->
+                        <!--<div class="col-xl-2 col-lg col-md-3 col-6">-->
+                        <!--    <div class="wgs">-->
+                        <!--        <h6 class="wgs-title">Resources</h6>-->
+                        <!--        <ul class="list gy-2 list-link-base">-->
+                        <!--            <li><a class="link-base" href="#">Facebook Group</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Discord Community</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Guide and Tutorials</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Request API access</a></li>-->
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <!-- .col -->
+                        <div class="col-xl-5 col-lg col-md-3 col-6">
+                            <div class="wgs">
+                                <h6 class="wgs-title">Company</h6>
+                                <ul class="">
+                                    <li style=" list-style:none;padding:0;margin:0;float: left;display: block;margin-right:0.5rem"><a class="link-base" href="index.html" data-sw-translate>首页</a></li>
+                                    <li style=" list-style:none;padding:0;margin:0;float: left;display: block;margin-right:0.5rem"><a class="link-base" href="index-s2.html#howto" data-sw-translate>应用</a></li>
+                                    <li style=" list-style:none;padding:0;margin:0;float: left;display: block;margin-right:0.5rem"><a class="link-base"  href="index-s2.html#usecase" data-sw-translate>安全</a></li>
+                                    <!--<li style=" list-style:none;padding:0;margin:0;float: left;display: block;margin-right:0.5rem"><a class="link-base" href="#">产品</a></li>-->
+                                    <li style=" list-style:none;padding:0;margin:0;float: left;display: block;"><a class="link-base" href="about.html" data-sw-translate>关于我们</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- .col -->
+                        <!--<div class="col-xl-2 col-lg col-md-3 col-6">-->
+                        <!--    <div class="wgs">-->
+                        <!--        <h6 class="wgs-title">Use Case</h6>-->
+                        <!--        <ul class="list gy-2 list-link-base">-->
+                        <!--            <li><a class="link-base" href="#">AI Writer</a></li>-->
+                        <!--            <li><a class="link-base" href="#">AI Articel Writer</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Content Generator</a></li>-->
+                        <!--            <li><a class="link-base" href="#">AI Content Writing</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Content Rewriter</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Blog Post Writer</a></li>-->
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <!-- .col -->
+                    </div>
+                </div><!-- .container -->
+            </section><!-- .section -->
+            <div class="bg-darker is-dark">
+                <div class="container">
+                    <hr class="border-opacity-25 border-white m-0">
+                    <div class="py-5">
+                        <div class="row">
+                            <div class="col-md">
+                                <p class="mb-2 mb-md-0">&copy; 2023EXPLORED GPT AI RESEARCHEXPLORED GPT AI RESEARCH 
+                                <!--<a href="#" class="fw-bold text-white">Softnio</a>.-->
+                                </p>
+                            </div>
+                            <div class="col-md">
+                                <ul class="list list-row gx-4 justify-content-start justify-content-md-end">
+                                  
+                                    <li><a class="link-primary" target="_blank" href="terms-condition.html">Terms &amp; Condition</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end page footer -->
+    </div>
+    <script src="assets/js/bundle.js?v1.3.0"></script>
+    <script src="assets/js/scripts.js?v1.3.0"></script>
+
+
+    <script type="">
+        'use strict';
+ 
+ 
+ window.SwaggerTranslator = {
+     _words: [],
+  
+     translate: function () {
+         var $this = this;
+         $('[data-sw-translate]').each(function () {
+             $(this).html($this._tryTranslate($(this).html()));
+             $(this).val($this._tryTranslate($(this).val()));
+             $(this).attr('title', $this._tryTranslate($(this).attr('title')));
+         });
+     },
+  
+     _tryTranslate: function (word) {
+         return this._words[$.trim(word)] !== undefined ? this._words[$.trim(word)] : word;
+     },
+  
+     learn: function (wordsMap) {
+         this._words = wordsMap;
+     }
+ };
+  
+  
+ /* jshint quotmark: double */
+ window.SwaggerTranslator.learn({
+     "首页":"Home",
+     "应用":"application",
+     "安全":"Safety",
+     "关于我们":"About Us",
+     "立即下载":"Download",
+     "中国大陆":"English",
+    "EXGPT通用人工智能大模型":"EXGPT general artificial intelligence model",
+    "超自然语言大模型":"supernatural language model",
+    "EXGPT的全面人工智能能力覆盖了多个关键技术领域，包 括深度学习、自然语言处理、图像识别和化交易等。相较于其他AI产品，EXGPT 综合性能出众，能够提供更全面、多维度的解决方案。":"EXGPT's comprehensive artificial intelligence capabilities cover multiple key technology areas, including deep learning, natural language processing, image recognition, and automated transactions. Compared with other AI products, EXGPT has outstanding comprehensive performance and can provide more comprehensive and multi-dimensional solutions.",
+    "立即下载":"Download",
+    "IOS/安卓":"IOS/Android",
+    "EXGPT获得超过六千家专业机构的机构的信赖":"EXGPT is trusted by more than 6,000 professional organizations",
+    "EXGPT—行业解决方案":"EXGPT—Industry Solutions",
+    "EXGPT的全面人工智能能力覆盖了多个关键技术领域，包 括深度学习、自然语言处理、图像识别和量化交易等":"EXGPT's comprehensive artificial intelligence capabilities cover several key technical areas, including deep learning, natural language processing, image recognition and quantitative trading, etc.",
+    "AI金融解决方案":"AI Financial Solutions",
+    "EXGPT可以提供智能的化交易决策支持和投资 策略优化。通过分析市场数据、历史交易和经济指标等信息，EXGPT可以利用训 练过的神经网络模型预测市场趋势和股票价格波动，并生成化交易策略。":"EXGPT can provide intelligent transaction decision support and investment strategy optimization. By analyzing information such as market data, historical transactions, and economic indicators, EXGPT can use the trained neural network model to predict market trends and stock price fluctuations, and generate automated trading strategies.",
+    "AI直播解决方案":"AI live broadcast solution",
+    "基于EXGPT的面部深度学习替换模型，获得难以辨别的高保真度直播，并且提供基于EXGPT底层的神经网络视频分发技术，在直播中进行面部实时替换，超低成本分发服务。":"Based on EXGPT's deep learning replacement model for faces, it can obtain difficult-to-distinguish high-fidelity live broadcasts, and provide neural network video distribution technology based on the underlying EXGPT, real-time replacement of faces in live broadcasts, and ultra-low-cost distribution services.",
+    "AI 角色会话行业解决方案":"AI role conversation industry solution",
+    "获得超越大型语言模型 (LLM) 的完全集成的 AI 角色平台，并添加可配置的安全性、知识、记忆、叙事控制、多模态，拥有卓越的真人情感演绎，处理多轮对话的超大上下文记忆空间等。":"Get a fully integrated AI character platform that goes beyond Large Language Models (LLMs) and adds configurable security, knowledge, memory, narrative control, multimodality, superior human emotion interpretation, and large contextual memory to handle multiple rounds of dialogue space etc.",
+
+    "AI翻译行业解决方案":"AI translation industry solutions",
+    "EXGPT翻译模型使用深度学习和神经网络等先进技术，通过大规模的训练数据和模型优化，提高了翻译的准确性和质量。AI翻译系统能够学习语言的语法、上下文和常用短语，从而生成更自然、流畅的翻译结果。":"The EXGPT translation model uses advanced technologies such as deep learning and neural networks to improve the accuracy and quality of translation through large-scale training data and model optimization. The AI ​​translation system is able to learn the grammar, context and common phrases of the language to generate more natural and fluent translation results.",
+    "AI超自然语音合成行业解决方案":"AI Supernatural Speech Synthesis Industry Solution",
+    "EXGPT Voice AI模型超自然语音合成采用了深度学习等技术，可以更好地模拟人类语音，生成更加自然、真实的语音，可以根据用户的需求和口音进行定制化，生成符合用户个性化需求的语音。":"EXGPT Voice AI model supernatural speech synthesis adopts deep learning and other technologies, which can better simulate human speech and generate more natural and real speech. It can be customized according to user needs and accents, and generate speech that meets the user's individual needs.",
+    
+    "AI营销行业解决方案":"AI marketing industry solutions",
+    "在全球任何地方随时通过客户喜爱的平台与其建立联系。无论您的客户是想询问常见问题还是获取特定信息，文字虚拟客服都能即时提供令人满意的体验，让客户快速获得准确的答复。":"Connect with your customers anytime, anywhere in the world, on the platforms they love. Whether your customers want to ask a common question or get specific information, text virtual agents provide an instant, satisfying experience, allowing customers to get accurate answers quickly.",
+    "如何应用EXGPT?":"How to apply EXGPT?",
+    "EXGPT开放式平台":"EXGPT open platform",
+    "EXGPT全面的AI能力使得我们能够为各行各业 的用户提供定制化、多维度的解决方案。":"EXGPT's comprehensive AI capabilities enable us to provide customized, multi-dimensional solutions for users from all walks of life.",
+    "EXGPTAI金融大模型":"EXGPTAI financial model",
+    "EXGPT可以根据市场行情，创建基于EXGPT的综合交易模型进行即时交易，帮助投资者实现更稳定和可盈利的投资回报。":"EXGPT can create an EXGPT-based comprehensive trading model for real-time transactions based on market conditions, helping investors achieve a more stable and profitable return on investment.",
+    "接入 TradingView全球市场实时精准数据":"Access to TradingView global market real-time accurate data",
+    "全天候24小时自动交易，帮助您在交易市场中稳定获利":"24 hours a day automatic trading to help you make stable profits in the trading market",
+    "支持多个指标/策略同时对接":"Support simultaneous docking of multiple indicators/strategies",
+    "零门槛AI模型自训练开放平台":"Zero-threshold AI model self-training open platform",
+    "任何人可以在短短5分钟实现训练属于自己的AI模型，使用EXGPT Flow在短短几秒内创建自有的AI应用，训练属于你独一无二的AI私人模型。":"Anyone can train their own AI model in just 5 minutes, use EXGPT Flow to create their own AI application in just a few seconds, and train your unique AI private model.",
+    "卓越的真人情感演绎":"Excellent live emotional interpretation",
+    "卓越的语义理解":"excellent semantic understanding",
+    "LangChain大内存向量数据库，具有处理多轮对话的超大上下文记忆空间":"LangChain large memory vector database with large context memory space for handling multiple rounds of dialogue",
+    "稳定的AI直播解决方案，在直播中进行面部实时替换，超低成本分发服务。":"Stable AI live broadcast solution, real-time facial replacement in live broadcast, ultra-low-cost distribution service.",
+
+
+    "视频面部替换":"video face replacement",
+    "直播面部替换":"Live Face Replacement",
+    "局部替换":"partial replacement",
+    "安全保障":"security",
+    "EXGPT的安全与稳定":"Security and Stability of EXGPT",
+    "EXGPT根据特定的行业、领域和任务要求，采用独立高质量的数据集和算法，从而实现更精确和高效的AI应用。":"EXGPT adopts independent high-quality data sets and algorithms according to specific industries, fields and task requirements, so as to achieve more accurate and efficient AI applications.",
+    "毫秒级交易响应":"Millisecond-level transaction response",
+    "通过我们的全栈金融级云原生工具和服务，帮助应用开发团队最大限度地提高核心业务应用开发的效率":"Through our full-stack financial-grade cloud-native tools and services, we help application development teams maximize the efficiency of core business application development.",
+    "可信AI洞察力驱动决策机制":"Trusted AI Insight-Driven Decision Mechanism",
+    "来自数百位数据科学团队研发调试，让AI具有洞察力并通过综合数据进行实时交易决策":"Developed and debugged by hundreds of data science teams, AI has insight and makes real-time trading decisions through comprehensive data.",
+    "强大网络基础设施":"Powerful Network Infrastructure",
+    "让EXGPT云计算中心和 IT 团队为您的金融解决方案实现银行级的可用性和弹性":"Let EXGPT's cloud computing center and IT team achieve bank-level availability and flexibility for your financial solutions.",
+    "法律安全合规":"Legal Security and Compliance",
+    "EXGPT归属于加拿大EXPLORED GPT AI RESEARCHEXPLORED GPT AI RESEARCH 公司，同时拥有在线数据处理与在线交易双资质":"EXGPT belongs to Canada's EXPLORED GPT AI RESEARCH company and has dual qualifications for online data processing and online trading.",
+    "ZOLOZ 智能反洗钱":"ZOLOZ Intelligent Anti-Money Laundering",
+    "EXGPT采用先进的ZOLOZ反洗钱风控机制，充分利用拥有 8亿万全球客户的钱包产品带来的技术和最佳实践":"EXGPT adopts advanced ZOLOZ anti-money laundering risk control mechanism, fully utilizing the technology and best practices brought by wallet products with 800 million global customers.",
+    "ODPS原生大数据计算中心":"ODPS Native Big Data Computing Center",
+    "完全托管的 TB/PB 级数据仓库，向用户提供了完善的数据导入方案以及多种经典的分布式计算模型，能够更快速的解决用户海量数据计算问题":"Fully managed TB/PB-level data warehouse provides users with a complete data import solution and multiple classic distributed computing models, which can solve user's massive data computing problems more quickly.",
+    "AI应用":"AI Applications",
+    "EXGPT AI行业通用开放式解决方案":"EXGPT AI Industry Universal Open Solution",
+    "用户可以根据特定的行业、领域和任务要求，选择合 适的模型组件、数据集和算法，从而实现更精确和高效的AI应用。":"Users can choose suitable model components, data sets and algorithms according to specific industries, fields and task requirements to achieve more accurate and efficient AI applications.",
+    "AI 金融大模型":"AI Financial Model",
+    "EXGPT所追求的不仅仅是交易的智能化，更是一种对全球金融生态的积极 改造与重构":"EXGPT's pursuit is not only the intelligence of trading, but also a positive transformation and reconstruction of the global financial ecosystem.",
+    "面向所有用户开放":"Open to All Users",
+    "立即下载":"Download Now",
+    "AVIVA保险承保":"AVIVA Insurance Underwriting",
+    "交易撮合引擎":"Trading Matching Engine",
+    "AI智能算力":"AI Intelligent Computing Power",
+    "股票AI引擎":"Stock AI Engine",
+    "数字货币AI引擎":"Digital Currency AI Engine",
+    "即时风控引擎":"Real-time Risk Control Engine",
+    "TradingView即时报价":"TradingView Real-time Quotes",
+    "AI 开放式训练场":"AI Open Training Ground",
+    "与 EXGPT 团队携手合作，利用数十年的 AI 专业知识和 EXGPT 的尖端平台，为您的项目构建和部署私有AI模型解决方案。":"Cooperate with the EXGPT team to use decades of AI expertise and cutting-edge platforms to build and deploy private AI model solutions for your project.",
+    "正在逐步推出过程中，我们优先考虑为EXGPT贡献卓越的用户使用":"It is being gradually launched, and we prioritize excellent users who contribute to EXGPT.",
+    "开始试用":"Start Trial",
+    "$0.1/GB 文件储存空间":"$0.1/GB File Storage Space",
+    "实现AI超长记忆":"Achieve AI Long-term Memory",
+    "私有化知识库":"Private Knowledge Base",
+    "智能数据处理引擎":"Intelligent Data Processing Engine",
+    "AI 流媒体":"AI Streaming Media",
+    "它提供了一个命令式且易于使用的管道，即使是那些没有全面了解深度学习框架或模型实现的人也可以使用":"It provides a command-style and easy-to-use pipeline, even those who do not fully understand deep learning frameworks or model implementations can use it.",
+    "下载试用版":"Download Trial Version",
+    "全脸替换":"Full Face Replacement",
+    "局部替换":"Partial Replacement",
+    "直播实时替换":"Live Real-time Replacement",
+    "视频流媒体服务":"Video Streaming Service",
+    "直播流媒体服务":"Live Streaming Service",
+    "品牌的使命、愿景和价值观":"Brand Mission, Vision and Values",
+    "我们以智慧与情怀，致力于为全球投资者带来无尽可能与意义的AI世界":"We are committed to bringing endless possibilities and meaning to the AI world for global investors with wisdom and emotion.",
+    "使命":"Mission",
+    "EXGPT的使命是探索和引领通用人工智能(AGI)的边界，以推动人类 智慧和文明的进步。我们致力于构建具有超越人类智能的AGI系统，以解决人类面 临的复杂问题，并为全球社会创造持续的积极影响。":"EXGPT's mission is to explore and lead the boundaries of general artificial intelligence (AGI) to promote human wisdom and civilization. We are committed to building AGI systems that surpass human intelligence to solve complex problems facing humanity and create sustained positive impact for the global society.",
+    "愿景":"Vision",
+    "我们追求的愿景是实现AGI技术的全面普及和平等共享。我们梦想着一 个未来，人们能够充分利用AGI的力量，扩展自己的认知能力和创造潜力，进一步 推动人类文明的繁荣和智慧的进化。":"Our vision is to achieve comprehensive popularization and equal sharing of AGI technology. We dream of a future where people can fully utilize the power of AGI to expand their cognitive abilities and creative potential, further promoting the prosperity and wisdom of human civilization.",
+    "价值观":"Values",
+    "我们深信智慧是推动人类文明发展的根本力量。我们追求卓越的科学研究和技术创新，通过不断突破技术边界，探索新的认知范式和智能 模型，为人类开辟更加广阔的思维空间。":"We firmly believe that wisdom is the fundamental force driving the development of human civilization. We pursue excellence in scientific research and technological innovation, explore new cognitive paradigms and intelligent models by constantly breaking through technological boundaries, and open up a broader space for human thinking.",
+    "道德与责任":"Ethics and Responsibility",
+    "我们坚守道德和社会责任，将安全性和可持续性置于首位。我们 承诺遵循伦理准则，确保AGI的发展和应用符合人类的利益，并对潜在⻛险和挑战 保持高度警惕。我们积极参与全球社会对话，推动AGI的治理和伦理框架的建立， 确保人工智能服务于人类的整体利益。":"We adhere to ethics and social responsibility, and prioritize safety and sustainability. We promise to follow ethical guidelines to ensure that the development and application of AGI are in line with human interests, and remain highly vigilant about potential risks and challenges. We actively participate in global social dialogue, promote the governance and ethical framework of AGI, and ensure that artificial intelligence serves the overall interests of humanity.",
+    "致力于为全球投资者带来无尽可能":"Committed to Bringing Endless Possibilities to Global Investors",
+    "开启未来·拥抱AI":"Open the Future and Embrace AI",
+    "EXGPT将给你带来有史以来最专业的交易团队，交易模型参数达到1700亿参数":"EXGPT will bring you the most professional trading team ever, with trading model parameters reaching 170 billion parameters.",
+    "AVIVA保险承保":"AVIVA Insurance Underwriting",
+    "毫秒级交易响应":"Millisecond-level Trading Response",
+    "立即下载体验":"Download and Experience Now",
+    "首页":"Home",
+    "应用":"Applications",
+    "安全":"Security",
+    "关于我们":"About Us",
+    "EXGPT-最先进的通用人工智能多模态大模型":"EXGPT - The Most Advanced multimodal Large Model For General Artificial Intelligence",
+
+
+ });
+  
+  
+ $(function () {
+     console.log(localStorage.getItem("language"))
+       if(localStorage.getItem("language")&&localStorage.getItem("language") == 'zh-cn'){
+           var dzjOut = document.getElementById("dzjOut");
+             var dzjOutEnglish = document.getElementById("dzjOutEnglish");
+                dzjOutEnglish.style.display = "none";
+                dzjOut.style.display = "block";
+       }else{
+           console.log("2")
+            window.SwaggerTranslator.translate();
+            // var daziji = document.getElementsByClassName("daziji");
+            // //修改daziji的data-strings属性
+            // daziji[0].setAttribute('data-strings', '"Supernatural Language Model", "AI Generated Large Image Model", "AI Trading Model"');
+            
+             //获取id为dzjOut的元素
+            // var dzjOut = document.getElementById("dzjOut");
+            // //清空dzjOut的内容
+            // dzjOut.innerHTML = "";
+            // // 给dzjOut添加span标签
+            // dzjOut.innerHTML = '<span class="type-init" data-strings=\'"Supernatural Language Model", "AI Generated Large Image Model", "AI Trading Model"\'></span>';
+            
+             var dzjOut = document.getElementById("dzjOut");
+             var dzjOutEnglish = document.getElementById("dzjOutEnglish");
+                dzjOut.style.display = "none";
+                dzjOutEnglish.style.display = "block";
+            
+            
+            // daziji.setAttribute('data-strings', '"Supernatural Language Model", "AI Generated Large Image Model", "AI Trading Model"');
+       }
+ });
+ function langSelect(){
+    if(localStorage.getItem("language")&&localStorage.getItem("language") == 'zh-cn'){
+        localStorage.setItem("language","en");
+    }else{
+        localStorage.setItem("language","zh-cn");
+    }
+    window.location.reload();
+    // window.SwaggerTranslator.translate();
+}
+    </script>
+
+</body>
+
+</html>

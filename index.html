@@ -1,0 +1,2539 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icon.png">
+    <title data-sw-translate>EX GPT-最先進的通用人工智能多模態大模型</title>
+    <meta name="description" content="EX GPT的使命是探索和引領通用人工智能(AGI)的邊界，以推動人類 智慧和文明的進步。我們致力於構建具有超越人類智慧的AGI系統，以解決人類面 臨的複雜問題，並為全球社會創造持續的積極影響。">
+    <link rel="stylesheet" href="assets/css/style-s2.css?v1.3.0">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--<script src="assets/js/swiper-3.4.2.min.js"></script>-->
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.js"></script>
+    <script>
+         var topNum = 0;
+         //监听向下滚动，向下滚动给idgundong添加top：-50px;
+        $(window).scroll(function () {
+            var top = $(document).scrollTop();
+            // if(top<=0){
+            //     alert("现在距离"+top+"存储距离"+topNum)
+            // }
+            if (top < topNum || top<=0) {
+                topNum = top
+                 $("#headerId").css("top", "0px");
+            } else {
+                topNum = top
+                $("#headerId").css("top", "-60px");
+            }
+            
+            
+            if(top> 0){
+                $("#headerId").removeClass("bg-on")
+                $("#headerId").addClass("has-fixed")
+            }else{
+                $("#headerId").removeClass("has-fixed")
+                $("#headerId").addClass("bg-on")
+                
+            }
+        });
+        
+        
+        //监听滚动到Id为renwuImg的位置，给renwuImg添加动画
+        $(window).scroll(function () {
+            var top = $(document).scrollTop();
+            var renwuImg = $("#renwuImg").offset().top;
+            if (top >= renwuImg - 500) {
+                 $("#renwuImg").css("opacity", "1");
+                $("#renwuImg").addClass("animate__animated animate__backInLeft");
+                $("#renwuName").css("opacity", "1");
+                $("#renwuName").addClass("animate__animated animate__backInRight");
+            }
+        });
+    </script>
+    <style>
+            #renwuImg{
+               opacity: 0; 
+            }
+            #renwuName{
+                opacity: 0; 
+            }
+        .videoBg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: 2;
+
+        }
+        .ifVideo{
+            width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.77vh;
+   
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+        }
+        
+        
+    .slick-slide {
+   
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    outline: 0;
+}    
+    .slick-slider {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    display: block;
+    position: relative;
+    touch-action: pan-y;
+
+    user-select: none;
+}
+ .banner-landing__container {
+    display: block;
+}
+.banner-landing__container {
+    z-index: 11;
+    max-width: 850px;
+    width: 100%;
+  
+}
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-list {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+.slick-track {
+    display: block;
+   
+    position: relative;
+    top: 0;
+}
+.slick-slide {
+    height: 100%;
+    min-height: 1px;
+    outline: 0;
+}
+
+.banner-landing__content {
+    position: relative;
+    z-index: 3;
+    width: 80%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 110px 0 100px;
+}
+.banner-landing__title {
+    text-align: center;
+    color: #fff;
+    font-size: 105px;
+    line-height: 102px;
+    margin-bottom: 45px;
+    font-weight: 500;
+    font-family: "Reckless";
+}
+
+
+
+
+@media (min-width: 1220px) and (max-width: 1620px) {
+        .banner-landing__title {
+            font-size: 80px!important;
+            line-height:90px!important;
+        }
+        .banner-landing__line{
+            height: 80px!important;
+        }
+          .banner-landing__line::before{
+            height: 80px!important;
+        }
+        .xianshi{
+            width: calc( 100vw - 80px )!important;
+        }
+        
+    }
+ @media (min-width: 990px) and (max-width: 1220px) {
+        .banner-landing__title {
+            font-size: 60px!important;
+            line-height:70px!important;
+        }
+        .banner-landing__line{
+            height: 60px!important;
+        }
+        .banner-landing__line::before{
+            height: 60px!important;
+        }
+         .slick-track{
+           
+        }
+        
+        .xianshi{
+            width: calc( 100vw - 80px )!important;
+        }
+    }
+    @media (min-width: 940px) and (max-width: 990px) {
+        .banner-landing__title {
+            font-size: 40px!important;
+            line-height:30px!important;
+        }
+        .banner-landing__line{
+            height: 60px!important;
+        }
+        .banner-landing__line::before{
+            height: 60px!important;
+        }
+         .slick-track{
+        
+        }
+        
+        .xianshi{
+            width: calc( 100vw - 80px )!important;
+        }
+        
+        .cols-left{
+            width: 49%;
+            font-family: Times New Roman;
+            font-size: calc(1.0rem + 1vw)!important;
+            line-height: calc(1.25rem + 1vw)!important;
+            
+        }
+    }
+    
+ @media  (min-width: 720px) and (max-width: 940px) {
+     /*手机*/
+        .banner-landing__title {
+            font-size: 30px!important;
+            line-height:40px!important;
+        }
+        .banner-landing__line{
+            height: 40px!important;
+        }
+         .banner-landing__line::before{
+            height: 40px!important;
+        }
+        .banner-landing__content{
+            padding: 120px 20px 80px!important;
+        }
+        .slick-track{
+     
+        }
+        .xianshi{
+            width: calc( 100vw - 80px )!important;
+        }
+        .cols-left{
+            width: 49%;
+            font-family: Times New Roman;
+            font-size: calc(1.0rem + 1vw)!important;
+            line-height: calc(1.25rem + 1vw)!important;
+            
+        }
+    }    
+     @media  (min-width: 690px) and (max-width: 720px) {
+     /*手机*/
+        .banner-landing__title {
+            font-size: 30px!important;
+            line-height:40px!important;
+        }
+        .banner-landing__line{
+            height: 40px!important;
+        }
+         .banner-landing__line::before{
+            height: 40px!important;
+        }
+        .banner-landing__content{
+            padding: 120px 20px 80px!important;
+        }
+        .slick-track{
+            left: 0!important;
+        }
+        .xianshi{
+            width: calc( 100vw - 80px )!important;
+        }
+        .cols-left{
+            width: 49%;
+            font-family: Times New Roman;
+            font-size: calc(1.0rem + 1vw)!important;
+            line-height: calc(1.25rem + 1vw)!important;
+            
+        }
+    }
+ @media  (min-width: 620px) and (max-width: 690px) {
+     /*手机*/
+        .banner-landing__title {
+            font-size: 30px!important;
+            line-height:40px!important;
+        }
+        .banner-landing__line{
+            height: 40px!important;
+        }
+         .banner-landing__line::before{
+            height: 40px!important;
+        }
+        .banner-landing__content{
+            padding: 120px 20px 80px!important;
+        }
+        .slick-track{
+           
+        }
+        .xianshi{
+            width: calc( 100vw - 80px )!important;
+        }
+        .cols-left{
+            width: 49%;
+            font-family: Times New Roman;
+            font-size: calc(1.0rem + 1vw)!important;
+            line-height: calc(1.25rem + 1vw)!important;
+            
+        }
+    }
+@media  (max-width: 620px)  {
+    .banner-landing__title {
+            font-size: 30px!important;
+            line-height:40px!important;
+        }
+        .banner-landing__line{
+            height: 40px!important;
+        }
+         .banner-landing__line::before{
+            height: 40px!important;
+        }
+        .banner-landing__content{
+            position: relative;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    .xianshi{
+            width: calc( 100vw - 80px )!important;
+        }
+    .slick-track{
+           
+        }
+        .cols-left{
+            width: 49%;
+            font-family: Times New Roman;
+            font-size: calc(1.0rem + 1vw)!important;
+            line-height: calc(1.25rem + 1vw)!important;
+            
+        }
+    
+}
+@media  (max-width: 620px)  {
+    .cols-container{
+        flex-flow: row wrap;
+        justify-content: center!important;
+            flex-flow: row wrap!important;
+    }
+    .imgOut{
+        width: 98%!important;
+    }
+    .cols-left{
+        width: 96%!important;
+        margin-top: 20px;
+    }
+    
+}
+
+
+
+@media only screen and (min-width: 1200px){
+    .related-news__controls{
+            width: 18%!important;
+            left:4%!important;
+        }
+        .related-news__counter {
+    margin-bottom: 140px!important;
+}
+ .nk-header-main {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199.98px){
+    .related-news__controls {
+    width: 32%!important;
+}
+.related-news__counter {
+    margin-bottom: 35px!important;
+}
+.releted-news__slider-wrap{
+    width: 60%!important;
+    flex: 1 1 auto;
+   
+}
+
+.related-news__top {
+    width: 35%!important;
+    min-width: 235px;
+    padding-bottom: 100px;
+    margin-right: 28px;
+}
+
+}
+@media  only screen and (max-width: 767.9px){
+    .related-news__wrap{
+        display: block!important;
+        padding-right: 0!important;
+        padding-left:0px!important;
+    }
+    .related-news__inner{
+        width: 100%!important;
+        max-width: 90%!important;
+        margin: 0 auto;
+    }
+    .related-news__title {
+        width: 100%!important;
+        font-size: calc(1.2rem + 1.2vw)!important;
+    }
+    .related-news__top{
+        width: 100%!important;
+        padding-bottom: 30px!important;
+    }
+    .releted-news__slider-wrap{
+        width: 100%!important;
+    }
+    .related-news__top::after{
+        display: none!important;
+    }
+    .related-news__paragraph{
+        width: 100%!important;
+         font-size: calc(0.8rem + 0.9vw)!important;
+    }
+    .related-news__box{
+        padding:0 5px!important;
+        border-right:0!important; 
+    }
+    .related-news__slide-standfirst{
+        font-size: 20px!important;
+    line-height: 24px!important;
+    margin-bottom: 25px!important;
+
+    }
+    .related-news__controls{
+            
+    position: relative!important;
+    width: 90%!important;
+    left:0!important;
+    margin:  auto!important;
+    margin-top: 55px!important;
+    }
+    .related-news__counter{
+        margin-bottom: 35px!important;
+    }
+    .juzhong{
+    justify-content: center!important;
+    width: 100%!important;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    
+}
+.jzli{
+        width: 100%!important;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+.banner-landing__content-line {
+    margin-bottom: 45px;
+}
+.banner-landing__line {
+    width: 100%;
+    position: relative;
+    height: 93px;
+    margin-top: 0;
+}
+.banner-landing__line::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 80px;
+    background-color: #fff;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.banner-landing__button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+.btn--home {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 14px 26px 15px;
+    height: auto;
+    line-height: normal;
+    border: none;
+    -webkit-transition: -webkit-transform .2s ease-out;
+    transition: -webkit-transform .2s ease-out;
+    transition: transform .2s ease-out;
+    transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+    border-radius: 54px;
+}
+
+
+.draggable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.xianshi{
+   position: absolute!important; top: 0px!important;left: 0rpx!important; z-index: 2!important; opacity: 1!important;transition: opacity 500ms linear 0s!important;margin: auto;
+}
+.yincang2{
+  
+    width: 850px!important; position: absolute!important;left: 900rpx!important;   top: -800px!important; z-index: 1!important; opacity: 0!important; transition: opacity 500ms linear 0s!important;
+}
+.yincang3{
+    width: 850px!important; position: absolute!important; left: 900rpx!important; top: -800px!important; z-index: 1!important; opacity: 0!important; transition: opacity 500ms linear 0s!important;
+}
+
+.slick-active{
+        transition-delay: .5s !important;
+}
+
+.bg-on{
+    background: rgba(0,0,0,0)!important
+}
+
+.cols-container{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse; 
+}
+
+.cols-left{
+    width: 55%;
+    font-family: Times New Roman;
+    font-size: calc(1.25rem + 1.9vw);
+    line-height: calc(1.25rem + 1.8vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left:40px
+    
+}
+
+.imgOut{
+    width: 40%;
+}
+.imgOut img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.renming{
+    font-size: 30px;
+    line-height:20px;
+    /*padding-left:20px ;*/
+    font-weight: 700;
+    /*color: #000000;*/
+}
+.zhiwei{
+    font-size: 20px;
+    line-height:20px;
+    margin-top: 30px;
+    /*padding-left:20px;*/
+}
+.yinhao{
+    /*padding-left: 20px;*/
+    position: relative;
+    font-size: 2rem;
+    line-height: 1.5;
+    /*color: #666666;*/
+}
+/*.yinhao::before{*/
+/*    --tw-content: "\201c";*/
+/*    content: var(--tw-content);*/
+/*        position: absolute;*/
+/*        left: 0rem;*/
+/*}*/
+/*.yinhao::after{*/
+/*    --tw-content: "\201d";*/
+/*    content: var(--tw-content);*/
+/*}*/
+.related-news__wrap{
+    display: flex;
+    flex-wrap: no-wrap;
+    align-content: center;
+        position: relative;
+        
+        
+            margin: 0 auto;
+    
+    padding: 0 20px;
+    width: 100%;
+}
+.related-news__top{
+    padding-bottom: 210px;
+    width: 25%;
+    margin-right: 13px;
+    position: relative;
+   
+}
+.related-news__top::after{
+        content: "";
+    box-shadow: 25px 0 45px -40px rgba(0,0,0,.3);
+    /*background-color: #fff;*/
+    position: absolute;
+    left: -5000px;
+    right: 0;
+    
+    /*M*/
+        top: -75px;
+    bottom: -75px;
+}
+.related-news__inner{
+    padding-right: 20px;
+    position: relative;
+    z-index: 2;
+    max-width: 300px;
+    margin: auto;
+}
+.related-news__title {
+    color: #202023;
+    position: relative;
+    z-index: 2;
+}
+.small {
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 25px;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+}
+.btn--homes{
+    position: relative;
+    z-index: 2;
+    border: 1px solid #0c4f88;
+    height: 54px;
+    line-height: 40px;
+    padding: 6px 38px;
+    display: inline-block;
+    
+}
+
+.related-news__box{
+    /*M*/
+    padding: 0 22px;
+    border-right: 1px solid rgba(149,149,149,.3);
+       max-width: 355px;
+    /*M*/
+    
+    /*color: #202023;*/
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+.related-news__slide-content{
+    position: relative;
+    padding-bottom: 75px;
+    height: 100%;
+}
+.related-news__slide-tag{
+    padding: 4px;
+    border: 1px solid #b4c8d7;
+    border-radius: 4px;
+    margin-right: 14px;
+}
+.related-news__slide-date{
+    font-size: 13px;
+    line-height: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 400;
+}
+.related-news__slide-standfirst{
+        margin-top: 0;
+    margin-bottom: 1rem;
+    
+    font-family: "Reckless";
+    font-size: 24px;
+    line-height: 35px;
+    margin-bottom: 35px;
+    font-weight: 400;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+        display: -webkit-box;
+    /* 注意：这里使用了浏览器私有前缀 */
+  -webkit-box-orient: vertical;
+    /* 设置为垂直排列 */
+  -webkit-line-clamp: 4;
+    /* 最多显示两行文字 */
+  overflow: hidden;
+}
+    
+}
+.related-news__inner::after{
+    content: "";
+    box-shadow: 25px 0 45px -40px rgba(0,0,0,.3);
+    background-color: #fff;
+    position: absolute;
+    left: -5000px;
+    right: 0;
+        top: -115px;
+    bottom: -115px;
+    z-index: 1;
+}
+
+.related-news__img-wrap{
+        min-height: 360px;
+            position: relative; 
+    margin-bottom: 20px;
+}
+.related-news__img{
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.related-news__slide-link{
+    
+}
+.related-news__slide-link{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.related-news__slide{
+    display: flex !important;
+}
+.read-more-link{
+    display: block;
+    min-width: 100px;
+    padding: 8px 18px;
+    background-color: #f3f3f3;
+    border-radius: 64px;
+    color: #202023;
+    font-weight: bold;
+    position: relative;
+    z-index: 3;
+    border: 1px solid transparent;
+    transition: .3s ease-in-out;
+}
+.font-ico-readmore{
+        font-size: 18px;
+    color: #202023;
+    font-weight: bold;
+    position: relative;
+    top: 3px;
+}
+.font-ico-readmore::before{
+    content: "";
+    
+    background-image: url('assets/images/staff/eye.png');
+    background-size:100%  100%;
+    width: 20px;
+    height: 16px;
+        font-family: "svgicons";
+     box-sizing: border-box;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+    display: inline-block;
+    line-height: 1;
+}
+
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+        width: 100%;
+    height: 100%;
+}
+
+.related-news__controls{
+    position: absolute;
+    bottom: 17px;
+    left: 2%;
+    right: 0;
+    z-index: 2;
+    
+    /*M*/
+    width: 14.5%;
+    
+    
+}
+.related-news__counter{
+        font-size: 13px;
+    line-height: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 400;
+    margin-bottom: 140px;
+}
+.related-news__buttons{
+        position: absolute;
+    top: -9px;
+    right: 0;
+  
+    display: flex;
+   
+    flex-direction: row;
+}
+
+.slick-arrow{
+    width: 55px;
+    height: 38px;
+    position: relative;
+    /*background-color: transparent;*/
+    border: 1px solid #202023;
+    border-radius: 120px;
+    opacity: 1;
+    visibility: visible;
+    font-size: 0;
+    transition: .3s ease-in-out;
+    display: block;
+    z-index: 10;
+    margin-left: 10px;
+}
+.related-news__btn--prev::before{
+    font-family: "svgicons";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    line-height: 1;
+    content: "→";
+    font-size: 14px;
+    color: #202023;
+    margin-right: 5px;
+    transform: translate(-50%, -50%) rotate(180deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+}
+.related-news__btn--next::before{
+    font-family: "svgicons";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    line-height: 1;
+    content: "→";
+    font-size: 14px;
+    color: #202023;
+    margin-right: 5px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+}
+
+.related-news__progress{
+    position: relative;
+    height: 1px;
+    background-color: #b4c8d7;
+    width: 100%;
+}
+.related-news__progress-line {
+    position: absolute;
+    top: -1.5px;
+    left: 0;
+    height: 3px;
+    background-color: #76d9c0;
+}
+.swiper-pagination-progressbar-fill{
+    background: #76d9c0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transform-origin: left top;
+}
+
+.releted-news__slider-wrap{
+    width: calc( 100% - 25% - 15px );
+}
+
+@media only screen and (min-width: 1200px){
+  
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){
+    .yinhao{
+        font-size: 24px;
+    }
+     .nk-header-main {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+}
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    .imgOut{
+        width: 30%;
+    }
+    .yinhao{
+        font-size: 18px;
+    }
+    .cols-left{
+        width: 65%;
+        padding-left: 10px;
+    }
+
+}
+@media  only screen and (max-width: 767.9px){
+    .container1{
+        flex-direction: column;
+    }
+    .imgOut{
+        width: 100%;
+    }
+    .yinhao{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .cols-left{
+        width: 100%;
+        padding-left: 10px;
+    }
+    
+}
+.related-news__box{
+    margin-right: 0 !important;
+}
+@media  only screen and (max-width: 700px){
+    .related-news__box{
+        max-width: 100% !important;
+        padding: 0 20px !important;
+    }
+    .small{
+        margin-bottom: 15px;
+    }
+}
+.nk-menu-link{
+    font-weight: 600 !important;
+}
+.jzli{
+       
+        display: flex;
+        align-items: center;
+        
+    }
+    .nk-header-menu {
+  
+  width: 50%;}
+  .container_nav {
+      padding: 0 1rem;
+  }
+    </style>
+    
+</head>
+
+<body class="nk-body " data-menu-collapse="lg" style="overflow-y: auto;">
+    <div class="nk-app-root  ">
+        <header class="nk-header " style="width:100%">
+            <div  class="videoBg is-dark">
+                <iframe class="ifVideo" src="https://player.vimeo.com/video/706236286?background=1&autoplay=1&loop=1&byline=0&sidedock=0&title=0&muted=1" webkitallowfullscreen allowfullscreen data-ready="true" mozallowfullscreen></iframe>
+            </div>
+            
+            <div class="nk-mask bg-pattern-dot-white-sm bg-blend-bottom"></div>
+            <div class="nk-header-main nk-menu-main will-shrink ignore-mask bg-on" id="headerId" style="width:100vw"><!--has-fixed bg-white-->
+                
+                
+                <!--is-transparent-->
+                <div class="container_nav">
+                    <div class="nk-header-wrap">
+                        <div class="nk-header-logo">
+                            <a href="index.html" class="logo-link">
+                                <div class="logo-wrap">
+                                    <img class="logo-img logo-light" src="images/logo-White.png" srcset="images/logo-White.png 2x" alt="">
+                                    <img class="logo-img logo-dark" src="images/logo-black.png" srcset="images/logo-black.png 2x" alt="">
+                                </div>
+                            </a>
+                        </div><!-- .nk-header-logo -->
+                        <div class="nk-header-toggle ">
+                            <button class="dark-mode-toggle">
+                                <em class="off icon ni ni-sun-fill"></em>
+                                <em class="on icon ni ni-moon-fill"></em>
+                            </button>
+                            <button class="btn btn-light btn-icon header-menu-toggle" >
+                                <em class="icon ni ni-menu"></em>
+                            </button>
+                            <!--<button class=" btn  header-menu-toggle" >-->
+                            <!--    <em class="icon ni ni-menu"></em>-->
+                            <!--</button>-->
+                        </div>
+                        <nav class="nk-header-menu nk-menu">
+                            <ul class="nk-menu-list me-auto" style="margin:0 auto;">
+                                <li class="nk-menu-item has-dropdown">
+                                    <a href="index.html" class="nk-menu-link">
+                                        <span class="nk-menu-text" data-sw-translate>首頁</span>
+                                    </a>
+                                    <!--<div class="nk-menu-dropdown">-->
+                                    <!--    <ul class="nk-menu-sub">-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index.html">Home S1</a>-->
+                                    <!--        </li>-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index-s2.html">Home S2</a>-->
+                                    <!--        </li>-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index-s3.html">Home S3</a>-->
+                                    <!--        </li>-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index-s4.html">Home S4 <div class="badge bg-primary ms-2 me-n4 px-2 rounded-pill">New</div></a>-->
+                                    <!--        </li>-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index-s5.html">Home S5 <div class="badge bg-primary ms-2 me-n4 px-2 rounded-pill">New</div></a>-->
+                                    <!--        </li>-->
+                                    <!--    </ul>-->
+                                    <!--</div>-->
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="Training" class="nk-menu-link">
+                                        <span class="nk-menu-text"  data-sw-translate>訓練中心</span>
+                                    </a>
+                                </li>
+                                 <li class="nk-menu-item">
+                                    <a href="/usecase-details.html" class="nk-menu-link">
+                                        <!--<span class="nk-menu-text" data-sw-translate>安全</span>-->
+                                        <span class="nk-menu-text" data-sw-translate>游戲</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="/usecase-details-s2.html" class="nk-menu-link">
+                                        <span class="nk-menu-text  " data-sw-translate>EX GPT</span>
+                                        <!--nk-menu-toggle-->
+                                    </a>
+                                    <!--<div class="nk-menu-dropdown nk-menu-mega">-->
+                                    <!--    <div class="nk-menu-mega-wrap">-->
+                                    <!--        <ul class="nk-menu-sub">-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="https://gws.EX GPTs.top/" data-sw-translate>AI开放式训练平台</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="#" >AI DEEPLFACE</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="features.html" data-sw-translate>AI 金融大模型</a>-->
+                                    <!--            </li>-->
+                                    <!--             <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="#" data-sw-translate>客户案例</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="#" data-sw-translate>安全标准</a>-->
+                                    <!--            </li>-->
+                                               
+                                    <!--        </ul>-->
+                                            
+                                    <!--    </div>-->
+                                    <!--</div>-->
+                                    
+                                    
+                                    
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a onclick="window.open('https://exgpt.gitbook.io/untitled')" class="nk-menu-link">
+                                        <!--<span class="nk-menu-text" data-sw-translate>安全</span>-->
+                                        <span class="nk-menu-text" data-sw-translate>開發者</span>
+                                    </a>
+                                </li>
+                                
+                                <li class="nk-menu-item has-dropdown">
+                                    <a href="about.html" class="nk-menu-link">
+                                        <!-- nk-menu-toggle-->
+                                        <span class="nk-menu-text" data-sw-translate>關於我們</span>
+                                    </a>
+                                    <!--<div class="nk-menu-dropdown nk-menu-mega">-->
+                                    <!--    <div class="nk-menu-mega-wrap">-->
+                                    <!--        <ul class="nk-menu-sub">-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="about.html">About</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="usecase.html">Use Case</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="usecase-details.html">Use Case Details <div class="badge bg-primary ms-2 me-n4 px-2 rounded-pill">New</div></a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="usecase-s2.html">Use Case S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="usecase-details-s2.html">Use Case Details S2 <div class="badge bg-primary ms-2 me-n4 px-2 rounded-pill">New</div></a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="pricing.html">Pricing</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="pricing-s2.html">Pricing S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="blog.html">Blog</a>-->
+                                    <!--            </li>-->
+                                    <!--        </ul>-->
+                                    <!--        <ul class="nk-menu-sub">-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="blog-single.html">Blog Single</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="features.html">Features</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="contact.html">Contact</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="contact-s2.html">Contact S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="login.html">Login</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="login-s2.html">Login S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="register.html">Register</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="register-s2.html">Register S2</a>-->
+                                    <!--            </li>-->
+                                    <!--        </ul>-->
+                                    <!--        <ul class="nk-menu-sub">-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="reset.html">Reset</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="reset-s2.html">Reset S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="404.html">404 Error</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="404-s2.html">404 Error S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="504.html">504 Error</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="504-s2.html">504 Error s2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="terms-condition.html">Terms &amp; Condition</a>-->
+                                    <!--            </li>-->
+                                    <!--        </ul>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
+                                </li>
+                                 <li class="nk-menu-item">
+                                    <a  href="contact.html" class="nk-menu-link">
+                                        <span class="nk-menu-text" data-sw-translate>聯繫我們</span>
+                                    </a>
+                                </li>
+                            </ul><!-- .nk-menu-list -->
+                            <div class="mx-2 d-none d-lg-block">
+                                <button class="dark-mode-toggle">
+                                    <em class="off icon ni ni-sun-fill"></em>
+                                    <em class="on icon ni ni-moon-fill"></em>
+                                </button>
+                            </div>
+                            <ul class="nk-menu-buttons flex-lg-row-reverse">
+                                <!--<li><a href="#" class="btn btn-outline-primary rounded-pill"  data-sw-translate>立即下载</a></li>-->
+                                <li>
+                                    <!--link-light-->
+                                    <a class="nk-menu-link " href="#" onclick="langSelect()" data-sw-translate>繁体中文 </a></li>
+                                <!--href="login-s2.html"-->
+                            </ul><!-- .nk-menu-buttons -->
+                        </nav><!-- .nk-header-menu -->
+                    </div>
+                </div>
+            </div>
+            <!-- .header -->
+            <div class="nk-hero py-xl-5 overflow-hidden has-shape  " >
+                <!--<div class="nk-shape bg-shape-blur-b mt-n5 start-50 top-50 translate-middle"></div>-->
+                <div class="nk-shape bg-shape-blur-m mt-8 start-50 top-0 translate-middle-x"></div>
+                <div class="nk-mask bg-pattern-dot bg-blend-around mt-n5 mb-10p mh-50vh"></div>
+                <div class="container" style="width: 100%;max-width: 100%;">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-lg-11 col-xl-10 col-xxl-9">
+                            <!--<div class="nk-hero-content py-5 py-lg-6">-->
+                                <!--<h1 class="title mb-3 mb-lg-4 display-6" ><span data-sw-translate>创造可持续价值</span>-->
+                                <!--<div class="text-gradient-primary" id="dzjOut"  style="display: none;font-family: Times New Roman;">-->
+                                <!--    <span class="type-init"  data-sw-translate data-strings='"探索和引领人工智能(AGI)的边界", "构建超越人類智慧的AGI系统", "推动AGI的治理和伦理框架的建立"'></span>-->
+                                <!--</div>-->
+                                <!--<div class="text-gradient-primary" id="dzjOutEnglish">-->
+                                <!--        <span class="type-init"  data-sw-translate data-strings='"AI Open Training Platform", "AI DEEPLFACE", "AI financial model"'></span>-->
+                                <!--</div>-->
+                                
+                                <!--</h1>-->
+                                <!--<p class="lead px-md-8 px-lg-6 px-xxl-12 mb-4 mb-lg-5"  data-sw-translate></p>-->
+                                <!--<ul class="btn-list btn-list-inline">-->
+                                <!--    <li><a href="#" class="btn btn-primary btn-lg rounded-pill"><span  data-sw-translate>立即下载</span></a></li>-->
+                                <!--</ul>-->
+                                <!--<p class="sub-text mt-2"  data-sw-translate>IOS/安卓</p>-->
+                            <!--</div>-->
+                            
+                            <div class="nk-hero-gfx position-absolute " style="height: calc( 100vh - 120px )">
+                                   
+                                <!--<img class="w-100 rounded-4" src="images/gfx/banner/landingpagebanner.png" alt="">-->
+                                <!-- large banner image -->
+                                <!--<div class="d-none d-md-block position-absolute top-0 end-100 me-5 me-lg-8 me-xl-12 mt-n3">-->
+                                <!--    <div class="media media-2xl rounded-pill mx-auto">-->
+                                <!--        <img src="images/avatar/illustration/1.png" alt="">-->
+                                <!--    </div>-->
+                                <!--    <div class="badge  bg-white p-2 mt-2 fw-normal text-white text-opacity-75">-->
+                                <!--        <h6 class="lead-text">Freelancer</h6> -->
+                                <!--        </div>-->
+                                <!--</div>-->
+                                <!-- floating user -->
+                                <!--<div class="d-none d-md-block position-absolute top-50 end-100 me-3 me-lg-4 mt-n5">-->
+                                <!--    <div class="media media-2xl rounded-pill mx-auto">-->
+                                <!--        <img src="images/avatar/illustration/2.png" alt="">-->
+                                <!--    </div>-->
+                                <!--    <div class="badge  bg-white p-2 mt-2 fw-normal text-white text-opacity-75">-->
+                                <!--        <h6 class="lead-text">Marketer</h6> -->
+                                <!--        </div>-->
+                                <!--</div>-->
+                                <!-- floating user -->
+                                <!--<div class="d-none d-md-block position-absolute top-0 start-100 ms-5 ms-lg-7 ms-xl-10 mt-n7">-->
+                                <!--    <div class="media media-2xl rounded-pill mx-auto">-->
+                                <!--        <img src="images/avatar/illustration/3.png" alt="">-->
+                                <!--    </div>-->
+                                <!--    <div class="badge bg-white  p-2 mt-2 fw-normal text-white text-opacity-75">-->
+                                <!--        <h6 class="lead-text">Copywriter</h6> -->
+                                <!--        </div>-->
+                                <!--</div>-->
+                                <!-- floating user -->
+                                <!--<div class="d-none d-md-block position-absolute top-50 start-100 ms-4 ms-lg-5 mt-n2">-->
+                                <!--    <div class="media media-2xl rounded-pill mx-auto">-->
+                                <!--        <img src="images/avatar/illustration/4.png" alt="">-->
+                                <!--    </div>-->
+                                <!--    <div class="badge bg-white p-2 mt-2 fw-normal text-white text-opacity-75">-->
+                                <!--       <h6 class="lead-text">Blogger</h6> -->
+                                <!--        </div>-->
+                                <!--</div>-->
+                                <!-- floating user -->
+                            </div>
+                            
+                            <div style="width:100%;height: calc( 100vh - 120px )">
+                                
+                            </div>
+                            <div class="nk-hero-content" style="padding-top:60px">
+                                <div class="section-head">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-9 col-xl-8 col-xxl-5">
+                                <!--<div class="badge text-bg-primary-soft-outline text-uppercase text-tracking-1 rounded-pill px-3 py-2 mb-3"  data-sw-translate>我們開放哪些模型?</div>-->
+                                <h2 class="title text-gradient-primary"  data-sw-translate>合作夥伴</h2>
+                                <p class="lead"  data-sw-translate>獲得超過六千傢專業機構的信賴</p>
+                            </div>
+                        </div>
+                    </div>
+                                <!--<h6 class="lead-text"  data-sw-translate>獲得超過六千傢專業機構的信賴</h6>-->
+                                <ul class="d-flex flex-wrap justify-content-between pt-4 has-gap gy-3 juzhong" >
+                                     <li class="jzli">
+                                <img class="h-3rem visible-on-light-mode" src="images/brands/Chase2007.png" alt="">
+                                <img class="h-3rem visible-on-dark-mode" src="images/brands/w3.png" alt="">
+                            </li>
+                            <li class="jzli">
+                                <img class="h-3rem visible-on-light-mode" src="images/brands/TradingView-Logo-Block.svg" alt="">
+                                <img class="h-3rem visible-on-dark-mode" src="images/brands/w4.png" alt="">
+                            </li>
+                            <li class="jzli">
+                                <img class="h-3rem visible-on-light-mode" src="images/yingweida2.png" alt="">
+                                <img class="h-3rem visible-on-dark-mode" src="images/yingweida3.png" alt="">
+                            </li>
+                            <li class="jzli">
+                                <img class="h-3rem visible-on-light-mode" src="images/brands/New_Bloomberg_Logo.png" alt="">
+                                <img class="h-3rem visible-on-dark-mode" src="images/brands/w2.png" alt="">
+                            </li>
+                            <li class="jzli">
+                                <img class="h-3rem visible-on-light-mode" src="images/brands/weir.png"  alt="">
+                                <img class="h-3rem visible-on-dark-mode" src="images/brands/weirW.png"  alt="">
+                            </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="" style="overflow-y: auto;position:absolute;left:0px;right:0px;margin:auto;width: 100vw;top:10%">
+             <div>
+                 <!-- class="banner-landing__container js-banner-slider slick-initialized slick-slider"-->
+                                        <div >
+                                            <!--class="slick-list draggable"-->
+                                            <div  style="opacity: 1; min-height:800px;">
+                                                <!--class="slick-track"-->
+                                                <div class="slick-slide slick-current slick-active xianshi" style="left: 0;right: 0;margin: auto;width:100%" id="slick1" data-slick-index="0" aria-hidden="false"
+                                                    >
+                                                    <div>
+                                                        <div class="banner-landing__content" style="width: 100%; ">
+                                                            <h2 class="banner-landing__title " style="font-family:Times" data-sw-translate>超越人類智慧</h2>
+                                                            <div class="banner-landing__content-line">
+                                                                <div class="banner-landing__line" aria-hidden="true"></div>
+                                                            </div>
+                                                            <!--<div class="banner-landing__button"><a href="/about.html" class="btn btn--white btn--home"-->
+                                                            <!--     style="border: 1px solid #fff;background: #fff;color: #000 !important;"   tabindex="0" data-sw-translate>關於我們</a></div>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slick-slide yincang2" id="slick2" style="left: 0;right: 0;margin: auto;width:100%" data-slick-index="0" aria-hidden="false"
+                                                    
+                                                    tabindex="-1">
+                                                    <div>
+                                                        <div class="banner-landing__content" style="width: 100%; ">
+                                                            <h2 class="banner-landing__title " style="font-family:Times" data-sw-translate>促進AGI的發展</h2>
+                                                            <div class="banner-landing__content-line">
+                                                                <div class="banner-landing__line" aria-hidden="true"></div>
+                                                            </div>
+                                                            <!--<div class="banner-landing__button"><a href="/about.html"-->
+                                                            <!--        class="btn btn--white btn--home" style="border: 1px solid #fff;background: #fff;color: #000 !important;" tabindex="1" data-sw-translate>關於我們</a></div>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slick-slide yincang3" style="left: 0;right: 0;margin: auto;width:100%" id="slick3" data-slick-index="0" aria-hidden="false"
+                                                    tabindex="-1">
+                                                    <div>
+                                                        <div class="banner-landing__content" style="width: 100%; ">
+                                                            <h2 class="banner-landing__title " style="font-family:Times" data-sw-translate>探索人工智能的新時代</h2>
+                                                            <div class="banner-landing__content-line">
+                                                                <div class="banner-landing__line" aria-hidden="true"></div>
+                                                            </div>
+                                                            <!--<div class="banner-landing__button"><a href="/about.html"-->
+                                                            <!--        class="btn btn--white btn--home" style="border: 1px solid #fff;background: #fff;color: #000 !important;" tabindex="0" data-sw-translate>關於我們</a></div>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        </div>
+        <main class="nk-pages ">
+            
+            <section class="section">
+                <div class="container related-news__wrap" style="position: relative;display:flex;max-width:1800px">
+                    <!--related-news__wrap-->
+                    <div class="related-news__top">
+                        <div class="related-news__inner">
+                            <h2 class="related-news__title text-gradient-primary" data-sw-translate>最新消息和見解</h2>
+                            <p class="related-news__paragraph small" data-sw-translate>EX GPT网络的最新消息和見解</p>
+                            <p data-sw-translate>在全球疫情影響下，許多投資者開始尋找更好的投資機會。 EX GPT可幫助使用者拓展知識、學習新技能，並做出更明智的投資決策。</p>
+                            <!--<a href="#" class=" btn--white btn--home btn--homes">View all media</a>-->
+                            <!--btn-->
+                        </div>
+                    </div>
+                    
+                    <div class="releted-news__slider-wrap" style="" >
+                        <!--width: calc( 100% - 25% - 15px )-->
+                        <div style="" class="swiper-container swiper-container-horizontal">
+                            <div class="related-news__slide swiper-wrapper" >
+                                <div class="related-news__box swiper-slide" tabindex="0">
+                                        <div class="related-news__img-wrap">
+                                                <div class="related-news__img has-cover"
+                                                    style="background-image:url('assets/dc73f4e6-4861-4bec-b07f-a6f515583e75.jpg')">
+                                                </div>
+                                        </div>
+                                        <div class="related-news__slide-content">
+                                                    <div class="related-news__slide-tags"><a href="/media/news/" tabindex="0"> <span
+                                                                class="related-news__slide-tag">NEWS</span> </a> <span class="related-news__slide-date" data-sw-translate>2023年5月18日</span>
+                                                    </div>
+                                                    <p class="related-news__slide-standfirst standfirst" data-sw-translate>EXPLORED GPT AI RESEARCH是一家人工智能研究公司。我們的目標是以最有可能造福全人類的方式推進數字智能受到財務回報需求的限制。因為我們的研究不是在財務上有義務，我們可以更好地關注對人類的積極影響。</p>
+                                                    <div class="related-news__slide-link"><a class="read-more-link" 
+                                                            href="/new.html?id=1" tabindex="0"> 
+                                                            <span class="icon font-ico-readmore" aria-hidden="true"></span> 
+                                                            <span data-sw-translate>查看文章</span>
+                                                             
+                                                        </a>
+                                                    </div>
+                                        </div>
+                                </div>
+                                <div class="related-news__box swiper-slide" tabindex="0">
+                                        <div class="related-news__img-wrap">
+                                                <div class="related-news__img has-cover"
+                                                    style="background-image:url('assets/2243-iskepxt5074910.jpg')">
+                                                </div>
+                                        </div>
+                                        <div class="related-news__slide-content">
+                                                    <div class="related-news__slide-tags"><a href="/media/news/" tabindex="0"> <span
+                                                                class="related-news__slide-tag">NEWS</span> </a> <span class="related-news__slide-date" data-sw-translate>2023年5月27日</span>
+                                                    </div>
+                                                    <p class="related-news__slide-standfirst standfirst" data-sw-translate   >我們計劃推出一個API，它將訪問我們新開發的人工智能模型。這個API將使用通用的多模式輸入和輸出接口，可用於與通常的人工智能係統相比，執行廣泛的多模式任務專為特定用例設計。您可以申請將API集成到您的產品，開發新的應用程序，或幫助我們探索優勢和這項技術的局限性。</p>
+                                                    <div class="related-news__slide-link"><a class="read-more-link"
+                                                            href="/new.html?id=2"
+                                                            tabindex="0"> <span class="icon font-ico-readmore" aria-hidden="true"></span> <span data-sw-translate>查看文章</span> </a>
+                                                    </div>
+                                        </div>
+                                </div>
+                                <div class="related-news__box swiper-slide" tabindex="0">
+                                        <div class="related-news__img-wrap">
+                                                <div class="related-news__img has-cover"
+                                                    style="background-image:url('assets/20210106_jjfa_01.jpg')">
+                                                </div>
+                                        </div>
+                                        <div class="related-news__slide-content">
+                                                    <div class="related-news__slide-tags"><a href="/media/news/" tabindex="0"> <span
+                                                                class="related-news__slide-tag">NEWS</span> </a> <span class="related-news__slide-date" data-sw-translate>2023年6月9日</span>
+                                                    </div>
+                                                    <p class="related-news__slide-standfirst standfirst" data-sw-translate>到2022年，公司團隊已發展到500多名員工。我們致力於用心引領，共創美好世界。</p>
+                                                    <div class="related-news__slide-link"><a class="read-more-link"
+                                                            href="/new.html?id=3"
+                                                            tabindex="0"> <span class="icon font-ico-readmore" aria-hidden="true"></span> <span data-sw-translate>查看文章</span> </a>
+                                                    </div>
+                                        </div>
+                                </div>
+                                <div class="related-news__box swiper-slide" tabindex="0">
+                                        <div class="related-news__img-wrap">
+                                                <div class="related-news__img has-cover"
+                                                    style="background-image:url('assets/12.jpg')">
+                                                </div>
+                                        </div>
+                                        <div class="related-news__slide-content">
+                                                    <div class="related-news__slide-tags"><a href="/media/news/" tabindex="0"> <span
+                                                                class="related-news__slide-tag">NEWS</span> </a> <span class="related-news__slide-date" data-sw-translate>2023年6月23日</span>
+                                                    </div>
+                                                    <p class="related-news__slide-standfirst standfirst" data-sw-translate>EX GPT作為一款集人工智能技術和金融市場於一體的智能交易模型終端，具有廣闊的發展前景。</p>
+                                                    <div class="related-news__slide-link"><a class="read-more-link"
+                                                            href="/new.html?id=4"
+                                                            tabindex="0"> <span class="icon font-ico-readmore" aria-hidden="true"></span> <span data-sw-translate>查看文章</span> </a>
+                                                    </div>
+                                        </div>
+                                </div>
+                             </div> 
+                           
+                        </div>
+                      
+
+                        
+                    </div>
+                        
+                        <div class="related-news__controls">
+                            <div class="related-news__counter">
+                                <span data-sw-translate>顯示 </span>
+                                <span class="swiper-paginationF">
+                                    <span
+                                    class="related-news__num swiper-pagination-current">1</span>/<span
+                                    class="related-news__total swiper-pagination-total">4</span>
+                                </span>
+                                
+                                    </div>
+                            <div class="related-news__buttons"><button
+                                    class="related-news__btn related-news__btn--prev js-related-new-prev slick-arrow slick-disabled"
+                                    type="button" aria-disabled="true" style=""></button> <button
+                                    class="related-news__btn related-news__btn--next js-related-new-next slick-arrow" type="button"
+                                    aria-disabled="false" style=""></button></div>
+                            <div class="related-news__progress" aria-hidden="true">
+                                <!--<span-->
+                                <!--    class="related-news__progress-line js-related-news-progress-line" style="width: 10.01%;"></span>-->
+                                <span class="swiper-pagination-progressbar-fill" ></span>
+                                    </div>
+                        </div>
+                        
+                        
+                </div>
+            </section>
+            
+            
+            <!--<section class="section bg-darker  section-top-0 has-shape  bg-white">-->
+            <!--    <div class="nk-shape bg-shape-blur-a start-50 top-50 translate-middle"></div>-->
+            <!--    <div class="container">-->
+            <!--        <div class="section-head">-->
+            <!--            <div class="row justify-content-center text-center">-->
+            <!--                <div class="col-lg-9 col-xl-6 col-xxl-5">-->
+            <!--                    <h2 class="title"  data-sw-translate>行业解决方案</h2>-->
+            <!--                    <p class="lead"  data-sw-translate>拥有全面的人工智能能力覆盖了多个关键技术领域，包 括深度学习、自然语言处理、图像识别和量化交易等</p>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--        <div class="section-content">-->
+            <!--            <div class="row g-gs">-->
+            <!--                <div class="col-md-6 col-xl-4">-->
+            <!--                    <div class="card rounded-4 border-0 h-100">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <div class="feature">-->
+            <!--                                <div class="feature-media">-->
+            <!--                                    <div class="media media-middle media-xl text-info bg-info bg-opacity-20 rounded-3">-->
+            <!--                                        <em class="icon ni ni-bulb"></em>-->
+            <!--                                    </div>-->
+            <!--                                </div>-->
+            <!--                                <div class="feature-text">-->
+            <!--                                    <h4 class="title"  data-sw-translate>AI金融解决方案</h4>-->
+            <!--                                    <p  data-sw-translate>EX GPT可以提供智能的化交易决策支持和投资 策略优化。通过分析市场数据、历史交易和经济指标等信息，EX GPT可以利用训 练过的神经网络模型预测市场趋势和股票价格波动，并生成化交易策略。 </p>-->
+            <!--                                </div>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+                        
+            <!--                <div class="col-md-6 col-xl-4">-->
+            <!--                    <div class="card rounded-4 border-0 h-100">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <div class="feature">-->
+            <!--                                <div class="feature-media">-->
+            <!--                                    <div class="media media-middle media-xl text-primary bg-primary bg-opacity-20 rounded-3">-->
+            <!--                                        <em class="icon ni ni-cpu"></em>-->
+            <!--                                    </div>-->
+            <!--                                </div>-->
+            <!--                                <div class="feature-text">-->
+            <!--                                    <h4 class="title"  data-sw-translate>AI直播解决方案</h4>-->
+            <!--                                    <p  data-sw-translate>基于EX GPT的面部深度学习替换模型，获得难以辨别的高保真度直播，并且提供基于EX GPT底层的神经网络视频分发技术，在直播中进行面部实时替换，超低成本分发服务。</p>-->
+            <!--                                </div>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+                          
+            <!--                <div class="col-md-6 col-xl-4">-->
+            <!--                    <div class="card rounded-4 border-0 h-100">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <div class="feature">-->
+            <!--                                <div class="feature-media">-->
+            <!--                                    <div class="media media-middle media-xl text-indigo bg-indigo bg-opacity-20 rounded-3">-->
+            <!--                                        <em class="icon ni ni-spark"></em>-->
+            <!--                                    </div>-->
+            <!--                                </div>-->
+            <!--                                <div class="feature-text">-->
+            <!--                                    <h4 class="title"  data-sw-translate>AI 角色会话行业解决方案</h4>-->
+            <!--                                    <p  data-sw-translate>获得超越大型语言模型 (LLM) 的完全集成的 AI 角色平台，并添加可配置的安全性、知识、记忆、叙事控制、多模态，拥有卓越的真人情感演繹，处理多轮对话的超大上下文记忆空间等。</p>-->
+            <!--                                </div>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+                            
+            <!--                <div class="col-md-6 col-xl-4">-->
+            <!--                    <div class="card rounded-4 border-0 h-100">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <div class="feature">-->
+            <!--                                <div class="feature-media">-->
+            <!--                                    <div class="media media-middle media-xl text-success bg-success bg-opacity-20 rounded-3">-->
+            <!--                                        <em class="icon ni ni-swap-alt"></em>-->
+            <!--                                    </div>-->
+            <!--                                </div>-->
+            <!--                                <div class="feature-text">-->
+            <!--                                    <h4 class="title"  data-sw-translate>AI翻译行业解决方案</h4>-->
+            <!--                                    <p  data-sw-translate>EX GPT翻译模型使用深度学习和神经网络等先进技术，通过大规模的训练数据和模型优化，提高了翻译的准确性和质量。AI翻译系统能够学习语言的语法、上下文和常用短语，从而生成更自然、流畅的翻译结果。</p>-->
+            <!--                                </div>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+                           
+            <!--                <div class="col-md-6 col-xl-4">-->
+            <!--                    <div class="card rounded-4 border-0 h-100">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <div class="feature">-->
+            <!--                                <div class="feature-media">-->
+            <!--                                    <div class="media media-middle media-xl text-danger bg-danger bg-opacity-20 rounded-3">-->
+            <!--                                        <div class=" d-flex align-items-end">-->
+            <!--                                            <em class="icon ni ni-text"></em>-->
+            <!--                                            <em class="icon half ms-n2 ni ni-text"></em>-->
+            <!--                                        </div>-->
+            <!--                                    </div>-->
+            <!--                                </div>-->
+            <!--                                <div class="feature-text">-->
+            <!--                                    <h4 class="title"  data-sw-translate>AI超自然语音合成行业解决方案</h4>-->
+            <!--                                    <p  data-sw-translate>EX GPT Voice AI模型超自然语音合成采用了深度学习等技术，可以更好地模拟人类语音，生成更加自然、真实的语音，可以根据用户的需求和口音进行定制化，生成符合用户个性化需求的语音。</p>-->
+            <!--                                </div>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+                           
+            <!--                <div class="col-md-6 col-xl-4">-->
+            <!--                    <div class="card rounded-4 border-0 h-100">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <div class="feature">-->
+            <!--                                <div class="feature-media">-->
+            <!--                                    <div class="media media-middle media-xl text-warning bg-warning bg-opacity-20 rounded-3">-->
+            <!--                                        <em class="icon ni ni-file-docs"></em>-->
+            <!--                                    </div>-->
+            <!--                                </div>-->
+            <!--                                <div class="feature-text">-->
+            <!--                                    <h4 class="title"  data-sw-translate>AI营销行业解决方案</h4>-->
+            <!--                                    <p  data-sw-translate>在全球任何地方随时通过客户喜爱的平台与其建立联系。无论您的客户是想询问常见问题还是获取特定信息，文字虚拟客服都能即时提供令人满意的体验，让客户快速获得准确的答复。</p>-->
+            <!--                                </div>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</section>-->
+            <!-- .section -->
+            <section class="section section-bottom-0 bg-white rounded-top-6" id="howto">
+                <div class="container">
+                    <div class="section-head">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-9 col-xl-8 col-xxl-5">
+                                <div class="badge text-bg-primary-soft-outline text-uppercase text-tracking-1 rounded-pill px-3 py-2 mb-3"  data-sw-translate>我們開放哪些模型?</div>
+                                <h2 class="title text-gradient-primary"  data-sw-translate>建設未來</h2>
+                                <p class="lead"  data-sw-translate>我們提供全面的AI能力使得我們能夠為各行各業 的用戶提供定制化、多維度的解決方案。</p>
+                            </div>
+                        </div>
+                    </div><!-- .section-head -->
+                    <div class="section-content">
+                        <div class="row gy-3 justify-content-center">
+                           
+                            <div class="col-xxl-12">
+                                <div class="bg-warning bg-opacity-10 p-5 p-lg-6 rounded-4" style="background-color:rgba(108, 91, 243,0.2)!important;">
+                                    <div class="row g-gs flex-lg-row-reverse justify-content-between align-items-center">
+                                        <div class="col-lg-6 col-xl-5">
+                                            <div class="rounded-4  bg-gradient-warning bg-opacity-50 p-5 pb-0">
+                                                <div class="block-gfx">
+                                                    <img class="w-100 rounded-top-3 shadow-sm" src="images/gfx/process/urls.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div><!-- .col -->
+                                        <div class="col-lg-6 col-xxl-5">
+                                            <div class="block-text pe-xl-5">
+                                                <img class="h-3rem mb-3" src="images/icon/edit.svg" alt="">
+                                                <h3 class="title"  data-sw-translate>零門檻AI模型自訓練開放平台</h3>
+                                                <p  data-sw-translate>任何人可以在短短5分鐘實現訓練屬於自己的AI模型，使用EX GPT Flow在短短幾秒內創建自有的AI應用，訓練屬於你獨一無二的AI私人模型。</p>
+                                                <ul class="list gy-3">
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>卓越的真人情感演繹</span></li>
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>卓越的語義理解</span></li>
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>LangChain大內存向量數據庫，具有處理多輪對話的超大上下文記憶空間</span></li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .col -->
+                                    </div><!-- .row -->
+                                </div><!-- box -->
+                            </div><!-- .col -->
+                            <div class="col-xxl-12">
+                                <div class="bg-info bg-opacity-10 p-5 p-lg-6 rounded-4">
+                                    <div class="row g-gs flex-lg-row-reverse justify-content-between align-items-center">
+                                        <div class="col-lg-6 col-xl-5">
+                                            <div class="rounded-4  bg-gradient-info bg-opacity-50 p-5 pb-0">
+                                                <div class="block-gfx">
+                                                    <img class="w-100 rounded-top-3 shadow-sm" src="images/photo_2023-06-26_06-41-21.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div><!-- .col -->
+                                        <div class="col-lg-6 col-xxl-5">
+                                            <div class="block-text pe-xl-5">
+                                                <img class="h-3rem mb-3" src="images/icon/paper.svg" alt="">
+                                                <h3 class="title"  data-sw-translate>游戲人工智能</h3>
+                                                <p data-sw-translate>
+                                                人工智能角色將改變日常生活——從虛擬世界到我們想像中的西部世界。我們正在把科幻小說中的東西變成現實。</p>
+                                                <ul class="list gy-3">
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>通過用自然語言描述人工智能角色，為他們創造獨特的個性</span></li>
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>角色根據用戶的反應表達情感。情緒可以映射到動畫、目標和触發器</span></li>
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>使用客戶定義的觸發器或通過意圖識別或動機激活目標</span></li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .col -->
+                                    </div><!-- .row -->
+                                </div><!-- box -->
+                            </div><!-- .col -->
+                             <div class="col-xxl-12">
+                                <div class="bg-primary bg-opacity-10 p-5 p-lg-6 rounded-4">
+                                    <div class="row g-gs flex-lg-row-reverse justify-content-between align-items-center">
+                                        <div class="col-lg-6 col-xl-5">
+                                            <div class="rounded-4 bg-gradient-primary bg-opacity-50 p-5 pb-0">
+                                                <div class="block-gfx">
+                                                    <img class="w-100 rounded-top-3 shadow-sm" src="images/gfx/process/a.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div><!-- .col -->
+                                        <div class="col-lg-6 col-xxl-5">
+                                            <div class="block-text pe-xl-5">
+                                                <img class="h-3rem mb-3" src="images/icon/text.svg" alt="">
+                                                <h3 class="title"  data-sw-translate>EX GPTAI金融大模型</h3>
+                                                <p  data-sw-translate>EX GPT可以根據市場行情，創建基於EX GPT的綜合交易模型進行即時交易，幫助投資者實現更穩定和可盈利的投資回報。</p>
+                                                <ul class="list gy-3">
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>接入 TradingView全球市場實時精準數據</span></li>
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>全天候24小時自動交易，幫助您在交易市場中穩定獲利</span></li>
+                                                    <li><em class="icon text-info fs-5 ni ni-check-circle-fill"></em><span  data-sw-translate>支持多個指標/策略同時對接</span></li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .col -->
+                                    </div><!-- .row -->
+                                </div><!-- box -->
+                            </div><!-- .col -->
+                            
+                            
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div>
+            </section>
+            <section class="section bg-white has-mask" id="usecase">
+                <div class="nk-mask bg-pattern-dot-sm bg-blend-around"></div>
+                <div class="container">
+                    <div class="section-head">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-9 col-xl-8 col-xxl-7">
+                                <div class="badge text-bg-primary-soft-outline text-uppercase text-tracking-1 rounded-pill px-3 py-2 mb-3"  data-sw-translate>安全保障</div>
+                                <h2 class="title h1 text-gradient-primary"  data-sw-translate>安全與穩定</h2>
+                                <p class="lead px-xl-6"  data-sw-translate>我們根據特定的行業、領域和任務要求，採用獨立高質量的數據集和算法，從而實現更精確和高效的AI應用。</p>
+                            </div>
+                        </div>
+                    </div><!-- .section-head -->
+                    <div class="section-content">
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-11">
+                                <div class="row gy-6 gx-5 text-center">
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="h-100 px-xl-4 px-xxl-5">
+                                            <div class="feature">
+                                                <div class="feature-media">
+                                                    <div class="media media-middle media-xl media-border text-bg-danger-soft-outline rounded-3">
+                                                        <img class="h-2rem" src="images/icon/articles.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="feature-text">
+                                                    <h3 class="title"  data-sw-translate>毫秒級交易響應</h3>
+                                                    <p  data-sw-translate>通過我們的全棧金融級雲原生工具和服務，幫助應用開發團隊最大限度地提高核心業務應用開發的效率</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="h-100 px-xl-4 px-xxl-5">
+                                            <div class="feature">
+                                                <div class="feature-media">
+                                                    <div class="media media-middle media-xl media-border text-bg-success-soft-outline rounded-3">
+                                                        <img class="h-2rem" src="images/icon/product-discription.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="feature-text">
+                                                    <h3 class="title"  data-sw-translate>可信AI洞察力驅動決策機制</h3>
+                                                    <p  data-sw-translate>來自數百位數據科學團隊研發調試，讓AI具有洞察力並通過綜合數據進行實時交易決策</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="h-100 px-xl-4 px-xxl-5">
+                                            <div class="feature">
+                                                <div class="feature-media">
+                                                    <div class="media media-middle media-xl media-border text-bg-purple-soft-outline rounded-3">
+                                                        <img class="h-2rem" src="images/icon/hand-mic.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="feature-text">
+                                                    <h3 class="title"  data-sw-translate>強大網絡基礎設施</h3>
+                                                    <p  data-sw-translate>讓EX GPT雲計算中心和 IT 團隊為您的金融解決方案實現銀行級的可用性和彈性</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="h-100 px-xl-4 px-xxl-5">
+                                            <div class="feature">
+                                                <div class="feature-media">
+                                                    <div class="media media-middle media-xl media-border text-bg-info-soft-outline rounded-3">
+                                                        <img class="h-2rem" src="images/icon/praying-hand.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="feature-text">
+                                                    <h3 class="title"  data-sw-translate>法律安全合規</h3>
+                                                    <p  data-sw-translate>EX GPT歸屬於加拿大EXPLORED GPT AI RESEARCHEXPLORED GPT AI RESEARCH 公司，同時擁有在線數據處理與在線交易雙資質</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="h-100 px-xl-4 px-xxl-5">
+                                            <div class="feature">
+                                                <div class="feature-media">
+                                                    <div class="media media-middle media-xl media-border text-bg-primary-soft-outline rounded-3">
+                                                        <img class="h-2rem" src="images/icon/stock-up.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="feature-text">
+                                                    <h3 class="title"  data-sw-translate>ZOLOZ 智能反洗錢</h3>
+                                                    <p  data-sw-translate>EX GPT採用先進的ZOLOZ反洗錢風控機制，充分利用擁有 8億萬全球客戶的錢包產品帶來的技術和最佳實踐</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="h-100 px-xl-4 px-xxl-5">
+                                            <div class="feature">
+                                                <div class="feature-media">
+                                                    <div class="media media-middle media-xl media-border text-bg-indigo-soft-outline rounded-3">
+                                                        <img class="h-2rem" src="images/icon/website.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="feature-text">
+                                                    <h3 class="title"  data-sw-translate>ODPS原生大數據計算中心</h3>
+                                                    <p  data-sw-translate>完全託管的 TB/PB 級數據倉庫，向用戶提供了完善的數據導入方案以及多種經典的分佈式計算模型，能夠更快速的解決用戶海量數據計算問題</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                </div><!-- .row -->
+                            </div>
+                        </div>
+                    </div><!-- .section-content -->
+                </div>
+            </section>
+            
+            <section class="section bg-light">
+                <div class="container">
+                    <div class="section-head">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-xl-8">
+                                <h2 class="title text-gradient-primary" data-sw-translate>品牌的使命、願景和價值觀</h2>
+                                <p class="lead" data-sw-translate>我們以智慧與情懷，致力於為全球投資者帶來無盡可能與意義的AI世界</p>
+                            </div>
+                        </div>
+                    </div><!-- .section-head -->
+                    <div class="section-content">
+                        <div class="row g-gs justify-content-center">
+                            <div class="col-xl-9 col-xxl-8">
+                                <div class="accordion accordion-separated accordion-plus-minus" id="faq-1">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq-1-1" data-sw-translate>使命</button>
+                                        </h2>
+                                        <div id="faq-1-1" class="accordion-collapse collapse show" data-bs-parent="#faq-1">
+                                            <div class="accordion-body" data-sw-translate>EX GPT的使命是探索和引領通用人工智能(AGI)的邊界，以推動人類 智慧和文明的進步。我們致力於構建具有超越人類智慧的AGI系統，以解決人類面 臨的複雜問題，並為全球社會創造持續的積極影響。</div>
+                                        </div>
+                                    </div><!-- .accordion-item -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq-1-2" data-sw-translate>願景</button>
+                                        </h2>
+                                        <div id="faq-1-2" class="accordion-collapse collapse" data-bs-parent="#faq-1">
+                                            <div class="accordion-body" data-sw-translate>我们追求的願景是实现AGI技术的全面普及和平等共享。我们梦想着一 个未来，人们能够充分利用AGI的力量，扩展自己的认知能力和创造潜力，进一步 推动人类文明的繁荣和智慧的进化。</div>
+                                        </div>
+                                    </div><!-- .accordion-item -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq-1-3" data-sw-translate>價值觀</button>
+                                        </h2>
+                                        <div id="faq-1-3" class="accordion-collapse collapse" data-bs-parent="#faq-1">
+                                            <div data-sw-translate class="accordion-body">我們深信智慧是推動人類文明發展的根本力量。我們追求卓越的科學研究和技術創新，通過不斷突破技術邊界，探索新的認知範式和智能 模型，為人類開闢更加廣闊的思維空間。</div>
+                                        </div>
+                                    </div><!-- .accordion-item -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq-1-4" data-sw-translate>道德與責任</button>
+                                        </h2>
+                                        <div id="faq-1-4" class="accordion-collapse collapse" data-bs-parent="#faq-1">
+                                            <div class="accordion-body" data-sw-translate>我們堅守道德和社會責任，將安全性和可持續性置於首位。我們 承諾遵循倫理準則，確保AGI的發展和應用符合人類的利益，並對潛在⻛險和挑戰 保持高度警惕。我們積極參與全球社會對話，推動AGI的治理和倫理框架的建立， 確保人工智能服務於人類的整體利益。</div>
+                                        </div>
+                                    </div><!-- .accordion-item -->
+                                </div><!-- .accordion -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+            <section  class="section bg-light">
+            <section class="section bg-light" style="border-top: 0.5px solid rgba(51,51,51,0.3);width:96%;margin:0 auto;padding-top: 1.625rem;">
+                <div class="container container1" style="display:flex">
+                    <!--cols-container-->
+                     <div class="imgOut" id="renwuImg">
+                        <img src="assets/images/staff/yuangong.jpg"/>
+                    </div>
+                    <div class="cols-left"  id="renwuName">
+                        <p class="yinhao" data-sw-translate>
+“從2009年到2011年，約翰·德賓開始在矽谷的一間小公寓裡開發他的人工智能概念。在創業初期的艱難階段，資金短缺，團隊只有少數人，但他們對夢想的執著讓他們的熱情高漲。 2011年，他們的第一個人工智能原型發布，儘管功能有限，但已經顯示出巨大的潛力”
+                        </p>
+                        <div class="">
+                             <div class="renming">
+                           <span data-sw-translate>約翰·德賓</span>
+                        </div>
+                        <div  class="zhiwei">
+                           <span data-sw-translate>創始人</span>
+                        </div>
+                        </div>
+                       
+                    </div>
+                   
+                </div>
+            </section>
+            </section>
+        </main>
+        <!-- start page footer -->
+        <footer class="nk-footer">
+            <!--<section class="section bg-light section-0 has-mask">-->
+            <!--    <div class="nk-mask bg-darker top-50"></div>-->
+            <!--    <div class="container container-xl">-->
+            <!--        <div class="section-wrap bg-dark is-dark rounded-4 has-shape overflow-hidden">-->
+            <!--            <div class="nk-shape bg-shape-blur-b start-50 top-50 translate-middle"></div>-->
+            <!--            <div class="section-content p-4 p-sm-5 p-xl-7">-->
+            <!--                <div class="row justify-content-between align-items-center g-5">-->
+            <!--                    <div class="col-xl-5 col-lg-6">-->
+            <!--                        <div class="block-text">-->
+            <!--                            <h6 class="overline-title text-primary" data-sw-translate>致力于为全球投资者带来无尽可能</h6>-->
+            <!--                            <h2 class="title" data-sw-translate>开启未来·拥抱AI</h2>-->
+            <!--                            <p data-sw-translate>EX GPT将给你带来有史以来最专业的交易团队，交易模型参数达到1700亿参数</p>-->
+            <!--                            <ul class="list list-row gx-3 gy-0">-->
+            <!--                                <li><em class="icon fs-5 ni ni-check-circle-fill text-info"></em><span data-sw-translate>AVIVA保险承保</span></li>-->
+            <!--                                <li><em class="icon fs-5 ni ni-check-circle-fill text-info"></em><span data-sw-translate>毫秒級交易響應</span></li>-->
+            <!--                            </ul>-->
+            <!--                            <ul class="btn-list btn-list-inline gy-0">-->
+            <!--                                <li><a href="#" class="btn btn-lg btn-primary rounded-pill"><span data-sw-translate>立即下载体验</span><em class="icon ni ni-arrow-long-right"></em></a></li>-->
+            <!--                            </ul>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-xl-6 col-lg-6 align-self-end">-->
+            <!--                        <div class="bg-white rounded-top-4">-->
+            <!--                            <div class="rounded-top-4 bg-gradient-primary bg-opacity-70 p-5 pb-0 mb-n4 mb-sm-n5 mb-xl-n7">-->
+            <!--                                <div class="block-gfx">-->
+            <!--                                    <img class="w-100 rounded-top-3 shadow-sm" src="images/gfx/process/uu.png" alt="">-->
+            <!--                                </div>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</section>-->
+            <!-- .section -->
+            <section class="section bg-darker is-dark">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-xl-4 col-lg-3 me-auto">
+                            <div class="block-text">
+                                <a href="index.html" class="logo-link mb-4" >
+                                    <div class="logo-wrap">
+                                        <img class="logo-img logo-light" src="images/logo-White.png" srcset="images/logo-White.png 2x" alt="">
+                                    <img class="logo-img logo-dark" src="images/logo-black.png" srcset="images/logo-black.png 2x" alt="">
+                                        <!--<img class="logo-img logo-light" src="images/logo.png" srcset="images/logo2x.png 2x" alt="">-->
+                                        <!--<img class="logo-img logo-dark" src="images/logo-dark.png" srcset="images/logo-dark2x.png 2x" alt="">-->
+                                    </div>
+                                </a>
+                                <ul class="btn-list btn-list-inline g-1">
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-facebook-fill" style="font-size: calc(1.675rem + 0.5vw) !important;"></em></a></li>
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-github-round" style="font-size: calc(1.675rem + 0.5vw) !important;"></em></a></li>
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-linkedin-round" style="font-size: calc(1.675rem + 0.5vw) !important;"></em></a></li>
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-youtube-round" style="font-size: calc(1.675rem + 0.5vw) !important;"></em></a></li>
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-twitter-round" style="font-size: calc(1.675rem + 0.5vw) !important;"></em></a></li>
+                                </ul>
+                            </div>
+                        </div><!-- .col -->
+                        <!--<div class="col-xl-2 col-lg col-md-3 col-6">-->
+                        <!--    <div class="wgs">-->
+                        <!--        <h6 class="wgs-title">Tools</h6>-->
+                        <!--        <ul class="list gy-2 list-link-base">-->
+                        <!--            <li><a class="link-base" href="#">Article Generator</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Blog Ideas</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Blog Intros</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Blog Outlines</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Product Description</a></li>-->
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <!-- .col -->
+                        <!--<div class="col-xl-2 col-lg col-md-3 col-6">-->
+                        <!--    <div class="wgs">-->
+                        <!--        <h6 class="wgs-title">Resources</h6>-->
+                        <!--        <ul class="list gy-2 list-link-base">-->
+                        <!--            <li><a class="link-base" href="#">Facebook Group</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Discord Community</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Guide and Tutorials</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Request API access</a></li>-->
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <!-- .col -->
+                        <div class="col-xl-3 col-lg col-md-3 col-6">
+                            <div class="wgs">
+                                <h6 class="wgs-title" data-sw-translate>導航</h6>
+                               <ul class="list gy-2 list-link-base">
+                                    <li ><a class="guanyu" href="index.html" data-sw-translate>首頁</a></li>
+                                    <li ><a class="link-base" href="Training" data-sw-translate>訓練中心</a></li>
+                                    <li><a class="link-base"  href="/usecase-details.html" data-sw-translate>游戲</a></li>
+                                    <li><a class="link-base"  href="/usecase-details-s2.html" data-sw-translate>EX GPT</a></li>
+                                    <li><a class="link-base" onclick="window.open('https://exgpt.gitbook.io/untitled')" data-sw-translate>開發者</a></li>
+                                    <!--<li style=" list-style:none;padding:0;margin:0;float: left;display: block;margin-right:0.5rem"><a class="link-base" href="#">产品</a></li>-->
+                                    <li ><a class="link-base gywm" href="about.html" data-sw-translate> 關於我們</a></li>
+                                    <li ><a class="link-base" href="contact.html" data-sw-translate> 联系我们</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- .col -->
+                        <!--<div class="col-xl-2 col-lg col-md-3 col-6">-->
+                        <!--    <div class="wgs">-->
+                        <!--        <h6 class="wgs-title">Use Case</h6>-->
+                        <!--        <ul class="list gy-2 list-link-base">-->
+                        <!--            <li><a class="link-base" href="#">AI Writer</a></li>-->
+                        <!--            <li><a class="link-base" href="#">AI Articel Writer</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Content Generator</a></li>-->
+                        <!--            <li><a class="link-base" href="#">AI Content Writing</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Content Rewriter</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Blog Post Writer</a></li>-->
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <!-- .col -->
+                    </div>
+                </div><!-- .container -->
+            </section><!-- .section -->
+            <div class="bg-darker is-dark">
+                <div class="container">
+                    <hr class="border-opacity-25 border-white m-0">
+                    <div class="py-5">
+                        <div class="row">
+                            <div class="col-md">
+                                <p class="mb-2 mb-md-0">&copy; 2023 EXPLORED GPT AI RESEARCH LTD
+                                <!--<a href="#" class="fw-bold text-white">Softnio</a>.-->
+                                </p>
+                            </div>
+                            <div class="col-md">
+                                <ul class="list list-row gx-4 justify-content-start justify-content-md-end">
+                                  
+                                    <li><a class="link-primary" target="_blank" href="terms-condition.html">Terms &amp; Condition</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end page footer -->
+    </div>
+    <script src="assets/js/bundle.js?v1.3.0"></script>
+    <script src="assets/js/scripts.js?v1.3.0"></script>
+    <script>
+    
+    
+    
+    var swiper = new Swiper('.swiper-container', {
+        // pagination: '.swiper-pagination',
+        slidesPerView: window.innerWidth >= 1200 ? 3 :  1,
+        paginationClickable: true,
+        spaceBetween: window.innerWidth >= 1200 ? 30 : 1,
+        pagination: {
+          el: ".related-news__progress",
+          type: "progressbar",
+        },
+         navigation: {
+          nextEl: ".related-news__btn--next",
+          prevEl: ".related-news__btn--prev",
+        },
+        //  pagination: {
+        //   el: ".swiper-paginationF",
+        //   type: "fraction",
+        // },
+        on:{
+       init:function(swiper){
+         var active =swiper.activeIndex;
+         $('.swiper-pagination-current').text(1+active);
+         if(window.innerWidth < 1200){
+             
+            $('.swiper-pagination-total').text(7);
+         }
+       },
+       transitionEnd:function(){
+         var active =swiper.realIndex +1;
+         $('.swiper-pagination-current').text(active);
+       }
+     }
+       
+    });
+    </script>
+  
+
+    <script type="">
+        'use strict';
+ 
+ 
+ window.SwaggerTranslator = {
+     _words: [],
+  
+     translate: function () {
+         var $this = this;
+         $('[data-sw-translate]').each(function () {
+             $(this).html($this._tryTranslate($(this).html()));
+             $(this).val($this._tryTranslate($(this).val()));
+             $(this).attr('title', $this._tryTranslate($(this).attr('title')));
+         });
+     },
+  
+     _tryTranslate: function (word) {
+         return this._words[$.trim(word)] !== undefined ? this._words[$.trim(word)] : word;
+     },
+  
+     learn: function (wordsMap) {
+         this._words = wordsMap;
+     }
+ };
+  
+  
+ /* jshint quotmark: double */
+ window.SwaggerTranslator.learn({
+     "上下文网格":"Contextual Mesh",
+     "人工智能角色將改變日常生活——從虛擬世界到我們想像中的西部世界。我們正在把科幻小說中的東西變成現實。":"The role of artificial intelligence will change daily life - from the virtual world to the imagined Western world. We are turning things from science fiction into reality.",
+     "知识":"Knowledge",
+     "通過用自然語言描述人工智能角色，為他們創造獨特的個性":"Create distinct personalities for your AI characters by describing them in natural language",
+     "可配置的安全性":"Configurable Safety",
+     "角色根據用戶的反應表達情感。情緒可以映射到動畫、目標和触發器":"Characters express emotion in response to users. Emotions can be mapped to animations, goals, and triggers",
+     "第四堵墙":"4th Wall",
+     "使用客戶定義的觸發器或通過意圖識別或動機激活目標":"Use client-defined triggers or activate goals through intent recognition or motivations.",
+     "關於我們":"About Us",
+     "超越人類智慧":"Transcend Human Intelligence",
+     "促進AGI的發展":"Promoting The Development Of AGI",
+     "探索人工智能的新時代":"Exploring The New Era Of AI",
+     "創始人":"Founder",
+     "約翰·德賓":"John Durbin",
+     "“從2009年到2011年，約翰·德賓開始在矽谷的一間小公寓裡開發他的人工智能概念。在創業初期的艱難階段，資金短缺，團隊只有少數人，但他們對夢想的執著讓他們的熱情高漲。 2011年，他們的第一個人工智能原型發布，儘管功能有限，但已經顯示出巨大的潛力”":"From 2009 to 2011, John Durbin began developing his AI concept in a small apartment in Silicon Valley. During the difficult early stages of startup, there was a shortage of funds and the team was only composed of a few people, but their dedication to the dream kept their enthusiasm burning. In 2011, their first AI prototype was released, although it had limited functions, it already showed great potential.",
+     "EXPLORED GPT AI RESEARCH是一家人工智能研究公司。我們的目標是以最有可能造福全人類的方式推進數字智能受到財務回報需求的限制。因為我們的研究不是在財務上有義務，我們可以更好地關注對人類的積極影響。":"EXPLORED GPT AI RESEARCH is an artificial intelligence research company. Our aim is to advance digital intelligence in the most likely way to benefit all of humanity, without being limited by the need for financial returns. Since our research is not financially obligated, we can better focus on the positive impact on humans.",
+     "我們計劃推出一個API，它將訪問我們新開發的人工智能模型。這個API將使用通用的多模式輸入和輸出接口，可用於與通常的人工智能係統相比，執行廣泛的多模式任務專為特定用例設計。您可以申請將API集成到您的產品，開發新的應用程序，或幫助我們探索優勢和這項技術的局限性。":"We are planning to launch an API that will access our newly developed AI model. The API will use a generic multi-modal input and output interface, which can be used to perform a wide range of multi-modal tasks, as opposed to AI systems typically designed for specific use cases. You can apply for access to integrate the API into your product, develop new applications, or help us explore the advantages and limitations of this technology.",
+     "到2022年，公司團隊已發展到500多名員工。我們致力於用心引領，共創美好世界。":"By 2022, the company team has grown to more than 500 employees. We are committed to leading with care and creating a better world together.",
+     "在全球疫情影響下，許多投資者開始尋找更好的投資機會。 EX GPT可幫助使用者拓展知識、學習新技能，並做出更明智的投資決策。":"Under the influence of the global epidemic, many investors are starting to look for better investment opportunities. EX GPT can help users expand their knowledge, learn new skills, and make more informed investment decisions.",
+     "2023年5月18日":"18 May 2023",
+     "2023年5月27日":"27 May 2023",
+     "2023年6月9日":"9 Jun 2023",
+     "2023年6月23日":"23 Jun 2023",
+     "查看文章":"Read article",
+     "EX GPT网络的最新消息和見解":"Latest news and insights from the EX GPT network",
+     "最新消息和見解":"Latest news and insights",
+     "合作夥伴":"Partners",
+     "首頁":"Home",
+     "应用":"application",
+     "安全":"Safety",
+     "關於我們":"About Us",
+     "立即下载":"Download",
+     "繁体中文":"English",
+     "開發者": "Developer",
+     "游戲人工智能": "Gaming AI",
+     "游戲":"Gaming",
+     "訓練中心": "Training Center",
+     "聯繫我們": "Contact Us",
+    "AI通用生态系统":"AI General Ecosystem",
+    "超自然语言大模型":"supernatural language model",
+    "我们致力于推动AI全球化生态的积极改进与重构，用人工智能改变工作和创造力":"We are committed to promoting the active improvement and reconstruction of the AI global ecology, using artificial intelligence to change work and creativity",
+    "立即下载":"Download",
+    "IOS/安卓":"IOS/Android",
+    "獲得超過六千傢專業機構的信賴":"Gained the trust of more than six thousand professional institutions.",
+    "行业解决方案":"Industry Solutions",
+    "拥有全面的人工智能能力覆盖了多个关键技术领域，包 括深度学习、自然语言处理、图像识别和量化交易等":"Having comprehensive Artificial Intelligence capabilities covering multiple key technology areas, including deep learning, natural language processing, image recognition and quantitative trading.",
+    "AI金融解决方案":"AI Financial Solutions",
+    "EX GPT可以提供智能的化交易决策支持和投资 策略优化。通过分析市场数据、历史交易和经济指标等信息，EX GPT可以利用训 练过的神经网络模型预测市场趋势和股票价格波动，并生成化交易策略。":"EX GPT can provide intelligent transaction decision support and investment strategy optimization. By analyzing information such as market data, historical transactions, and economic indicators, EX GPT can use the trained neural network model to predict market trends and stock price fluctuations, and generate automated trading strategies.",
+    "AI直播解决方案":"AI live broadcast solution",
+    "基于EX GPT的面部深度学习替换模型，获得难以辨别的高保真度直播，并且提供基于EX GPT底层的神经网络视频分发技术，在直播中进行面部实时替换，超低成本分发服务。":"Based on EX GPT's deep learning replacement model for faces, it can obtain difficult-to-distinguish high-fidelity live broadcasts, and provide neural network video distribution technology based on the underlying EX GPT, real-time replacement of faces in live broadcasts, and ultra-low-cost distribution services.",
+    "AI 角色会话行业解决方案":"AI role conversation industry solution",
+    "获得超越大型语言模型 (LLM) 的完全集成的 AI 角色平台，并添加可配置的安全性、知识、记忆、叙事控制、多模态，拥有卓越的真人情感演繹，处理多轮对话的超大上下文记忆空间等。":"Get a fully integrated AI character platform that goes beyond Large Language Models (LLMs) and adds configurable security, knowledge, memory, narrative control, multimodality, superior human emotion interpretation, and large contextual memory to handle multiple rounds of dialogue space etc.",
+
+    "AI翻译行业解决方案":"AI translation industry solutions",
+    "EX GPT翻译模型使用深度学习和神经网络等先进技术，通过大规模的训练数据和模型优化，提高了翻译的准确性和质量。AI翻译系统能够学习语言的语法、上下文和常用短语，从而生成更自然、流畅的翻译结果。":"The EX GPT translation model uses advanced technologies such as deep learning and neural networks to improve the accuracy and quality of translation through large-scale training data and model optimization. The AI ​​translation system is able to learn the grammar, context and common phrases of the language to generate more natural and fluent translation results.",
+    "AI超自然语音合成行业解决方案":"AI Supernatural Speech Synthesis Industry Solution",
+    "EX GPT Voice AI模型超自然语音合成采用了深度学习等技术，可以更好地模拟人类语音，生成更加自然、真实的语音，可以根据用户的需求和口音进行定制化，生成符合用户个性化需求的语音。":"EX GPT Voice AI model supernatural speech synthesis adopts deep learning and other technologies, which can better simulate human speech and generate more natural and real speech. It can be customized according to user needs and accents, and generate speech that meets the user's individual needs.",
+    
+    "AI营销行业解决方案":"AI marketing industry solutions",
+    "在全球任何地方随时通过客户喜爱的平台与其建立联系。无论您的客户是想询问常见问题还是获取特定信息，文字虚拟客服都能即时提供令人满意的体验，让客户快速获得准确的答复。":"Connect with your customers anytime, anywhere in the world, on the platforms they love. Whether your customers want to ask a common question or get specific information, text virtual agents provide an instant, satisfying experience, allowing customers to get accurate answers quickly.",
+    "我們開放哪些模型?":"Which models have we opened?",
+    "建設未來":"Building The Future",
+    "我們提供全面的AI能力使得我們能夠為各行各業 的用戶提供定制化、多維度的解決方案。":"We provide comprehensive AI capabilities that enable us to provide customized, multi-dimensional solutions for users in all industries.",
+    "EX GPTAI金融大模型":"EX GPTAI financial model",
+    "EX GPT可以根據市場行情，創建基於EX GPT的綜合交易模型進行即時交易，幫助投資者實現更穩定和可盈利的投資回報。":"EX GPT can create an EX GPT-based comprehensive trading model for real-time transactions based on market conditions, helping investors achieve a more stable and profitable return on investment.",
+    "接入 TradingView全球市場實時精準數據":"Access to TradingView global market real-time accurate data",
+    "全天候24小時自動交易，幫助您在交易市場中穩定獲利":"24 hours a day automatic trading to help you make stable profits in the trading market",
+    "支持多個指標/策略同時對接":"Support simultaneous docking of multiple indicators/strategies",
+    "零門檻AI模型自訓練開放平台":"Zero-threshold AI model self-training open platform",
+    "任何人可以在短短5分鐘實現訓練屬於自己的AI模型，使用EX GPT Flow在短短幾秒內創建自有的AI應用，訓練屬於你獨一無二的AI私人模型。":"Anyone can train their own AI model in just 5 minutes, use EX GPT Flow to create their own AI application in just a few seconds, and train your unique AI private model.",
+    "卓越的真人情感演繹":"Excellent live emotional interpretation",
+    "卓越的語義理解":"excellent semantic understanding",
+    "LangChain大內存向量數據庫，具有處理多輪對話的超大上下文記憶空間":"LangChain large memory vector database with large context memory space for handling multiple rounds of dialogue",
+    "稳定的AI直播解决方案，在直播中进行面部实时替换，超低成本分发服务。":"Stable AI live broadcast solution, real-time facial replacement in live broadcast, ultra-low-cost distribution service.",
+    "EX GPT作為一款集人工智能技術和金融市場於一體的智能交易模型終端，具有廣闊的發展前景。":"EX GPT, as an intelligent trading model terminal that integrates artificial intelligence technology and the financial market, has broad development prospects.",
+
+    "视频面部替换":"video face replacement",
+    "直播面部替换":"Live Face Replacement",
+    "局部替换":"partial replacement",
+    "安全保障":"security",
+    "安全與穩定":"Security & Stability",
+    "我們根據特定的行業、領域和任務要求，採用獨立高質量的數據集和算法，從而實現更精確和高效的AI應用。":"We achieve more accurate and efficient AI applications by adopting independent high-quality datasets and algorithms according to specific industry, domain and task requirements.",
+    "通過我們的全棧金融級雲原生工具和服務，幫助應用開發團隊最大限度地提高核心業務應用開發的效率":"Through our full-stack financial-grade cloud-native tools and services, we help application development teams maximize the efficiency of core business application development.",
+    "可信AI洞察力驅動決策機制":"Trusted AI Insight-Driven Decision Mechanism",
+    "來自數百位數據科學團隊研發調試，讓AI具有洞察力並通過綜合數據進行實時交易決策":"Developed and debugged by hundreds of data science teams, AI has insight and makes real-time trading decisions through comprehensive data.",
+    "強大網絡基礎設施":"Powerful Network Infrastructure",
+    "讓EX GPT雲計算中心和 IT 團隊為您的金融解決方案實現銀行級的可用性和彈性":"Let EX GPT's cloud computing center and IT team achieve bank-level availability and flexibility for your financial solutions.",
+    "法律安全合規":"Legal Security and Compliance",
+    "EX GPT歸屬於加拿大EXPLORED GPT AI RESEARCHEXPLORED GPT AI RESEARCH 公司，同時擁有在線數據處理與在線交易雙資質":"EX GPT belongs to Canada's EXPLORED GPT AI RESEARCH company and has dual qualifications for online data processing and online trading.",
+    "ZOLOZ 智能反洗錢":"ZOLOZ Intelligent Anti-Money Laundering",
+    "EX GPT採用先進的ZOLOZ反洗錢風控機制，充分利用擁有 8億萬全球客戶的錢包產品帶來的技術和最佳實踐":"EX GPT adopts advanced ZOLOZ anti-money laundering risk control mechanism, fully utilizing the technology and best practices brought by wallet products with 800 million global customers.",
+    "ODPS原生大數據計算中心":"ODPS Native Big Data Computing Center",
+    "完全託管的 TB/PB 級數據倉庫，向用戶提供了完善的數據導入方案以及多種經典的分佈式計算模型，能夠更快速的解決用戶海量數據計算問題":"Fully managed TB/PB-level data warehouse provides users with a complete data import solution and multiple classic distributed computing models, which can solve user's massive data computing problems more quickly.",
+    "AI应用":"AI Applications",
+    "EX GPT AI行业通用开放式解决方案":"EX GPT AI Industry Universal Open Solution",
+    "用户可以根据特定的行业、领域和任务要求，选择合 适的模型组件、数据集和算法，从而实现更精确和高效的AI应用。":"Users can choose suitable model components, data sets and algorithms according to specific industries, fields and task requirements to achieve more accurate and efficient AI applications.",
+    "AI 金融大模型":"AI Financial Model",
+    "EX GPT所追求的不仅仅是交易的智能化，更是一种对全球金融生态的积极 改造与重构":"EX GPT's pursuit is not only the intelligence of trading, but also a positive transformation and reconstruction of the global financial ecosystem.",
+    "面向所有用户开放":"Open to All Users",
+    "立即下载":"Download Now",
+    "AVIVA保险承保":"AVIVA Insurance Underwriting",
+    "交易撮合引擎":"Trading Matching Engine",
+    "AI智能算力":"AI Intelligent Computing Power",
+    "股票AI引擎":"Stock AI Engine",
+    "数字货币AI引擎":"Digital Currency AI Engine",
+    "即时风控引擎":"Real-time Risk Control Engine",
+    "TradingView即时报价":"TradingView Real-time Quotes",
+    "AI 开放式训练场":"AI Open Training Ground",
+    "与 EX GPT 团队携手合作，利用数十年的 AI 专业知识和 EX GPT 的尖端平台，为您的项目构建和部署私有AI模型解决方案。":"Cooperate with the EX GPT team to use decades of AI expertise and cutting-edge platforms to build and deploy private AI model solutions for your project.",
+    "正在逐步推出过程中，我们优先考虑为EX GPT贡献卓越的用户使用":"It is being gradually launched, and we prioritize excellent users who contribute to EX GPT.",
+    "开始试用":"Start Trial",
+    "$0.1/GB 文件储存空间":"$0.1/GB File Storage Space",
+    "实现AI超长记忆":"Achieve AI Long-term Memory",
+    "私有化知识库":"Private Knowledge Base",
+    "智能数据处理引擎":"Intelligent Data Processing Engine",
+    "AI 流媒体":"AI Streaming Media",
+    "它提供了一个命令式且易于使用的管道，即使是那些没有全面了解深度学习框架或模型实现的人也可以使用":"It provides a command-style and easy-to-use pipeline, even those who do not fully understand deep learning frameworks or model implementations can use it.",
+    "下载试用版":"Download Trial Version",
+    "全脸替换":"Full Face Replacement",
+    "局部替换":"Partial Replacement",
+    "直播实时替换":"Live Real-time Replacement",
+    "视频流媒体服务":"Video Streaming Service",
+    "直播流媒体服务":"Live Streaming Service",
+    "品牌的使命、願景和價值觀":"Brand Mission, Vision and Values",
+    "我們以智慧與情懷，致力於為全球投資者帶來無盡可能與意義的AI世界":"We are committed to bringing endless possibilities and meaning to the AI world for global investors with wisdom and emotion.",
+    "使命":"Mission",
+    "EX GPT的使命是探索和引領通用人工智能(AGI)的邊界，以推動人類 智慧和文明的進步。我們致力於構建具有超越人類智慧的AGI系統，以解決人類面 臨的複雜問題，並為全球社會創造持續的積極影響。":"EX GPT's mission is to explore and lead the boundaries of general artificial intelligence (AGI) to promote human wisdom and civilization. We are committed to building AGI systems that surpass human intelligence to solve complex problems facing humanity and create sustained positive impact for the global society.",
+    "願景":"Vision",
+    "我们追求的願景是实现AGI技术的全面普及和平等共享。我们梦想着一 个未来，人们能够充分利用AGI的力量，扩展自己的认知能力和创造潜力，进一步 推动人类文明的繁荣和智慧的进化。":"Our vision is to achieve comprehensive popularization and equal sharing of AGI technology. We dream of a future where people can fully utilize the power of AGI to expand their cognitive abilities and creative potential, further promoting the prosperity and wisdom of human civilization.",
+    "價值觀":"Values",
+    "我們深信智慧是推動人類文明發展的根本力量。我們追求卓越的科學研究和技術創新，通過不斷突破技術邊界，探索新的認知範式和智能 模型，為人類開闢更加廣闊的思維空間。":"We firmly believe that wisdom is the fundamental force driving the development of human civilization. We pursue excellence in scientific research and technological innovation, explore new cognitive paradigms and intelligent models by constantly breaking through technological boundaries, and open up a broader space for human thinking.",
+    "道德與責任":"Ethics and Responsibility",
+    "我們堅守道德和社會責任，將安全性和可持續性置於首位。我們 承諾遵循倫理準則，確保AGI的發展和應用符合人類的利益，並對潛在⻛險和挑戰 保持高度警惕。我們積極參與全球社會對話，推動AGI的治理和倫理框架的建立， 確保人工智能服務於人類的整體利益。":"We adhere to ethics and social responsibility, and prioritize safety and sustainability. We promise to follow ethical guidelines to ensure that the development and application of AGI are in line with human interests, and remain highly vigilant about potential risks and challenges. We actively participate in global social dialogue, promote the governance and ethical framework of AGI, and ensure that artificial intelligence serves the overall interests of humanity.",
+    "致力于为全球投资者带来无尽可能":"Committed to Bringing Endless Possibilities to Global Investors",
+    "开启未来·拥抱AI":"Open the Future and Embrace AI",
+    "EX GPT将给你带来有史以来最专业的交易团队，交易模型参数达到1700亿参数":"EX GPT will bring you the most professional trading team ever, with trading model parameters reaching 170 billion parameters.",
+    "AVIVA保险承保":"AVIVA Insurance Underwriting",
+    "毫秒級交易響應":"Millisecond-level Trading Response",
+    "立即下载体验":"Download and Experience Now",
+    "首頁":"Home",
+    "应用":"Applications",
+    "安全":"Security",
+    "關於我們":"About Us",
+    "EX GPT-最先進的通用人工智能多模態大模型":"EX GPT - The Most Advanced multimodal Large Model For General Artificial Intelligence",
+    
+    "产品":"Product",
+    "AI开放式训练平台":"AI Open Training Platform",
+    "AI 金融大模型":"AI Financial Big Model",
+    "客户案例":"Customer Cases",
+    "安全标准":"Security Standards",
+    "顯示":"Showing",
+    "導航":"Company",
+ });
+  function setbackground(num){
+         
+
+            var slick1 = document.getElementById("slick1");
+            var slick2 = document.getElementById("slick2");
+            var slick3 = document.getElementById("slick3");
+            switch(num){
+                case 0: //1移除1变3 2移除2变1  3移除3变2
+                slick1.classList.remove("slick-current")
+                slick1.classList.remove("slick-active")
+                slick1.classList.remove("xianshi")
+                slick1.classList.add("yincang3")
+                slick2.classList.add("slick-current")
+                slick2.classList.add("slick-active")
+                slick2.classList.remove("yincang2")
+                slick2.classList.add("xianshi")
+                
+                slick3.classList.remove("yincang3")
+                slick3.classList.add("yincang2")
+                
+             
+                break;
+                case 1: //1移除3变2 2移除1变3  3移除2变1
+                slick2.classList.remove("slick-current")
+                slick2.classList.remove("slick-active")
+                slick2.classList.remove("xianshi")
+                slick2.classList.add("yincang3")
+                
+                slick3.classList.add("slick-current")
+                slick3.classList.add("slick-active")
+                slick3.classList.remove("yincang2")
+                slick3.classList.add("xianshi")
+                
+                 slick1.classList.remove("yincang3")
+                slick1.classList.add("yincang2")
+                
+               
+                break;
+                case 2: //1移除2变1 2移除3变2  3移除1变3
+                    slick3.classList.remove("xianshi")
+                slick1.classList.add("slick-current")
+                slick1.classList.add("slick-active")
+                slick1.classList.remove("yincang2")
+                slick1.classList.add("xianshi")
+                slick3.classList.add("yincang3")
+                slick3.classList.remove("slick-current")
+                slick3.classList.remove("slick-active")
+                
+                 slick2.classList.remove("yincang3")
+                slick2.classList.add("yincang2")
+                
+               
+               
+                break;
+                
+            }
+            
+            if(num == 2){
+                num = 0;
+            }else{
+                num++;
+            }
+            //  window.setTimeout( "setbackground("+num+")", 5000);
+            window.setTimeout( function () {
+
+                setbackground(num);
+            
+              }, 5000);
+        }
+  
+ $(function () {
+       if(localStorage.getItem("language")&&localStorage.getItem("language") == 'zh-cn'){
+        //   var dzjOut = document.getElementById("dzjOut");
+        //      var dzjOutEnglish = document.getElementById("dzjOutEnglish");
+        //         dzjOutEnglish.style.display = "none";
+        //         dzjOut.style.display = "block";
+       }else{
+            window.SwaggerTranslator.translate();
+            // var daziji = document.getElementsByClassName("daziji");
+            // //修改daziji的data-strings属性
+            // daziji[0].setAttribute('data-strings', '"Supernatural Language Model", "AI Generated Large Image Model", "AI Trading Model"');
+            
+             //获取id为dzjOut的元素
+            // var dzjOut = document.getElementById("dzjOut");
+            // //清空dzjOut的内容
+            // dzjOut.innerHTML = "";
+            // // 给dzjOut添加span标签
+            // dzjOut.innerHTML = '<span class="type-init" data-strings=\'"Supernatural Language Model", "AI Generated Large Image Model", "AI Trading Model"\'></span>';
+            
+            //  var dzjOut = document.getElementById("dzjOut");
+            //  var dzjOutEnglish = document.getElementById("dzjOutEnglish");
+            //     dzjOut.style.display = "none";
+            //     dzjOutEnglish.style.display = "block";
+                
+                
+            
+            // daziji.setAttribute('data-strings', '"Supernatural Language Model", "AI Generated Large Image Model", "AI Trading Model"');
+       }
+       
+        var rotate = 0;
+        setbackground(0);
+        
+       
+        
+        
+       $("#gundongX").scroll(function () {
+            var left = $("#gundongX").scrollLeft();
+            console.log(left)
+            if (left > 0) {
+                
+            } else {
+                $("#gundongX").css("overflow-x", "hidden");
+            }
+        });
+ });
+ 
+ function langSelect(){
+    if(localStorage.getItem("language")&&localStorage.getItem("language") == 'zh-cn'){
+        localStorage.setItem("language","en");
+    }else{
+        localStorage.setItem("language","zh-cn");
+    }
+    window.location.reload();
+    // window.SwaggerTranslator.translate();
+}
+
+
+
+    </script>
+    
+    
+    <script>
+    // AI应用  应用下载
+        // <section class="section section-bottom-0 bg-light" id="pricing">
+        //         <div class="container">
+        //             <div class="section-head">
+        //                 <div class="row justify-content-center text-center">
+        //                     <div class="col-lg-9 col-xl-8 col-xxl-6">
+        //                         <div class="badge text-bg-primary-soft-outline text-uppercase text-tracking-1 rounded-pill px-3 py-2 mb-3"  data-sw-translate>AI应用</div>
+        //                         <h2 class="title h1"  data-sw-translate>EX GPT AI行业通用开放式解决方案</h2>
+        //                         <p class="lead"  data-sw-translate>用户可以根据特定的行业、领域和任务要求，选择合 适的模型组件、数据集和算法，从而实现更精确和高效的AI应用。</p>
+        //                     </div>
+        //                 </div>
+        //             </div>
+        //             <!-- .section-head -->
+        //             <div class="section-content">
+        //                 <!--<div class="pricing-toggle-wrap mb-4">-->
+        //                 <!--    <div class="h5 mb-0 pricing-toggle-text monthly">Monthly</div>-->
+        //                 <!--    <div class="mx-3">-->
+        //                 <!--        <button class="pricing-toggle" data-parent="pricing-toggle-wrap" data-target="pricing-price-wrap">-->
+        //                 <!--            <span class="pricing-toggle-ball"></span>-->
+        //                 <!--        </button>-->
+        //                 <!--    </div>-->
+        //                 <!--    <div class="h5 mb-0 pricing-toggle-text yearly position-relative"> Yearly <span class="badge text-bg-success-soft fw-normal text-uppercase smaller rounded-pill position-absolute ms-n5 mb-2 mb-sm-0 ms-sm-3 translate-middle-sm-y start-100 bottom-100 bottom-sm-auto top-sm-50">Save 12%</span>-->
+        //                 <!--    </div>-->
+        //                 <!--</div>-->
+        //                 <!-- .pricing-toggle -->
+        //                 <div class="row g-gs">
+        //                     <div class="col-xxl-4 col-xl-4">
+        //                         <div class="pricing h-100 pricing-featured bg-gradient-primary">
+        //                             <div class="pricing-body h-100 p-5 pt-3 p-md-0 pt-md-0 p-xl-5 pt-xl-3 d-md-flex d-xl-block">
+        //                                 <div class="text-center p-md-5 p-xl-0 w-md-50 w-xl-100">
+        //                                     <div class="badge bg-gradient-primary bg-opacity-20 gradient-angle-90 mb-4 px-3 py-2 rounded-pill small text-primary text-tracking-1">
+        //                                         <div class="p-1"  data-sw-translate>Business</div>
+        //                                     </div>
+        //                                     <!--<h3 class="mb-3">Business</h3>-->
+        //                                     <div class="pricing-price-wrap">
+        //                                         <div class="pricing-price monthly">
+                                                    
+        //                                             <h3 class="display-5 mb-3" style="font-size: 18px;"  data-sw-translate>AI 金融大模型</h3>
+        //                                             <!--<h3 class="display-5 mb-3">$19 <span class="caption-text text-muted"> / month</span></h3>-->
+        //                                         </div>
+        //                                         <div class="pricing-price yearly">
+        //                                             <h3 class="display-5 mb-3" >$190 <span class="caption-text text-muted" > / yearly</span></h3>
+        //                                         </div>
+        //                                     </div>
+        //                                     <p class="fw-bold text-primary" data-sw-translate>EX GPT所追求的不仅仅是交易的智能化，更是一种对全球金融生态的积极 改造与重构</p>
+        //                                     <div class="bg-light px-4 py-2 mb-4 smaller rounded-1" data-sw-translate>面向所有用户开放</div>
+        //                                     <div class="px-4">
+        //                                         <button class="btn btn-primary btn-block rounded-pill" data-sw-translate>立即下载</button>
+        //                                     </div>
+        //                                 </div>
+        //                                 <div class="d-none d-md-block d-xl-none border-start h-100"></div>
+        //                                 <div class="pt-4 p-md-5 p-xl-0 pt-xl-4 w-md-50 w-xl-100">
+        //                                     <h5 class="fw-medium pb-1"></h5>
+        //                                     <!--Everything in Free, plus-->
+        //                                     <ul class="list gy-3">
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>AVIVA保险承保</span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>交易撮合引擎</span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>AI智能算力</span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>股票AI引擎</span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>数字货币AI引擎</span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>即时风控引擎</span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>TradingView即时报价</span></li>
+        //                                     </ul>
+        //                                 </div>
+        //                             </div>
+        //                         </div>
+        //                     </div><!-- .col -->
+        //                     <div class="col-xxl-4 col-xl-4 col-md-6 order-xl-first">
+        //                         <div class="h-100 pt-xl-6">
+        //                             <div class="pricing h-100">
+        //                                 <div class="pricing-body h-100 p-5">
+        //                                     <div class="text-center">
+        //                                         <h3 class="mb-3">Beta</h3>
+                                                
+        //                                          <h3 class="display-5 mb-3" style="font-size: 18px;" data-sw-translate>AI 开放式训练场</h3>
+        //                                         <!--<h3 class="display-5 mb-3">$0 <span class="caption-text text-muted"> / month</span></h3>-->
+        //                                         <p class="fw-bold" data-sw-translate>与 EX GPT 团队携手合作，利用数十年的 AI 专业知识和 EX GPT 的尖端平台，为您的项目构建和部署私有AI模型解决方案。</p>
+        //                                         <div class="bg-light px-4 py-2 mb-4 smaller rounded-1" data-sw-translate>正在逐步推出过程中，我们优先考虑为EX GPT贡献卓越的用户使用</div>
+        //                                         <div class="px-4">
+        //                                             <button class="btn btn-outline-primary btn-block rounded-pill" data-sw-translate>开始试用</button>
+        //                                         </div>
+        //                                     </div>
+        //                                     <h5 class="fw-medium pt-4 pb-1"></h5>
+        //                                     <!--Give a try for free-->
+        //                                     <ul class="list gy-3">
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span><strong>$0.004 / 1K</strong> Token</span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span>EX GPT AI X<strong>$0.02 / 1K </strong> Token</span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>$0.1/GB 文件储存空间</span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>实现AI超长记忆</span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>私有化知识库</span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>智能数据处理引擎</span></li>
+        //                                     </ul>
+        //                                 </div>
+        //                             </div>
+        //                         </div>
+        //                     </div><!-- .col -->
+        //                     <div class="col-xxl-4 col-xl-4 col-md-6">
+        //                         <div class="h-100 pt-xl-6">
+        //                             <div class="pricing h-100">
+        //                                 <div class="pricing-body h-100 p-5">
+        //                                     <div class="text-center">
+        //                                         <h3 class="mb-3">Beta</h3>
+        //                                         <h3 class="display-5 mb-3" style="font-size: 18px;" data-sw-translate>AI 流媒体</h3>
+        //                                         <!--<div class="media media-middle media-2xl bg-light rounded-pill mb-4 mt-3">-->
+        //                                         <!--    <em class="icon ni ni-building"></em>-->
+                                                    
+        //                                         <!--</div>-->
+        //                                         <p class="fw-bold" data-sw-translate>它提供了一个命令式且易于使用的管道，即使是那些没有全面了解深度学习框架或模型实现的人也可以使用</p>
+        //                                         <div class="bg-light px-4 py-2 mb-4 smaller rounded-1" data-sw-translate>正在逐步推出过程中，我们优先考虑为EX GPT贡献卓越的用户使用</div>
+        //                                         <div class="px-4">
+        //                                             <button class="btn btn-outline-primary btn-block rounded-pill" data-sw-translate>下载试用版</button>
+        //                                         </div>
+        //                                     </div>
+        //                                     <h5 class="fw-medium pt-4 pb-1"></h5>
+        //                                     <ul class="list gy-3">
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span><strong data-sw-translate>全脸替换</strong></span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>局部替换</span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>直播实时替换</span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>视频流媒体服务</span></li>
+        //                                         <li><em class="icon fs-4 ni ni-check-circle-fill text-info"></em> <span data-sw-translate>直播流媒体服务</span></li>
+        //                                     </ul>
+        //                                 </div>
+        //                             </div>
+        //                         </div>
+        //                     </div><!-- .col -->
+        //                 </div><!-- .row -->
+        //             </div><!-- .section-content -->
+        //         </div>
+        //     </section>
+    </script>
+
+</body>
+
+</html>

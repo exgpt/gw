@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icon.png">
+    <title data-sw-translate>EX GPT-最先進的通用人工智能多模態大模型</title>
+    <meta name="description" content="EX GPT的使命是探索和引領通用人工智能(AGI)的邊界，以推動人類 智慧和文明的進步。我們致力於構建具有超越人類智能的AGI系統，以解決人類面 臨的複雜問題，並為全球社會創造持續的積極影響。">
+    <link rel="stylesheet" href="assets/css/style.css?v1.3.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script>
+         var topNum = 0;
+         //监听向下滚动，向下滚动给idgundong添加top：-50px;
+        $(window).scroll(function () {
+            var top = $(document).scrollTop();
+            // if(top<=0){
+            //     alert("现在距离"+top+"存储距离"+topNum)
+            // }
+            if (top < topNum || top<=0) {
+                topNum = top
+                 $("#headerId").css("top", "0px");
+            } else {
+                topNum = top
+                $("#headerId").css("top", "-60px");
+            }
+        });
+    </script>
+    <style>
+          .nk-header-menu {
+  
+  width: 50%;}
+    .nk-header-main {
+      padding: 0 !important;
+  }
+    .container_nav {
+      padding: 0 1rem;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1199.98px){
+     .nk-header-main {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+@media only screen and (min-width: 1200px){
+ .nk-header-main {
+        display: flex;
+        justify-content: center;
+    }
+}
+  .bg-on{
+    background: rgba(0,0,0,0)!important
+}
+    </style>
+</head>
+
+<body class="nk-body " data-menu-collapse="lg">
+    <div class="nk-app-root ">
+        <header class="nk-header has-mask">
+            <div class="nk-mask bg-gradient-a opacity-30"></div>
+            <div class="nk-mask bg-pattern-dot-sm bg-blend-top"></div>
+            <div class="nk-header-main nk-menu-main will-shrink is-transparent ignore-mask" id="headerId">
+                <div class="container_nav">
+                    <div class="nk-header-wrap">
+                        <div class="nk-header-logo">
+                            <a href="index.html" class="logo-link">
+                                <div class="logo-wrap">
+                                    <img class="logo-img logo-light" src="images/logo-White.png" srcset="images/logo-White.png 2x" alt="">
+                                    <img class="logo-img logo-dark" src="images/logo-black.png" srcset="images/logo-black.png 2x" alt="">
+                                </div>
+                            </a>
+                        </div><!-- .nk-header-logo -->
+                        <div class="nk-header-toggle ">
+                            <button class="dark-mode-toggle">
+                                <em class="off icon ni ni-sun-fill"></em>
+                                <em class="on icon ni ni-moon-fill"></em>
+                            </button>
+                            <button class="btn btn-light btn-icon header-menu-toggle" >
+                                <em class="icon ni ni-menu"></em>
+                            </button>
+                            <!--<button class=" btn  header-menu-toggle" >-->
+                            <!--    <em class="icon ni ni-menu"></em>-->
+                            <!--</button>-->
+                        </div>
+                        <nav class="nk-header-menu nk-menu">
+                            <ul class="nk-menu-list me-auto" style="margin:0 auto;">
+                                <li class="nk-menu-item has-dropdown">
+                                    <a href="index.html" class="nk-menu-link">
+                                        <span class="nk-menu-text" data-sw-translate>首頁</span>
+                                    </a>
+                                    <!--<div class="nk-menu-dropdown">-->
+                                    <!--    <ul class="nk-menu-sub">-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index.html">Home S1</a>-->
+                                    <!--        </li>-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index-s2.html">Home S2</a>-->
+                                    <!--        </li>-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index-s3.html">Home S3</a>-->
+                                    <!--        </li>-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index-s4.html">Home S4 <div class="badge bg-primary ms-2 me-n4 px-2 rounded-pill">New</div></a>-->
+                                    <!--        </li>-->
+                                    <!--        <li class="nk-menu-item">-->
+                                    <!--            <a class="nk-menu-link" href="index-s5.html">Home S5 <div class="badge bg-primary ms-2 me-n4 px-2 rounded-pill">New</div></a>-->
+                                    <!--        </li>-->
+                                    <!--    </ul>-->
+                                    <!--</div>-->
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="Training" class="nk-menu-link">
+                                        <span class="nk-menu-text"  data-sw-translate>訓練中心</span>
+                                    </a>
+                                </li>
+                                 <li class="nk-menu-item">
+                                    <a href="/usecase-details.html" class="nk-menu-link">
+                                        <!--<span class="nk-menu-text" data-sw-translate>安全</span>-->
+                                        <span class="nk-menu-text" data-sw-translate>游戲</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="/usecase-details-s2.html" class="nk-menu-link">
+                                        <span class="nk-menu-text  " data-sw-translate>EX GPT</span>
+                                        <!--nk-menu-toggle-->
+                                    </a>
+                                    <!--<div class="nk-menu-dropdown nk-menu-mega">-->
+                                    <!--    <div class="nk-menu-mega-wrap">-->
+                                    <!--        <ul class="nk-menu-sub">-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="https://gws.EX GPTs.top/" data-sw-translate>AI开放式训练平台</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="#" >AI DEEPLFACE</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="features.html" data-sw-translate>AI 金融大模型</a>-->
+                                    <!--            </li>-->
+                                    <!--             <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="#" data-sw-translate>客户案例</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="#" data-sw-translate>安全标准</a>-->
+                                    <!--            </li>-->
+                                               
+                                    <!--        </ul>-->
+                                            
+                                    <!--    </div>-->
+                                    <!--</div>-->
+                                    
+                                    
+                                    
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a onclick="window.open('https://exgpt.gitbook.io/untitled')" class="nk-menu-link">
+                                        <!--<span class="nk-menu-text" data-sw-translate>安全</span>-->
+                                        <span class="nk-menu-text" data-sw-translate>開發者</span>
+                                    </a>
+                                </li>
+                                
+                                <li class="nk-menu-item has-dropdown">
+                                    <a href="about.html" class="nk-menu-link">
+                                        <!-- nk-menu-toggle-->
+                                        <span class="nk-menu-text" data-sw-translate>關於我們</span>
+                                    </a>
+                                    <!--<div class="nk-menu-dropdown nk-menu-mega">-->
+                                    <!--    <div class="nk-menu-mega-wrap">-->
+                                    <!--        <ul class="nk-menu-sub">-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="about.html">About</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="usecase.html">Use Case</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="usecase-details.html">Use Case Details <div class="badge bg-primary ms-2 me-n4 px-2 rounded-pill">New</div></a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="usecase-s2.html">Use Case S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="usecase-details-s2.html">Use Case Details S2 <div class="badge bg-primary ms-2 me-n4 px-2 rounded-pill">New</div></a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="pricing.html">Pricing</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="pricing-s2.html">Pricing S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="blog.html">Blog</a>-->
+                                    <!--            </li>-->
+                                    <!--        </ul>-->
+                                    <!--        <ul class="nk-menu-sub">-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="blog-single.html">Blog Single</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="features.html">Features</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="contact.html">Contact</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" href="contact-s2.html">Contact S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="login.html">Login</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="login-s2.html">Login S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="register.html">Register</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="register-s2.html">Register S2</a>-->
+                                    <!--            </li>-->
+                                    <!--        </ul>-->
+                                    <!--        <ul class="nk-menu-sub">-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="reset.html">Reset</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="reset-s2.html">Reset S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="404.html">404 Error</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="404-s2.html">404 Error S2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="504.html">504 Error</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="504-s2.html">504 Error s2</a>-->
+                                    <!--            </li>-->
+                                    <!--            <li class="nk-menu-item">-->
+                                    <!--                <a class="nk-menu-link" target="_blank" href="terms-condition.html">Terms &amp; Condition</a>-->
+                                    <!--            </li>-->
+                                    <!--        </ul>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
+                                </li>
+                                 <li class="nk-menu-item">
+                                    <a  href="contact.html" class="nk-menu-link">
+                                        <span class="nk-menu-text" data-sw-translate>聯繫我們</span>
+                                    </a>
+                                </li>
+                            </ul><!-- .nk-menu-list -->
+                            <div class="mx-2 d-none d-lg-block">
+                                <button class="dark-mode-toggle">
+                                    <em class="off icon ni ni-sun-fill"></em>
+                                    <em class="on icon ni ni-moon-fill"></em>
+                                </button>
+                            </div>
+                            <ul class="nk-menu-buttons flex-lg-row-reverse">
+                                <!--<li><a href="#" class="btn btn-outline-primary rounded-pill"  data-sw-translate>立即下载</a></li>-->
+                                <li>
+                                    <!--link-light-->
+                                    <a class="nk-menu-link " href="#" onclick="langSelect()" data-sw-translate>繁体中文 </a></li>
+                                <!--href="login-s2.html"-->
+                            </ul><!-- .nk-menu-buttons -->
+                        </nav><!-- .nk-header-menu -->
+                    </div>
+                </div>
+            </div>
+            <div class="nk-hero pt-lg-9 pb-lg-11 pt-2 pb-6 pb-sm-8">
+                <div class="container">
+                    <div class="row g-4 align-items-center justify-content-center flex-lg-row-reverse">
+                        <div class="col-lg-6 col-md-9">
+                            <div class="nk-hero-gfx mx-sm-n5">
+                                <!--<img class="w-100" src="https://images.prismic.io/inworld-web/6f7cf6d0-3e86-4d0e-aa1a-309cf74236eb_man-1.png?auto=compress%2Cformat&fit=max&w=2048" alt="">-->
+                                <img class="w-100" src="./assets/images/jq.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-11 text-center text-lg-start">
+                            <div class="nk-hero-content">
+                                <h5 class="mb-1 text-warning" data-sw-translate>即將開始,敬請期待!</h5>
+                                <h1 class="display-6" data-sw-translate>遊戲</h1>
+                                <h1 class="text-gradient-primary" data-sw-translate>人工智能</h1>
+                                <h1 class="text-gradient-primary" data-sw-translate>角色開發者平台!</h1>
+                                
+                                <ul class="btn-list btn-list-inline">
+                                    <li><a onclick="getshiyong()" class="mt-10p btn btn-primary btn-lg"><span data-sw-translate>申請試用</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- .nk-hero -->
+        </header>
+        <main class="nk-pages">
+            <section class="section section-lg section-bottom-0 has-shape">
+                <div class="nk-shape bg-shape-blur-f me-12 mt-10p end-50"></div>
+                <!--<div class="container">-->
+                <!--    <div class="section-head">-->
+                <!--        <div class="row justify-content-center text-center">-->
+                <!--            <div class="col-xl-11 col-xxl-10">-->
+                <!--                <h2 class="title h1">CopyGen helps <span class="text-gradient-primary">76,000+</span> people like you create better content 10X faster.</h2>-->
+                <!--                <a href="#" class="btn btn-lg btn-primary"><span>Start for free</span> <em class="icon ni ni-arrow-long-right"></em></a>-->
+                <!--            </div>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--    <div class="section-content">-->
+                <!--        <div class="row g-gs justify-content-center">-->
+                <!--            <div class="col-xxl-10">-->
+                <!--                <div class="card border-0 shadow-sm">-->
+                <!--                    <div class="card-body">-->
+                <!--                        <div class="swiper-init swiper">-->
+                <!--                            <div class="swiper-wrapper">-->
+                <!--                                <div class="swiper-slide">-->
+                <!--                                    <div class="row align-items-center gx-4 gx-lg-5 gx-xl-6">-->
+                <!--                                        <div class="col-md-4 col-sm-6 col-8">-->
+                <!--                                            <div class="bg-gradient-primary rounded-3 p-2 bg-opacity-70">-->
+                <!--                                                <img class="rounded-3" src="images/avatar/testimonials/md-a.jpg" alt="">-->
+                <!--                                            </div>-->
+                <!--                                        </div>-->
+                <!--                                        <div class="col-md-8">-->
+                <!--                                            <div class="py-md-3 pt-3">-->
+                <!--                                                <blockquote class="blockquote">“At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti provident, similique sunt in culpa qui officia deserunt mollitia animi”</blockquote>-->
+                <!--                                                <div class="block-info pt-lg-4">-->
+                <!--                                                    <h4 class="title">Kathleen Smith</h4>-->
+                <!--                                                    <div class="caption-text">Author, Podcast Host</div>-->
+                <!--                                                </div>-->
+                <!--                                            </div>-->
+                <!--                                        </div>-->
+                <!--                                    </div>-->
+                <!--                                </div>-->
+                <!--                                <div class="swiper-slide">-->
+                <!--                                    <div class="row align-items-center gx-4 gx-lg-5 gx-xl-6">-->
+                <!--                                        <div class="col-md-4 col-sm-6 col-8">-->
+                <!--                                            <div class="bg-gradient-primary rounded-3 p-2 bg-opacity-70">-->
+                <!--                                                <img class="rounded-3" src="images/avatar/testimonials/md-b.jpg" alt="">-->
+                <!--                                            </div>-->
+                <!--                                        </div>-->
+                <!--                                        <div class="col-md-8">-->
+                <!--                                            <div class="py-md-3 pt-3">-->
+                <!--                                                <blockquote class="blockquote">“At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti provident, similique sunt in culpa qui officia deserunt mollitia animi”</blockquote>-->
+                <!--                                                <div class="block-info pt-lg-4">-->
+                <!--                                                    <h4 class="title">Frances Burns</h4>-->
+                <!--                                                    <div class="caption-text">Writer, Envato Elements</div>-->
+                <!--                                                </div>-->
+                <!--                                            </div>-->
+                <!--                                        </div>-->
+                <!--                                    </div>-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                            <ul class="swiper-button-wrap btn-list btn-list-inline gx-3 bottom-0 end-0 pb-md-5 pe-md-5 position-absolute">-->
+                <!--                                <li>-->
+                <!--                                    <div class="swiper-button-prev btn btn-sm btn-icon btn-outline-primary rounded-pill"><em class="icon ni ni-arrow-long-left"></em></div>-->
+                <!--                                </li>-->
+                <!--                                <li>-->
+                <!--                                    <div class="swiper-button-next btn btn-sm btn-icon btn-outline-primary rounded-pill"><em class="icon ni ni-arrow-long-right"></em></div>-->
+                <!--                                </li>-->
+                <!--                            </ul>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--            </div>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</div>-->
+                <div class="container">
+                    <div class="section-head">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-xl-11 col-xxl-10">
+                                <h2 class="title h1" data-sw-translate>角色引擎</h2>
+                                <h2 class="title h1 text-gradient-primary" data-sw-translate>多模態人工智能的力量表達</h2>
+                                 <h6 class="" data-sw-translate>將個性置於人工智能的中心，以增強沉浸感和聯繫。使用自然語言和簡單的控件可以在幾分鐘內配置出獨特的角色個性。</h6>
+                                
+                                <!--<a href="#" class="btn btn-lg btn-primary"><span>Start for free</span> <em class="icon ni ni-arrow-long-right"></em></a>-->
+                            </div>
+                        </div>
+                    </div><!-- .section-head -->
+                    <div class="section-content">
+                        <div class="row g-gs justify-content-center">
+                            <div class="col-xxl-10">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="swiper-init swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="row align-items-center gx-4 gx-lg-5 gx-xl-6">
+                                                        <div class="col-md-4 col-sm-6 col-8">
+                                                            <div class="bg-gradient-primary rounded-3 p-2 bg-opacity-70">
+                                                                <img class="rounded-3" src="./assets/images/e1.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="py-md-3 pt-3">
+                                                                <blockquote data-sw-translate class="blockquote">“人工智能為3D遊戲帶來了更逼真、智能化和個性化的體驗。它提供了更具挑戰性的敵人AI、動態的遊戲難度調整、自動生成的遊戲世界和更豐富的角色行為，進一步推動了遊戲技術和娛樂價值的發展。”</blockquote>
+                                                                <div class="block-info pt-lg-4">
+                                                                    <h4 class="title" data-sw-translate>3D</h4>
+                                                                    <div class="caption-text" data-sw-translate>蒸汽朋克</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="row align-items-center gx-4 gx-lg-5 gx-xl-6">
+                                                        <div class="col-md-4 col-sm-6 col-8">
+                                                            <div class="bg-gradient-primary rounded-3 p-2 bg-opacity-70">
+                                                                <img class="rounded-3" src="./assets/images/e2.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="py-md-3 pt-3">
+                                                                <blockquote data-sw-translate class="blockquote">“如果您正在开发遊戲业务，那么您不能错过EX GPT的AI遊戲资产生成器。当遊戲资产设计预算有限时，遊戲開發者可以通过训练有素的AI来获取遊戲开发资产。”</blockquote>
+                                                                <div class="block-info pt-lg-4">
+                                                                    <h4 class="title" data-sw-translate>未來</h4>
+                                                                    <div class="caption-text" data-sw-translate>賽博朋克</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="swiper-button-wrap btn-list btn-list-inline gx-3 bottom-0 end-0 pb-md-5 pe-md-5 position-absolute">
+                                                <li>
+                                                    <div class="swiper-button-prev btn btn-sm btn-icon btn-outline-primary rounded-pill"><em class="icon ni ni-arrow-long-left"></em></div>
+                                                </li>
+                                                <li>
+                                                    <div class="swiper-button-next btn btn-sm btn-icon btn-outline-primary rounded-pill"><em class="icon ni ni-arrow-long-right"></em></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- .section-content -->
+                </div>
+            </section><!-- .section -->
+            <section class="section section-bottom-0">
+                <div class="container">
+                    <div class="section-head">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                                <h2 class="title" data-sw-translate>AI NPC 改变了遊戲规则</h2>
+                            </div>
+                        </div>
+                    </div><!-- .section-head -->
+                    <div class="section-content">
+                        <div class="row g-gs justify-content-center flex-md-row-reverse align-items-center">
+                            <div class="col-xl-4 col-lg-5 col-md-6">
+                                <div class="rounded-4  p-5 pe-0">
+                                    <div class="block-gfx me-n4">
+                                      <img class="w-100 rounded-3 shadow-sm" src="./assets/images/mo1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-5 col-md-6">
+                                <div class="block-text">
+                                    <div class="media media-middle text-bg-primary-soft rounded-pill fw-medium fs-5 mb-3">01</div>
+                                    <h3 class="title" data-sw-translate>玩家渴望來自 NPC 的更多互動。</h3>
+                                    <p data-sw-translate>我们调查了 1,000 名遊戲玩家更好地了解玩家对 NPC 的喜爱、厌恶和秘密渴望。虽然 NPC 对遊戲玩家很重要，但他们却因重复的对话和无法适应玩家的输入而感到沮丧。</p>
+                                </div>
+                            </div>
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                    <div class="sction-sap text-center py-3 d-none d-md-block">
+                        <svg class="h-3rem h-sm-5rem h-lg-7rem" viewBox="0 0 444 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M442.989 1C443.49 18.4197 426.571 53.2592 354.892 53.2591C265.293 53.2591 126.139 53.2591 80.0875 53.2591C34.0366 53.2591 7.00663 85.784 0.999979 111" stroke="currentColor" stroke-dasharray="7 7" />
+                        </svg>
+                    </div><!-- .sction-sap -->
+                    <div class="h-3rem d-md-none"></div>
+                    <div class="section-content">
+                        <div class="row g-gs justify-content-center align-items-center">
+                            <div class="col-xl-4 col-lg-5 col-md-6">
+                                <div class="rounded-4 p-5 ps-0">
+                                    <div class="block-gfx ms-n4">
+                                        <img class="w-100 rounded-3 shadow-sm" src="./assets/images/mo2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-5 col-md-6">
+                                <div class="block-text px-xxl-5">
+                                    <div class="media media-middle text-bg-primary-soft rounded-pill fw-medium fs-5 mb-3">02</div>
+                                    <h3 class="title" data-sw-translate>专为遊戲而打造</h3>
+                                    <p data-sw-translate>允許完全生成的對話，或添加“第四堵牆”功能，以確保您的角色符合劇本。</p>
+                                    <ul class="list gy-2">
+                                        <li><em class="icon ni ni-dot"></em><span data-sw-translate>与流行遊戲引擎的本机集成，例如 统一 和 虚幻引擎 允许您在任何平台或体验中部署您的角色</span></li>
+                                        <li><em class="icon ni ni-dot"></em><span data-sw-translate>EX GPT 適用於任何角色設計或頭像。我們為角色的思維提供動力：視覺設計完全由您掌控。</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                    <div class="sction-sap text-center py-3 d-none d-md-block">
+                        <svg class="h-3rem h-sm-5rem h-lg-7rem" viewBox="0 0 444 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.01068 1C0.510125 18.7364 17.4289 54.2093 89.1082 54.2093C178.707 54.2093 317.861 54.2093 363.912 54.2093C409.963 54.2093 436.993 87.3256 443 113" stroke="currentColor" stroke-dasharray="7 7" />
+                        </svg>
+                    </div>
+                    <div class="h-3rem d-md-none"></div>
+                    <div class="section-content">
+                        <div class="row g-gs justify-content-center flex-md-row-reverse align-items-center">
+                            <div class="col-xl-4 col-lg-5 col-md-6">
+                                <div class="rounded-4 p-5 pe-0">
+                                    <div class="block-gfx me-n4">
+                                        <img class="w-100 rounded-3 shadow-sm" src="./assets/images/mo3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-5 col-md-6">
+                                <div class="block-text">
+                                    <div class="media media-middle text-bg-primary-soft rounded-pill fw-medium fs-5 mb-3">03</div>
+                                    <h3 class="title" data-sw-translate>生成人工智能內容</h3>
+                                    <p data-sw-translate>我們訓練有素的人工智能可以理解您的詳細信息，並在幾秒鐘內生成獨特的、類似人類的內容。</p>
+                                </div>
+                            </div>
+                        </div><
+                    </div>
+                </div><!-- .container -->
+            </section><!-- .section -->
+            <section class="section section-bottom-0">
+                <div class="container">
+                    <div class="section-head">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                                <h6 class="overline-title text-primary" data-sw-translate>了解优势</h6>
+                                <h2 class="title" data-sw-translate>与虚拟世界的互动和品牌形象</h2>
+                            </div>
+                        </div>
+                    </div><!-- .section-head -->
+                    <div class="section-content">
+                        <div class="row g-gs justify-content-center">
+                            <div class="col-xl-4 col-md-6">
+                                <div class="card rounded-4 border-0 shadow-sm h-100">
+                                    <div class="card-body">
+                                        <div class="feature feature-inline flex-md-column flex-lg-row flex-xl-column flex-xxl-row">
+                                            <div class="feature-media">
+                                                <div class="media media-middle media-xl border border-1 text-info border-info border-opacity-25 rounded-pill">
+                                                    <em class="icon ni ni-note-add"></em>
+                                                </div>
+                                            </div>
+                                            <div class="feature-text">
+                                                <h4 class="title" data-sw-translate>性格</h4>
+                                                <p class="line-clamp-2" data-sw-translate>通過用自然語言描述人工智能角色，為他們創造獨特的個性</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-xl-4 col-md-6">
+                                <div class="card rounded-4 border-0 shadow-sm h-100">
+                                    <div class="card-body">
+                                        <div class="feature feature-inline flex-md-column flex-lg-row flex-xl-column flex-xxl-row">
+                                            <div class="feature-media">
+                                                <div class="media media-middle media-xl border border-1 text-warning border-warning border-opacity-25 rounded-pill">
+                                                    <em class="icon ni ni-bulb"></em>
+                                                </div>
+                                            </div>
+                                            <div class="feature-text">
+                                                <h4 class="title" data-sw-translate>情緒</h4>
+                                                <p class="line-clamp-2" data-sw-translate>角色根据用户的反应表达情感。情緒可以映射到动画、目标和触发器。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-xl-4 col-md-6">
+                                <div class="card rounded-4 border-0 shadow-sm h-100">
+                                    <div class="card-body">
+                                        <div class="feature feature-inline flex-md-column flex-lg-row flex-xl-column flex-xxl-row">
+                                            <div class="feature-media">
+                                                <div class="media media-middle media-xl border border-1 text-primary border-primary border-opacity-25 rounded-pill">
+                                                    <em class="icon ni ni-article"></em>
+                                                </div>
+                                            </div>
+                                            <div class="feature-text">
+                                                <h4 class="title" data-sw-translate>實時語音</h4>
+                                                <p class="line-clamp-2" data-sw-translate>使用內置語音以最小化延遲或集成第三方服務（例如 Eleven Labs）。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-xl-4 col-md-6">
+                                <div class="card rounded-4 border-0 shadow-sm h-100">
+                                    <div class="card-body">
+                                        <div class="feature feature-inline flex-md-column flex-lg-row flex-xl-column flex-xxl-row">
+                                            <div class="feature-media">
+                                                <div class="media media-middle media-xl border border-1 text-blue border-blue border-opacity-25 rounded-pill">
+                                                    <em class="icon ni ni-activity-round"></em>
+                                                </div>
+                                            </div>
+                                            <div class="feature-text">
+                                                <h4 class="title" data-sw-translate>目標與行動</h4>
+                                                <p class="line-clamp-2" data-sw-translate>使用客戶定義的觸發器或通過意圖識別或動機激活目標。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-xl-4 col-md-6">
+                                <div class="card rounded-4 border-0 shadow-sm h-100">
+                                    <div class="card-body">
+                                        <div class="feature feature-inline flex-md-column flex-lg-row flex-xl-column flex-xxl-row">
+                                            <div class="feature-media">
+                                                <div class="media media-middle media-xl border border-1 text-success border-success border-opacity-25 rounded-pill">
+                                                    <em class="icon ni ni-note-add"></em>
+                                                </div>
+                                            </div>
+                                            <div class="feature-text">
+                                                <h4 class="title" data-sw-translate>免費訂閱</h4>
+                                                <p class="line-clamp-2" data-sw-translate>每月200分鐘無限的角色創建共享工作空間和協作</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-xl-4 col-md-6">
+                                <div class="card rounded-4 border-0 shadow-sm h-100">
+                                    <div class="card-body">
+                                        <div class="feature feature-inline flex-md-column flex-lg-row flex-xl-column flex-xxl-row">
+                                            <div class="feature-media">
+                                                <div class="media media-middle media-xl border border-1 text-danger border-danger border-opacity-25 rounded-pill">
+                                                    <em class="icon ni ni-star-round"></em>
+                                                </div>
+                                            </div>
+                                            <div class="feature-text">
+                                                <h4 class="title" data-sw-translate>按量付費</h4>
+                                                <p class="line-clamp-2" data-sw-translate>0.016$/每分鐘無限制功能和定制個性、情感、知識等等！</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <!--<div class="col-xl-4 col-md-6">-->
+                            <!--    <div class="card rounded-4 border-0 shadow-sm h-100">-->
+                            <!--        <div class="card-body">-->
+                            <!--            <div class="feature feature-inline flex-md-column flex-lg-row flex-xl-column flex-xxl-row">-->
+                            <!--                <div class="feature-media">-->
+                            <!--                    <div class="media media-middle media-xl border border-1 text-info border-info border-opacity-25 rounded-pill">-->
+                            <!--                        <em class="icon ni ni-note-add"></em>-->
+                            <!--                    </div>-->
+                            <!--                </div>-->
+                            <!--                <div class="feature-text">-->
+                            <!--                    <h4 class="title">Facebook Posts</h4>-->
+                            <!--                    <p class="line-clamp-2">You do not need to spend hours to write good content </p>-->
+                            <!--                    <a class="link link-primary" href="#"><span class="fw-regular">Try Facebook Posts</span><em class="icon fs-5 ni ni-arrow-long-right"></em></a>-->
+                            <!--                </div>-->
+                            <!--            </div>-->
+                            <!--        </div>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+                            <!--<div class="col-xl-4 col-md-6">-->
+                            <!--    <div class="card rounded-4 border-0 shadow-sm h-100">-->
+                            <!--        <div class="card-body">-->
+                            <!--            <div class="feature feature-inline flex-md-column flex-lg-row flex-xl-column flex-xxl-row">-->
+                            <!--                <div class="feature-media">-->
+                            <!--                    <div class="media media-middle media-xl border border-1 text-warning border-warning border-opacity-25 rounded-pill">-->
+                            <!--                        <em class="icon ni ni-bulb"></em>-->
+                            <!--                    </div>-->
+                            <!--                </div>-->
+                            <!--                <div class="feature-text">-->
+                            <!--                    <h4 class="title">YouTube Descriptions</h4>-->
+                            <!--                    <p class="line-clamp-2">Using our AI tools and pre-built template to create content briefs.</p>-->
+                            <!--                    <a class="link link-primary" href="#"><span class="fw-regular">Try YouTube Descriptions</span><em class="icon fs-5 ni ni-arrow-long-right"></em></a>-->
+                            <!--                </div>-->
+                            <!--            </div>-->
+                            <!--        </div>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+                            <!--<div class="col-xl-4 col-md-6">-->
+                            <!--    <div class="card rounded-4 border-0 shadow-sm h-100">-->
+                            <!--        <div class="card-body">-->
+                            <!--            <div class="feature feature-inline flex-md-column flex-lg-row flex-xl-column flex-xxl-row">-->
+                            <!--                <div class="feature-media">-->
+                            <!--                    <div class="media media-middle media-xl border border-1 text-primary border-primary border-opacity-25 rounded-pill">-->
+                            <!--                        <em class="icon ni ni-article"></em>-->
+                            <!--                    </div>-->
+                            <!--                </div>-->
+                            <!--                <div class="feature-text">-->
+                            <!--                    <h4 class="title">Pinterest Descriptions</h4>-->
+                            <!--                    <p class="line-clamp-2">Use our advanced AI as your personal content writer </p>-->
+                            <!--                    <a class="link link-primary" href="#"><span class="fw-regular">Try Pinterest Descriptions</span><em class="icon fs-5 ni ni-arrow-long-right"></em></a>-->
+                            <!--                </div>-->
+                            <!--            </div>-->
+                            <!--        </div>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+                            <!--<div class="col-xl-4 col-md-6">-->
+                            <!--    <div class="card rounded-4 border-0 shadow-sm h-100">-->
+                            <!--        <div class="card-body">-->
+                            <!--            <div class="feature feature-inline flex-md-column flex-lg-row flex-xl-column flex-xxl-row">-->
+                            <!--                <div class="feature-media">-->
+                            <!--                    <div class="media media-middle media-xl border border-1 text-blue border-blue border-opacity-25 rounded-pill">-->
+                            <!--                        <em class="icon ni ni-activity-round"></em>-->
+                            <!--                    </div>-->
+                            <!--                </div>-->
+                            <!--                <div class="feature-text">-->
+                            <!--                    <h4 class="title">Instagram Captions</h4>-->
+                            <!--                    <p class="line-clamp-2">You can simply copy your desire content and then you can publish.</p>-->
+                            <!--                    <a class="link link-primary" href="#"><span class="fw-regular">Try Instagram Captions</span><em class="icon fs-5 ni ni-arrow-long-right"></em></a>-->
+                            <!--                </div>-->
+                            <!--            </div>-->
+                            <!--        </div>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+                            <!--<div class="col-xl-4 col-md-6">-->
+                            <!--    <div class="card rounded-4 border-0 shadow-sm h-100">-->
+                            <!--        <div class="card-body">-->
+                            <!--            <div class="feature feature-inline flex-md-column flex-lg-row flex-xl-column flex-xxl-row">-->
+                            <!--                <div class="feature-media">-->
+                            <!--                    <div class="media media-middle media-xl border border-1 text-success border-success border-opacity-25 rounded-pill">-->
+                            <!--                        <em class="icon ni ni-note-add"></em>-->
+                            <!--                    </div>-->
+                            <!--                </div>-->
+                            <!--                <div class="feature-text">-->
+                            <!--                    <h4 class="title">LinkedIn Posts</h4>-->
+                            <!--                    <p class="line-clamp-2">Write and saved once, use everywhere. </p>-->
+                            <!--                    <a class="link link-primary" href="#"><span class="fw-regular">Try LinkedIn Posts</span><em class="icon fs-5 ni ni-arrow-long-right"></em></a>-->
+                            <!--                </div>-->
+                            <!--            </div>-->
+                            <!--        </div>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+                            <!--<div class="col-xl-4 col-md-6">-->
+                            <!--    <div class="card rounded-4 border-0 shadow-sm h-100">-->
+                            <!--        <div class="card-body">-->
+                            <!--            <div class="feature feature-inline flex-md-column flex-lg-row flex-xl-column flex-xxl-row">-->
+                            <!--                <div class="feature-media">-->
+                            <!--                    <div class="media media-middle media-xl border border-1 text-danger border-danger border-opacity-25 rounded-pill">-->
+                            <!--                        <em class="icon ni ni-star-round"></em>-->
+                            <!--                    </div>-->
+                            <!--                </div>-->
+                            <!--                <div class="feature-text">-->
+                            <!--                    <h4 class="title">TikTok Scripts</h4>-->
+                            <!--                    <p class="line-clamp-2">Let AI write for you in over 40 languages. Our AI can </p>-->
+                            <!--                    <a class="link link-primary" href="#"><span class="fw-regular">Try TikTok Scripts</span><em class="icon fs-5 ni ni-arrow-long-right"></em></a>-->
+                            <!--                </div>-->
+                            <!--            </div>-->
+                            <!--        </div>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+            <section class="section section-bottom-0">
+                <div class="container">
+                    <div class="section-wrap bg-primary bg-opacity-10 rounded-4">
+                        <div class="section-content bg-pattern-dot-sm p-4 p-sm-6 sresse">
+                            <div class="row justify-content-center text-center">
+                                <div class="col-xl-8 col-xxl-9">
+                                    <div class="block-text">
+                                        <h6 class="overline-title text-primary" data-sw-translate>AI角色帶來互動體驗</h6>
+                                        <h2 class="title">游戲</h2>
+                                        <p class="lead mt-3" data-sw-translate>使用 AI 驅動的 NPC 創造更可信的世界。能夠獨立思考、說話和行動的 NPC 將沉浸感提升到了一個新的水平。</p>
+                                        <ul class="btn-list btn-list-inline">
+                                            <li><a onclick="getshiyong()" class="btn btn-lg btn-primary"><span data-sw-translate>申請試用</span><em class="icon ni ni-arrow-long-right"></em></a></li>
+                                        </ul>
+                                        <ul class="list list-row gy-0 gx-3">
+                                            <li><em class="icon ni ni-check-circle-fill text-success"></em><span data-sw-translate>娛樂</span></li>
+                                            <li><em class="icon ni ni-check-circle-fill text-success"></em><span data-sw-translate>品牌與客戶體驗</span></li>
+                                            <li><em class="icon ni ni-check-circle-fill text-success"></em><span data-sw-translate>培訓與教育</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .section-content -->
+                    </div><!-- .section-wrap -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+        </main>
+        <footer class="nk-footer">
+            <!--<section class="section bg-light section-0 has-mask">-->
+            <!--    <div class="nk-mask bg-darker top-50"></div>-->
+            <!--    <div class="container container-xl">-->
+            <!--        <div class="section-wrap bg-dark is-dark rounded-4 has-shape overflow-hidden">-->
+            <!--            <div class="nk-shape bg-shape-blur-b start-50 top-50 translate-middle"></div>-->
+            <!--            <div class="section-content p-4 p-sm-5 p-xl-7">-->
+            <!--                <div class="row justify-content-between align-items-center g-5">-->
+            <!--                    <div class="col-xl-5 col-lg-6">-->
+            <!--                        <div class="block-text">-->
+            <!--                            <h6 class="overline-title text-primary" data-sw-translate>致力于为全球投资者带来无尽可能</h6>-->
+            <!--                            <h2 class="title" data-sw-translate>开启未來·拥抱AI</h2>-->
+            <!--                            <p data-sw-translate>EX GPT将给你带来有史以来最专业的交易团队，交易模型参数达到1700亿参数</p>-->
+            <!--                            <ul class="list list-row gx-3 gy-0">-->
+            <!--                                <li><em class="icon fs-5 ni ni-check-circle-fill text-info"></em><span data-sw-translate>AVIVA保险承保</span></li>-->
+            <!--                                <li><em class="icon fs-5 ni ni-check-circle-fill text-info"></em><span data-sw-translate>毫秒级交易响应</span></li>-->
+            <!--                            </ul>-->
+            <!--                            <ul class="btn-list btn-list-inline gy-0">-->
+            <!--                                <li><a href="#" class="btn btn-lg btn-primary rounded-pill"><span data-sw-translate>立即下载体验</span><em class="icon ni ni-arrow-long-right"></em></a></li>-->
+            <!--                            </ul>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                    <div class="col-xl-6 col-lg-6 align-self-end">-->
+            <!--                        <div class="bg-white rounded-top-4">-->
+            <!--                            <div class="rounded-top-4 bg-gradient-primary bg-opacity-70 p-5 pb-0 mb-n4 mb-sm-n5 mb-xl-n7">-->
+            <!--                                <div class="block-gfx">-->
+            <!--                                    <img class="w-100 rounded-top-3 shadow-sm" src="images/gfx/process/uu.png" alt="">-->
+            <!--                                </div>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</section>-->
+            <!-- .section -->
+            <section class="section bg-darker is-dark">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-xl-4 col-lg-3 me-auto">
+                            <div class="block-text">
+                                <a href="index.html" class="logo-link mb-4">
+                                    <div class="logo-wrap">
+                                        <img class="logo-img logo-light" src="images/logo-White.png" srcset="images/logo-White.png 2x" alt="">
+                                    <img class="logo-img logo-dark" src="images/logo-black.png" srcset="images/logo-black.png 2x" alt="">
+                                        <!--<img class="logo-img logo-light" src="images/logo.png" srcset="images/logo2x.png 2x" alt="">-->
+                                        <!--<img class="logo-img logo-dark" src="images/logo-dark.png" srcset="images/logo-dark2x.png 2x" alt="">-->
+                                    </div>
+                                </a>
+                                <ul class="btn-list btn-list-inline g-1">
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-facebook-fill" style="font-size: calc(1.675rem + 0.5vw) !important;"></em></a></li>
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-github-round" style="font-size: calc(1.675rem + 0.5vw) !important;"></em></a></li>
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-linkedin-round" style="font-size: calc(1.675rem + 0.5vw) !important;"></em></a></li>
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-youtube-round" style="font-size: calc(1.675rem + 0.5vw) !important;"></em></a></li>
+                                    <li><a class="link-base" href="#"><em class="icon fs-3 ni ni-twitter-round" style="font-size: calc(1.675rem + 0.5vw) !important;"></em></a></li>
+                                </ul>
+                            </div>
+                        </div><!-- .col -->
+                        <!--<div class="col-xl-2 col-lg col-md-3 col-6">-->
+                        <!--    <div class="wgs">-->
+                        <!--        <h6 class="wgs-title">Tools</h6>-->
+                        <!--        <ul class="list gy-2 list-link-base">-->
+                        <!--            <li><a class="link-base" href="#">Article Generator</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Blog Ideas</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Blog Intros</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Blog Outlines</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Product Description</a></li>-->
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <!-- .col -->
+                        <!--<div class="col-xl-2 col-lg col-md-3 col-6">-->
+                        <!--    <div class="wgs">-->
+                        <!--        <h6 class="wgs-title">Resources</h6>-->
+                        <!--        <ul class="list gy-2 list-link-base">-->
+                        <!--            <li><a class="link-base" href="#">Facebook Group</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Discord Community</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Guide and Tutorials</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Request API access</a></li>-->
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <!-- .col -->
+                        <div class="col-xl-3 col-lg col-md-3 col-6">
+                            <div class="wgs">
+                                <h6 class="wgs-title" data-sw-translate>導航</h6>
+                               <ul class="list gy-2 list-link-base">
+                                    <li ><a class="link-base" href="index.html" data-sw-translate>首頁</a></li>
+                                    <li ><a class="link-base" href="Training" data-sw-translate>訓練中心</a></li>
+                                    <li><a class="guanyu"  href="/usecase-details.html" data-sw-translate>游戲</a></li>
+                                    <li><a class="link-base"  href="/usecase-details-s2.html" data-sw-translate>EX GPT</a></li>
+                                    <li><a class="link-base" onclick="window.open('https://exgpt.gitbook.io/untitled')" data-sw-translate>開發者</a></li>
+                                    <!--<li style=" list-style:none;padding:0;margin:0;float: left;display: block;margin-right:0.5rem"><a class="link-base" href="#">产品</a></li>-->
+                                    <li ><a class="link-base gywm" href="about.html" data-sw-translate> 關於我們</a></li>
+                                    <li ><a class="link-base" href="contact.html" data-sw-translate> 联系我们</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- .col -->
+                        <!--<div class="col-xl-2 col-lg col-md-3 col-6">-->
+                        <!--    <div class="wgs">-->
+                        <!--        <h6 class="wgs-title">Use Case</h6>-->
+                        <!--        <ul class="list gy-2 list-link-base">-->
+                        <!--            <li><a class="link-base" href="#">AI Writer</a></li>-->
+                        <!--            <li><a class="link-base" href="#">AI Articel Writer</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Content Generator</a></li>-->
+                        <!--            <li><a class="link-base" href="#">AI Content Writing</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Content Rewriter</a></li>-->
+                        <!--            <li><a class="link-base" href="#">Blog Post Writer</a></li>-->
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <!-- .col -->
+                    </div>
+                </div><!-- .container -->
+            </section><!-- .section -->
+            <div class="bg-darker is-dark">
+                <div class="container">
+                    <hr class="border-opacity-25 border-white m-0">
+                    <div class="py-5">
+                        <div class="row">
+                            <div class="col-md">
+                                <p class="mb-2 mb-md-0">&copy; 2023 EXPLORED GPT AI RESEARCH LTD
+                                <!--<a href="#" class="fw-bold text-white">Softnio</a>.-->
+                                </p>
+                            </div>
+                            <div class="col-md">
+                                <ul class="list list-row gx-4 justify-content-start justify-content-md-end">
+                                  
+                                    <li><a class="link-primary" target="_blank" href="terms-condition.html">Terms &amp; Condition</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/js/bundle.js?v1.3.0"></script>
+    <script src="assets/js/scripts.js?v1.3.0"></script>
+    <style type="text/css" media="all">
+        .nk-menu-link {
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .sresse {
+            margin-bottom: 50px;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+    function getshiyong(){
+        if(window.localStorage.getItem('language') == 'en'){
+            window.open('https://forms.gle/CY1WLAkDZFwmJN5Q7')
+        }else{
+            window.open('https://forms.gle/YhHuDVtJUSYX817X9')
+           
+        }
+    }
+        window.SwaggerTranslator = {
+     _words: [],
+  
+     translate: function () {
+         var $this = this;
+         $('[data-sw-translate]').each(function () {
+             $(this).html($this._tryTranslate($(this).html()));
+             $(this).val($this._tryTranslate($(this).val()));
+             $(this).attr('title', $this._tryTranslate($(this).attr('title')));
+         });
+     },
+  
+     _tryTranslate: function (word) {
+         return this._words[$.trim(word)] !== undefined ? this._words[$.trim(word)] : word;
+     },
+  
+     learn: function (wordsMap) {
+         this._words = wordsMap;
+     }
+ };
+     window.SwaggerTranslator.learn({
+         "聯繫我們": "contact us",
+         "申請試用":"Apply for a trial",
+         "0.016$/每分鐘無限制功能和定制個性、情感、知識等等！":"0.016$/minute Unlimited functions and customization of personality, emotion, knowledge and more!",
+         "按量付費":"pay as you go",
+         "每月200分鐘無限的角色創建共享工作空間和協作":"200 minutes per month of unlimited character creation for shared workspaces and collaboration",
+         "免費訂閱":"free subscription",
+         "EX GPT 適用於任何角色設計或頭像。我們為角色的思維提供動力：視覺設計完全由您掌控。":"EX GPT works with any character design or avatar. We power the minds of our characters: the visual design is completely in your hands.",
+         "与流行遊戲引擎的本机集成，例如 统一 和 虚幻引擎 允许您在任何平台或体验中部署您的角色":"Native integrations with popular game engines such as Unity and Unreal Engine allow you to deploy your characters on any platform or experience",
+         "允許完全生成的對話，或添加“第四堵牆”功能，以確保您的角色符合劇本。":"Allow for fully generated dialogue, or add a fourth wall feature to ensure your characters fit the script.",
+         "专为遊戲而打造":"Built for Gaming",
+         "我们调查了 1,000 名遊戲玩家更好地了解玩家对 NPC 的喜爱、厌恶和秘密渴望。虽然 NPC 对遊戲玩家很重要，但他们却因重复的对话和无法适应玩家的输入而感到沮丧。":"We surveyed 1,000 gamers to better understand players' loves, dislikes, and secret desires for NPCs. While NPCs are important to gamers, they are frustrated by repetitive dialogue and an inability to adapt to player input.",
+         "玩家渴望來自 NPC 的更多互動。":"Players crave more interaction from NPCs.",
+         "AI NPC 改变了遊戲规则":"AI NPCs change the rules of the game",
+         "賽博朋克":"Cyberpunk",
+         "蒸汽朋克":"Steampunk",
+         "未來":"Futuristic",
+         "“如果您正在开发遊戲业务，那么您不能错过EX GPT的AI遊戲资产生成器。当遊戲资产设计预算有限时，遊戲開發者可以通过训练有素的AI来获取遊戲开发资产。”":"If you are developing a game business, you can't miss EX GPT AI game asset generator. When the game asset design budget is limited, game developers can get game development assets with well-trained AI.",
+         "“您无需深入研究遊戲开发艺术，因为我们的人工智能遊戲资产创建者经过数百万著名股票和插图的培训，可以为您制作最好的遊戲资产。每次您都会根据您输入的描述获得不同的遊戲资产创建结果。”":"There is no need for you to dive into the game dev art because our AI game assets creator is trained by millions of famous stocks and illustrations to produce the best game assets for you. Every time you will get different game asset creation outcomes according to your entered descriptions.",
+         "將個性置於人工智能的中心，以增強沉浸感和聯繫。使用自然語言和簡單的控件可以在幾分鐘內配置出獨特的角色個性。":"Put personality at the center of your AI to enable increased immersion and connection. Distinct character personalities can be configured in minutes using natural language and simple controls.",
+         "角色引擎":"Character Engine",
+         "多模態人工智能的力量表達":"Power expression with multimodal AI",
+         "培訓與教育": "Training & Education",
+         "品牌與客戶體驗":"Brands & Customer Experience",
+         "娛樂":"Entertainment",
+         "使用 AI 驅動的 NPC 創造更可信的世界。能夠獨立思考、說話和行動的 NPC 將沉浸感提升到了一個新的水平。":"Create more believable worlds with AI-driven NPCs. NPCs that can think, talk, and act for themselves take immersion to the next level.",
+         "游戲": "Gaming",
+         "AI角色帶來互動體驗": "AI characters for interactive experiences",
+         "定价": "pricing",
+         "10 多个可供探索的工具": "10+ tools to expolore",
+         "随时取消": "Cancel anytime",
+         "无需信用卡":"No credit card required",
+         "开始免费写作":"Start writing for free",
+         "这就像可以访问文案专家团队，一键为您编写强大的文案。":"It’s like having access to a team of copywriting experts writing powerful copy for you in 1-click.",
+         "今天结束写作障碍": "End writer’s block today",
+         "提高你的写作效率": "BOOST YOUR WRITING PRODUCTIVITY",
+         "我們訓練有素的人工智能可以理解您的詳細信息，並在幾秒鐘內生成獨特的、類似人類的內容。":"Our highly trained AI understands your details and generate unique and human-like content in seconds.",
+         "生成人工智能內容": "Generate AI Content",
+         "在vero eos et Accusamus et iusto": "At vero eos et accusamus et iusto",
+         "在vero eos et Accusamus et iusto": "At vero eos et accusamus et iusto",
+         "尽可能详细地向人工智能解释你想写什么。":"Explain with as many details as possible to the AI what you would like to write about.",
+         "填写您的产品详细信息":"Fill in your product details",
+         "选择模板":"select template",
+         "但是，为了看看这个孩子的错误在哪里，我将解释指控者的意愿和赞扬他的人的痛苦，我将作为生活的建筑师打开整个事情。": "Sed ut perspiciatis unde omnis iste natus error sat voluptatem Accusantium doloremque laudantium, totam rem aperiam, quasi archiarchobeatae vitae dicta sunt explicabo.",
+         "如何运行的": "HOW IT WORKS",
+         "编写内容的几个步骤": "Few steps to write content",
+         "通過用自然語言描述人工智能角色，為他們創造獨特的個性":"Create distinct personalities for your AI characters by describing them in natural language.",
+          "知识": "Knowledge",
+         "多名像您一样的人以10倍速度创建更好的内容。":"people like you create better content 10X faster.",
+         "76,000": "76,000+",
+         "CopyGen 帮助": "CopyGen helps",
+         "对话安全性因用例而异，请自行确定角色可以讨论哪些主题。": "Conversational safety varies by use case, determine yourself what topics characters are able to discuss.",
+         "添加角色应该拥有的关于他们的世界、背景和背景的共享传说和个人知识。": "Add shared lore and personal knowledge characters should have about their worlds, contexts, and backgrounds.",
+         "使用客戶定義的觸發器或通過意圖識別或動機激活目標。": "Use client-defined triggers or activate goals through intent recognition or motivations.",
+         "使用內置語音以最小化延遲或集成第三方服務（例如 Eleven Labs）。":"Use built-in voices for minimal latency or integrate third-party services like Eleven Labs.",
+         "角色根据用户的反应表达情感。情緒可以映射到动画、目标和触发器。": "Characters express emotion in response to users. Emotions can be mapped to animations, goals, and triggers.",
+         "可配置的安全性": "Configurable Safety",
+         "性格": "Personality",
+         "情緒": "Emotions",
+         "實時語音": "Real-Time Voices",
+         "目標與行動": "Goals & Actions",
+         "与虚拟世界的互动和品牌形象": "Stay in-world or on-brand",
+         "了解优势": "LEARN ABOUT BESNIFITS",
+         "角色開發者平台!": "developer platform!",
+         "人工智能": "character intelligent",
+         "遊戲": "Game AI",
+         "即將開始,敬請期待!": "It's about to start, so stay tuned",
+         "即将开始": "About to start",
+         "推特": "Twitter",
+         "脸书": "Facebook",
+         "遊戲人工智能": "Gaming",
+         "訓練中心": "Training Center",
+         "聯繫我們": "Contact Us",
+         "開發者": "Developer",
+         "EX GPT具备全⾯的⼈⼯智能能⼒，不仅限于语⾔处理和图像识别，还包括深度学习、⾃动化决策、ᰁ化交易等领域的专业能⼒。这使得EX GPT成为⼀个多功能的AI平台，能够满⾜不同⾏业和领域的需求。": "EX GPT has comprehensive artificial intelligence capabilities, not limited to language processing and image recognition, but also includes professional capabilities in deep learning, automated decision-making, and automated transactions. This makes EX GPT a versatile AI platform that can meet the needs of different industries and fields.",
+         "EX GPT采⽤⾼度可定制的架构，允许⽤户根据⾃身需求和业务场景进⾏个性化定制。⽤户可以根据特定的⾏业、领域和任务要求，选择合适的模型组件、数据集和算法，从⽽实现更精确和⾼效的AI应⽤。": "EX GPT adopts a highly customizable architecture, allowing users to customize according to their own needs and business scenarios. Users can select appropriate model components, data sets, and algorithms according to specific industries, domains, and task requirements, so as to achieve more accurate and efficient AI applications.",
+         "EX GPT拥有⼀⽀强⼤的技术团队，包括专业的研究⼈员、数据科学家和⼯程师。他们在⼈⼯智能和机器学习领域拥有深厚的专业知识和经验，能够不断推动EX GPT技术的创新和发展。": "EX GPT has a strong technical team, including professional researchers, data scientists and engineers. They have deep professional knowledge and experience in the field of artificial intelligence and machine learning, and can continuously promote the innovation and development of EX GPT technology.",
+         "强大的技术团队和研发能力": "Strong technical team and R & D strength",
+         "高度可定制的架构": "Highly customizable architecture",
+         "所有人⼯智能能力⼒": "All AI Capabilities",
+         "全面的人工智能能力": "Comprehensive artificial intelligence capabilities",
+         "发送成功！": "Successfully sent!",
+         "发送": "Send Message",
+         "你的名字": "Your Name",
+         "请随时使用下面的表格与我们联系": "Please feel free to contact us using form below",
+         "地址": "Office",
+         "电子邮件": "Email",
+         "联系": "Contact",
+         "必须向你解释所有这些谴责快乐和赞扬的错误观念是如何诞生的，我会给你一个完整的系统说明。":"Must explain to you how all this mistaken idea of denouncing pleasure and praising born and I will give you a complete account of the system.",
+         "我们来谈谈": "Let's talk",
+    "我们喜欢收到反馈、问题并听取您的意见!": "We love getting feedback, Questions, and hearing what you have to say!",
+     "首頁":"Home",
+     "应用":"application",
+     "安全":"Safety",
+     "产品":"Product",
+    "AI开放式训练平台":"AI Open Training Platform",
+    "AI 金融大模型":"AI Financial Big Model",
+    "客户案例":"Customer Cases",
+    "安全标准":"Security Standards",
+     "關於我們":"About Us",
+     "立即下载":"Download",
+     "繁体中文":"English",
+
+    "Explored Gpt Ai researchExplored GPT AI Research 作为一家致力于AI技术研发和应用的企业， 立志成为行业领导者。AI全球技术有限责任公司的愿景是通 过AI技术驱动未來，为全球各行业提供智能化解决方 案，推动社会进步。使命是成为AI技术领域的领导者， 为客户提供可靠、高效、创新的AI服务，创造价值。":"Explored Gpt Ai researchExplored GPT AI Research is a company dedicated to AI technology research and application, aspiring to be an industry leader. The vision of AI Global Technology Co., Ltd. is to drive the future through AI technology, provide intelligent solutions for various industries worldwide, and promote social progress. Our mission is to become a leader in the field of AI technology, provide reliable, efficient, and innovative AI services to customers, and create value.",
+    "英伟达战略合作伙伴":"NVIDIA Strategic Partner",
+    "拥有在线数据处理与在线交易双资质":"Dual Qualification for Online Data Processing and Online Trading",
+    "谁使用我们的产品":"Who Uses Our Products",
+    "EX GPT的环境、社会和治理责任":"EX GPT's Environmental, Social, and Governance Responsibility",
+    "我们认识到 EXG 涵盖了环境、社会和治理方面的可持续商业行为。 我们的 EXG 框架基于两个方面的内部评估，即哪些因素对我们和我们的利益相关者最重要以及我们在哪些领域发挥的积极影响力最大。 该框架强调了多个关键领域。":"We recognize that EXG covers sustainable business practices in the areas of environment, society, and governance. Our EXG framework is based on two aspects of internal evaluation: which factors are most important to us and our stakeholders, and in which areas we have the greatest positive impact. The framework emphasizes multiple key areas.",
+    "环境":"Environment",
+    "我们关爱我们的环境。 我们的产品能够使全球企业减少商务旅行，从而有助于减少碳足迹。 我们通过工作场所计划尽最大可能降低运营影响，并支持全球倡议，从而直接对环境产生积极影响。":"We care about our environment. Our products can help global companies reduce business travel, thereby reducing carbon footprints. We strive to minimize operational impact through workplace planning and support global initiatives, thus directly contributing to positive environmental impact.",
+    "社区":"Community",
+    "EX GPT 关心我们所服务的多元化社区。 我们的社会影响力部门 EX GPT Cares 设想为人类和地球——我们共同的家园建立一个更加公正的社会。 我们力争利用自己的业务优势建设一个更公正、更公平、更友善的未來。":"EX GPT cares about the diverse communities we serve. Our social impact department, EX GPT Cares, envisions building a more just society for humanity and the earth - our common home. We strive to use our business advantages to build a more just, fair, and friendly future.",
+    "信任":"Trust",
+    "我们致力于成为一个深受信任的平台，在我们的价值观和文化中，信任是不可或缺的一部分。 我们遵守职业道德规范，为每位用户提供无缝、安全且可靠的 EX GPT 平台。":"We are committed to being a trusted platform, where trust is an essential part of our values and culture. We adhere to professional ethics and provide each user with a seamless, secure, and reliable EX GPT platform.",
+    "员工":"Employees",
+    "我们认为最优秀的员工是幸福的员工。 我们努力创造一个高效、包容且具有激励作用的工作环境，让所有员工都感受到自己的价值并产生归属感。":"We believe that the best employees are happy employees. We strive to create an efficient, inclusive, and motivating work environment where all employees feel valued and have a sense of belonging.",
+    "认证和证明":"Certifications and Proofs",
+    "美国国防部云计算安全要求":"US Department of Defense Cloud Computing Security Requirements",
+    "全球公认的用于实施 ISMS 的安全标准":"Global Recognized Security Standards for Implementing ISMS",
+    "CSA STAR 2 级":"CSA STAR Level 2",
+    "针对云服务产品的安全性和合规性控制注册表":"Registry of Security and Compliance Controls for Cloud Service Products",
+
+
+  
+    "致力于为全球投资者带来无尽可能":"Committed to Bringing Endless Possibilities to Global Investors",
+    "开启未來·拥抱AI":"Open the Future and Embrace AI",
+    "EX GPT将给你带来有史以来最专业的交易团队，交易模型参数达到1700亿参数":"EX GPT will bring you the most professional trading team ever, with trading model parameters reaching 170 billion parameters.",
+    "AVIVA保险承保":"AVIVA Insurance Underwriting",
+    "毫秒级交易响应":"Millisecond-level Trading Response",
+    "立即下载体验":"Download and Experience Now",
+    "首頁":"Home",
+    "应用":"Applications",
+    "安全":"Security",
+    "關於我們":"About Us",
+    "EX GPT-最先進的通用人工智能多模態大模型":"EX GPT - The Most Advanced multimodal Large Model For General Artificial Intelligence",
+    "導航":"Company",
+    "人工智能為3D遊戲帶來了更逼真、智能化和個性化的體驗。它提供了更具挑戰性的敵人AI、動態的遊戲難度調整、自動生成的遊戲世界和更豐富的角色行為，進一步推動了遊戲技術和娛樂價值的發展。":"Artificial intelligence brings a more realistic, intelligent and personalized experience to 3D games. It provides more challenging enemy AI, dynamic game difficulty adjustment, automatically generated game world and richer character behavior, further pushing the development of game technology and entertainment value.",
+
+ });
+     $(function () {
+       if(localStorage.getItem("language")&&localStorage.getItem("language") == 'zh-cn'){
+       }else{
+            window.SwaggerTranslator.translate();
+       }
+ });
+ function langSelect(){
+    if(localStorage.getItem("language")&&localStorage.getItem("language") == 'zh-cn'){
+        localStorage.setItem("language","en");
+    }else{
+        localStorage.setItem("language","zh-cn");
+    }
+    window.location.reload();
+    // window.SwaggerTranslator.translate();
+}
+    </script>
+</body>
+
+</html>
